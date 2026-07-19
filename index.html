@@ -3,79 +3,94 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Daniels Comicarchiv – Prototyp</title>
-  <style>
-    :root{--ink:#171714;--paper:#f2ecdf;--acid:#d7ff3f;--blue:#3569ff;--muted:#786f64;--line:#cdc3b3}
-    *{box-sizing:border-box} body{margin:0;background:var(--ink);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif}
-    button,input{font:inherit}.shell{min-height:100vh;background:var(--paper);max-width:1180px;margin:auto;box-shadow:0 0 80px #0008}
-    header{display:flex;align-items:center;justify-content:space-between;padding:22px 5vw;border-bottom:1px solid var(--line);gap:20px}
-    .brand{font-weight:900;letter-spacing:-.04em;font-size:clamp(21px,3vw,34px)}.brand i{font-style:normal;color:var(--blue)}
-    .count{font-size:12px;text-transform:uppercase;letter-spacing:.13em;color:var(--muted)}
-    .selector{display:flex;gap:10px;padding:14px 5vw;border-bottom:1px solid var(--line);overflow:auto}.comic-tab{display:flex;align-items:center;gap:10px;min-width:max-content;border:1px solid var(--line);background:transparent;padding:7px 13px 7px 7px;border-radius:4px;cursor:pointer;text-align:left}.comic-tab img{width:34px;height:47px;object-fit:cover}.comic-tab span{display:block;font-weight:850;font-size:12px}.comic-tab small{display:block;color:var(--muted);font-size:10px;margin-top:2px}.comic-tab.active{background:var(--ink);color:var(--paper);border-color:var(--ink)}.comic-tab.active small{color:#bdb5aa}
-    main{display:grid;grid-template-columns:minmax(260px,42%) 1fr;min-height:calc(100vh - 84px)}
-    .visual{position:relative;padding:7vw 5vw;background:#d9d0c2;display:grid;place-items:center;overflow:hidden}
-    .visual:before{content:attr(data-number);position:absolute;right:-12px;top:-44px;font-weight:950;font-size:180px;color:#c8bdad;line-height:1}
-    .cover-wrap{position:relative;width:min(100%,380px);z-index:1;transform:rotate(-1.4deg);transition:.35s ease}
-    .cover-wrap:hover{transform:rotate(0) translateY(-7px)}
-    .cover{display:block;width:100%;aspect-ratio:23/32;object-fit:cover;background:#202a39;box-shadow:20px 26px 0 #171714,0 32px 60px #3a302a66;border-radius:2px}
-    .sticker{position:absolute;right:-28px;bottom:30px;background:var(--acid);padding:12px 14px;font-weight:900;text-transform:uppercase;font-size:12px;letter-spacing:.08em;transform:rotate(4deg);box-shadow:5px 5px 0 var(--ink)}
-    .details{padding:clamp(34px,6vw,78px);display:flex;flex-direction:column;justify-content:center}
-    .eyebrow{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:18px}
-    h1{font-size:clamp(40px,6vw,78px);letter-spacing:-.065em;line-height:.88;margin:0 0 26px;max-width:700px}
-    .byline{font-family:Georgia,serif;font-style:italic;font-size:20px;margin:0 0 38px;color:#4e4942}
-    .facts{display:grid;grid-template-columns:repeat(2,minmax(120px,1fr));border-top:1px solid var(--line);margin-bottom:34px}
-    .fact{padding:15px 8px 15px 0;border-bottom:1px solid var(--line)}.fact small{display:block;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:4px}.fact strong{font-size:14px}
-    .actions{display:flex;flex-wrap:wrap;gap:10px}.actions button{border:1px solid var(--ink);background:transparent;padding:13px 16px;border-radius:100px;font-weight:800;cursor:pointer;transition:.2s}
-    .actions button.active{background:var(--ink);color:var(--paper)}.actions button:hover{transform:translateY(-2px)}
-    .note{margin-top:28px;color:var(--muted);font-size:12px;line-height:1.5;max-width:530px}
-    @media(max-width:720px){header{padding:18px 22px}.count{display:none}.selector{padding:10px 22px}main{grid-template-columns:1fr}.visual{min-height:55vh;padding:54px}.cover-wrap{width:min(72vw,310px)}.details{padding:42px 24px 56px}h1{font-size:48px}.facts{grid-template-columns:1fr 1fr}}
-  </style>
+  <meta name="theme-color" content="#171714">
+  <title>Daniels Comicarchiv</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="shell">
-    <header><div class="brand">DANIELS <i>COMICARCHIV</i></div><div class="count">Prototyp · 2 von ca. 300 Comics</div></header>
-    <nav class="selector" aria-label="Comics auswählen">
-      <button class="comic-tab active" data-comic="0"><img src="assets/peter-pan-cover.jpg" alt=""><div><span>Peter Pan</span><small>2024 · Splitter</small></div></button>
-      <button class="comic-tab" data-comic="1"><img src="assets/pinocchio-cover.jpg" alt=""><div><span>Pinocchio</span><small>2015 · Splitter</small></div></button>
-    </nav>
-    <main>
-      <section class="visual" id="visual" data-number="01">
-        <div class="cover-wrap">
-          <img class="cover" id="cover" src="assets/peter-pan-cover.jpg" alt="Cover von Peter Pan in Kensington Gardens">
-          <div class="sticker" id="sticker">Im Bestand</div>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="brand" data-view-link="dashboard" aria-label="Zur Übersicht">DANIELS <i>COMICARCHIV</i></button>
+      <nav class="main-nav" aria-label="Hauptnavigation">
+        <button class="active" data-view-link="dashboard">Übersicht</button>
+        <button data-view-link="collection">Sammlung</button>
+        <button data-view-link="series">Reihen</button>
+        <button data-view-link="wishlist">Wunschliste</button>
+      </nav>
+      <button class="mobile-menu" id="mobileMenu" aria-label="Navigation öffnen">Menü</button>
+    </header>
+
+    <main id="app" aria-live="polite">
+      <section class="view active" id="dashboardView">
+        <div class="hero">
+          <div>
+            <p class="kicker">Persönliche Bibliothek · Prototyp</p>
+            <h1>Eine Sammlung,<br><em>die Geschichten erzählt.</em></h1>
+            <p class="hero-copy">Dein Bestand, deine Wunschliste und deine Reihen – visuell, durchsuchbar und dauerhaft dokumentiert.</p>
+            <button class="primary-action" data-view-link="collection">Sammlung entdecken <span>→</span></button>
+          </div>
+          <div class="hero-stack" aria-hidden="true">
+            <img src="assets/peter-pan-cover.jpg" alt="">
+            <img src="assets/pinocchio-cover.jpg" alt="">
+          </div>
+        </div>
+
+        <section class="stats" id="stats"></section>
+
+        <section class="dashboard-section">
+          <div class="section-heading"><div><p class="kicker">Zuletzt erfasst</p><h2>Neu im Archiv</h2></div><button class="text-action" data-view-link="collection">Alle ansehen →</button></div>
+          <div class="recent-grid" id="recentGrid"></div>
+        </section>
+
+        <section class="dashboard-grid">
+          <article class="reading-card">
+            <p class="kicker">Lesestapel</p><h2>Als Nächstes lesen</h2>
+            <p>Noch keine Auswahl. Markiere später ungelesene Comics für deinen persönlichen Lesestapel.</p>
+            <button class="text-action" data-view-link="collection">Ungelesene anzeigen →</button>
+          </article>
+          <article class="wishlist-card">
+            <span class="big-number" id="wishCount">0</span><p>Comics auf deiner Wunschliste</p>
+            <button class="text-action" data-view-link="wishlist">Wunschliste öffnen →</button>
+          </article>
+        </section>
+      </section>
+
+      <section class="view" id="collectionView">
+        <div class="page-intro"><p class="kicker">Deine Bibliothek</p><h1>Sammlung</h1><p id="resultCount">0 Comics</p></div>
+        <div class="toolbar">
+          <label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="Titel, ISBN, Autor oder Verlag suchen …"></label>
+          <div class="filters">
+            <select id="statusFilter" aria-label="Status filtern"><option value="all">Alle Status</option><option value="owned">Im Bestand</option><option value="unread">Ungelesen</option><option value="favorite">Favoriten</option></select>
+            <select id="publisherFilter" aria-label="Verlag filtern"><option value="all">Alle Verlage</option></select>
+            <select id="sortSelect" aria-label="Sortierung"><option value="title">Titel A–Z</option><option value="year-desc">Neueste Ausgabe</option><option value="added-desc">Zuletzt erfasst</option></select>
+          </div>
+        </div>
+        <div class="active-filter-row" id="activeFilters"></div>
+        <div class="comic-grid" id="comicGrid"></div>
+        <div class="empty-state" id="emptyState" hidden><h2>Nichts gefunden</h2><p>Versuche einen anderen Suchbegriff oder entferne die Filter.</p></div>
+      </section>
+
+      <section class="view" id="seriesView">
+        <div class="page-intro"><p class="kicker">Zusammengehörige Geschichten</p><h1>Reihen</h1><p>Serien, Einzelbände und dein Sammelfortschritt</p></div>
+        <div class="series-grid" id="seriesGrid"></div>
+      </section>
+
+      <section class="view" id="wishlistView">
+        <div class="page-intro"><p class="kicker">Für den nächsten Comicshop-Besuch</p><h1>Wunschliste</h1><p>Gesuchte und vorgemerkte Ausgaben</p></div>
+        <div class="empty-wishlist" id="wishlistContent">
+          <div class="empty-icon">♡</div><h2>Die Wunschliste ist noch leer.</h2><p>Auf der Detailseite kannst du einen Comic vom Bestand auf die Wunschliste setzen.</p>
+          <button class="primary-action" data-view-link="collection">Sammlung öffnen <span>→</span></button>
         </div>
       </section>
-      <section class="details">
-        <div class="eyebrow" id="eyebrow">Graphic Novel · Fantasy · Literaturadaption</div>
-        <h1 id="title">Peter Pan in Kensington Gardens</h1>
-        <p class="byline" id="byline">José Luis Munuera · nach J. M. Barrie</p>
-        <div class="facts" id="facts"></div>
-        <div class="actions">
-          <button class="active" data-state="owned">✓ Im Bestand</button>
-          <button data-state="read">Gelesen</button>
-          <button data-state="wish">Zur Wunschliste</button>
-        </div>
-        <p class="note">Testansicht: Die Buttons funktionieren bereits. In der späteren Version kommen Coverwand, Suche, Reihenansicht, eigene Bewertung, Regalstandort und eine einfache Erfassung per ISBN-Foto hinzu.</p>
+
+      <section class="view" id="detailView">
+        <button class="back-button" id="backButton">← Zurück zur Sammlung</button>
+        <div id="detailContent"></div>
       </section>
     </main>
+
+    <footer><div class="brand small">DANIELS <i>COMICARCHIV</i></div><p>Privater Sammlungskatalog · Prototyp 2026</p></footer>
   </div>
-  <script>
-    const comics=[
-      {title:'Peter Pan in Kensington Gardens',eyebrow:'Graphic Novel · Fantasy · Literaturadaption',byline:'José Luis Munuera · nach J. M. Barrie',cover:'assets/peter-pan-cover.jpg',alt:'Cover von Peter Pan in Kensington Gardens',number:'01',facts:[['Verlag','Splitter'],['Erschienen','24. Oktober 2024'],['Ausgabe','1. Auflage · Hardcover'],['Umfang','96 Seiten · farbig'],['ISBN','978-3-98721-460-8'],['Listenpreis','19,80 €']]},
-      {title:'Pinocchio',eyebrow:'Comic · Literaturadaption · Einzelband',byline:'David Chauvel · Tim McBurnie · nach Carlo Collodi',cover:'assets/pinocchio-cover.jpg',alt:'Cover von Pinocchio',number:'02',facts:[['Verlag','Splitter'],['Erschienen','25. Mai 2015'],['Ausgabe','1. Auflage · Hardcover'],['Umfang','80 Seiten · farbig'],['ISBN','978-3-95839-903-7'],['Listenpreis','15,95 €']]}
-    ];
-    const buttons=[...document.querySelectorAll('button[data-state]')], sticker=document.querySelector('#sticker'), tabs=[...document.querySelectorAll('.comic-tab')];
-    const render=i=>{const c=comics[i];document.querySelector('#title').textContent=c.title;document.querySelector('#eyebrow').textContent=c.eyebrow;document.querySelector('#byline').textContent=c.byline;const cover=document.querySelector('#cover');cover.src=c.cover;cover.alt=c.alt;document.querySelector('#visual').dataset.number=c.number;document.querySelector('#facts').innerHTML=c.facts.map(([k,v])=>`<div class="fact"><small>${k}</small><strong>${v}</strong></div>`).join('');tabs.forEach((t,n)=>t.classList.toggle('active',n===i));};
-    tabs.forEach(t=>t.addEventListener('click',()=>render(Number(t.dataset.comic))));render(0);
-    buttons.forEach(b=>b.addEventListener('click',()=>{
-      if(b.dataset.state==='wish'){
-        const on=b.classList.toggle('active');
-        buttons.find(x=>x.dataset.state==='owned').classList.toggle('active',!on);
-        b.textContent=on?'♥ Auf Wunschliste':'Zur Wunschliste'; sticker.textContent=on?'Wunschliste':'Im Bestand';
-      }else if(b.dataset.state==='owned'){
-        b.classList.add('active'); const w=buttons.find(x=>x.dataset.state==='wish');w.classList.remove('active');w.textContent='Zur Wunschliste';sticker.textContent='Im Bestand';
-      }else{b.classList.toggle('active');b.textContent=b.classList.contains('active')?'✓ Gelesen':'Gelesen'}
-    }));
-  </script>
+  <script src="app.js" defer></script>
 </body>
 </html>
