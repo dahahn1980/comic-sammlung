@@ -1,10 +1,6 @@
 const state={comics:[],view:'dashboard',previousView:'collection',search:'',status:'all',publisher:'all',sort:'title'};
-const demoTitles=['Die verlorene Stadt','Orbit 7','Der letzte Leuchtturm','Morgenrot','Das mechanische Herz','Nordwärts','Die Chroniken von Argo','Jenseits der Linie'];
-const demoColors=[['#ee5e40','#572d87'],['#0b7891','#edc34d'],['#1c315c','#e87050'],['#991f45','#f0a05d'],['#305244','#b9cc65'],['#3549a2','#f56d87'],['#592c70','#2fb5a3'],['#1c1d24','#d19442']];
-const demos=demoTitles.map((title,i)=>({id:`demo-${i}`,title,subtitle:'Demo-Platzhalter',publisher:'Demo',year:2000+i,publicationDate:`${2000+i}-01-01`,status:'demo',read:false,favorite:false,isDemo:true,demoColors:demoColors[i],authors:['Beispieldatensatz'],genre:['Demo'],seriesId:i<3?'demo-series':null,volume:i<3?i+1:null,addedDate:`2026-07-${String(10-i).padStart(2,'0')}`}));
-
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
-const formatDate=v=>v?new Intl.DateTimeFormat('de-DE',{day:'2-digit',month:'long',year:'numeric'}).format(new Date(v)): '–';
+const formatDate=v=>v?(String(v).endsWith('-01-01')?String(v).slice(0,4):new Intl.DateTimeFormat('de-DE',{day:'2-digit',month:'long',year:'numeric'}).format(new Date(v))): '–';
 const esc=v=>String(v??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
 
 async function init(){
@@ -43,7 +39,7 @@ function recentCard(c){return `<button class="recent-card" data-open="${c.id}"><
 function populatePublishers(){const values=[...new Set(state.comics.map(c=>c.publisher))].sort();$('#publisherFilter').insertAdjacentHTML('beforeend',values.map(v=>`<option value="${esc(v)}">${esc(v)}</option>`).join(''))}
 
 function filteredComics(){
-  const q=state.search.trim().toLowerCase();let list=[...state.comics,...demos].filter(c=>{
+  const q=state.search.trim().toLowerCase();let list=[...state.comics].filter(c=>{
     const hay=[c.title,c.subtitle,c.publisher,c.isbn13,...(c.authors||[])].join(' ').toLowerCase();
     const status=state.status==='all'||(state.status==='owned'&&c.status==='owned')||(state.status==='unread'&&c.status==='owned'&&!c.read)||(state.status==='favorite'&&c.favorite);
     return (!q||hay.includes(q))&&status&&(state.publisher==='all'||c.publisher===state.publisher);
@@ -52,20 +48,22 @@ function filteredComics(){
 }
 
 function renderCollection(){
-  const list=filteredComics();$('#resultCount').textContent=`${list.filter(c=>!c.isDemo).length} echte Comics · ${list.filter(c=>c.isDemo).length} Demo-Platzhalter`;
+  const list=filteredComics();$('#resultCount').textContent=`${list.length} ${list.length===1?'Comic':'Comics'}`;
   $('#comicGrid').innerHTML=list.map(comicCard).join('');$('#emptyState').hidden=list.length!==0;
   const labels=[];if(state.search)labels.push(`Suche: „${esc(state.search)}“`);if(state.status!=='all')labels.push($('#statusFilter').selectedOptions[0].textContent);if(state.publisher!=='all')labels.push(state.publisher);$('#activeFilters').innerHTML=labels.length?`Aktiv: ${labels.join(' · ')}`:'Alle Comics werden angezeigt';
-  $$('#comicGrid [data-open]').forEach(b=>b.addEventListener('click',()=>{const id=b.dataset.open;if(id.startsWith('demo-'))return;b.blur();openDetail(id)}));
+  $$('#comicGrid [data-open]').forEach(b=>b.addEventListener('click',()=>{b.blur();openDetail(b.dataset.open)}));
 }
 
 function comicCard(c){
-  const visual=c.isDemo?`<div class="demo-cover" style="--demo-a:${c.demoColors[0]};--demo-b:${c.demoColors[1]}"><small>DEMO · ${c.year}</small><strong>${esc(c.title)}</strong></div>`:`<img src="${c.cover}" loading="lazy" alt="Cover von ${esc(c.title)}">`;
-  return `<button class="comic-card" data-open="${c.id}"><div class="cover-frame">${visual}${c.isDemo?'<span class="card-badge demo-label">Platzhalter</span>':c.read?'<span class="card-badge">Gelesen</span>':''}</div><h3>${esc(c.title)}</h3><p>${esc(c.publisher)} · ${c.year}${c.volume?` · Band ${c.volume}`:''}</p></button>`;
+  const visual=`<img src="${c.cover}" loading="lazy" alt="Cover von ${esc(c.title)}">`;
+  return `<button class="comic-card" data-open="${c.id}"><div class="cover-frame">${visual}${c.read?'<span class="card-badge">Gelesen</span>':''}</div><h3>${esc(c.title)}</h3><p>${esc(c.publisher)} · ${c.year}${c.volume?` · Band ${esc(c.volume)}`:''}</p></button>`;
 }
 
 function renderSeries(){
-  const groups=[{title:'Einzelbände',owned:state.comics.filter(c=>!c.seriesId).length,total:state.comics.filter(c=>!c.seriesId).length,copy:'Abgeschlossene Geschichten ohne übergeordnete Reihe.'},{title:'Demo-Reihe',owned:0,total:3,copy:'Beispiel für eine künftige Reihenansicht. Wird durch echte Reihen ersetzt.',demo:true},{title:'Noch nicht zugeordnet',owned:0,total:0,copy:'Neue Reihen erscheinen automatisch, sobald Comics eine Reihen-ID erhalten.'}];
-  $('#seriesGrid').innerHTML=groups.map(g=>`<article class="series-card"><div><p class="kicker">${g.demo?'Demo':'Sammlungsstruktur'}</p><h2>${g.title}</h2><p>${g.copy}</p></div><div><strong>${g.owned}${g.total?` von ${g.total}`:''} ${g.owned===1?'Comic':'Comics'}</strong><div class="progress"><span style="width:${g.total?g.owned/g.total*100:0}%"></span></div></div></article>`).join('');
+  const grouped=new Map();state.comics.filter(c=>c.seriesId).forEach(c=>{const g=grouped.get(c.seriesId)||{title:c.series||c.seriesId,comics:[]};g.comics.push(c);grouped.set(c.seriesId,g)});
+  const groups=[...grouped.values()].sort((a,b)=>a.title.localeCompare(b.title,'de'));
+  const standalone=state.comics.filter(c=>!c.seriesId).length;
+  $('#seriesGrid').innerHTML=groups.map(g=>`<article class="series-card"><div><p class="kicker">Reihe</p><h2>${esc(g.title)}</h2><p>${g.comics.slice().sort((a,b)=>String(a.volume||'').localeCompare(String(b.volume||''),'de',{numeric:true})).map(c=>c.volume?`Band ${esc(c.volume)}`:esc(c.title)).join(' · ')}</p></div><div><strong>${g.comics.length} ${g.comics.length===1?'Comic':'Comics'}</strong><div class="progress"><span style="width:100%"></span></div></div></article>`).join('')+`<article class="series-card"><div><p class="kicker">Sammlungsstruktur</p><h2>Einzelbände</h2><p>Comics ohne übergeordnete Reihe.</p></div><div><strong>${standalone} Comics</strong><div class="progress"><span style="width:100%"></span></div></div></article>`;
 }
 
 function renderWishlist(){
@@ -77,7 +75,7 @@ function openDetail(id){const c=state.comics.find(x=>x.id===id);if(!c)return;sta
 
 function rows(items){return items.map(([k,v])=>`<div class="data-row"><span>${k}</span><strong>${esc(v||'–')}</strong></div>`).join('')}
 function detailTemplate(c){
-  const creators=(c.authors||[]).join(' · ');const bibliographic=[['Verlag',c.publisher],['Erscheinungsdatum',formatDate(c.publicationDate)],['Auflage',c.edition],['Einband',c.binding],['Seiten',`${c.pages} Seiten`],['Sprache',c.language],['ISBN',c.isbn13],['Genre',(c.genre||[]).join(', ')]];
+  const creators=(c.authors||[]).join(' · ');const bibliographic=[['Reihe',c.series],['Band',c.volume],['Verlag',c.publisher],['Erscheinungsdatum',formatDate(c.publicationDate)],['Auflage',c.edition],['Einband',c.binding],['Seiten',c.pages?`${c.pages} Seiten`:'–'],['Sprache',c.language],['ISBN',c.isbn13],['Genre',(c.genre||[]).join(', ')]];
   const personal=[['Status',c.status==='owned'?'Im Bestand':'Wunschliste'],['Gelesen',c.read?'Ja':'Nein'],['Zustand',c.condition],['Regal / Karton',c.shelf],['Kaufpreis',c.purchasePrice],['Kaufdatum',c.purchaseDate],['Kaufort',c.purchasePlace],['Bewertung',c.rating?`${c.rating} / 5`:'–']];
   return `<article><div class="detail-hero"><div class="detail-visual"><img src="${c.cover}" alt="Cover von ${esc(c.title)}"></div><div class="detail-main"><p class="kicker">${esc((c.genre||['Comic']).join(' · '))}</p><h1>${esc(c.title)}</h1><p class="detail-byline">${esc(creators)}</p><div class="status-actions"><button class="active" data-detail-state="owned">✓ Im Bestand</button><button class="${c.read?'active':''}" data-detail-state="read">${c.read?'✓ Gelesen':'Ungelesen'}</button><button data-detail-state="wish">♡ Wunschliste</button><button class="${c.favorite?'active':''}" data-detail-state="favorite">★ Favorit</button></div></div></div><div class="detail-sections"><section class="info-section"><p class="kicker">Ausgabe</p><h2>Bibliografische Daten</h2><div class="data-list">${rows(bibliographic)}</div></section><section class="info-section private-block"><p class="kicker">Nur für dich</p><h2>Meine Sammlung</h2><div class="data-list">${rows(personal)}</div><p class="privacy-note">Diese Angaben werden im späteren geschützten Bereich verwaltet und nicht öffentlich ausgegeben.</p></section></div></article>`;
 }

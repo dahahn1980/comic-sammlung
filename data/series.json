@@ -1,8 +1,146 @@
 [
   {
-    "id": "standalone",
-    "title": "Einzelbände",
-    "type": "virtual",
-    "description": "Abgeschlossene Comics und Graphic Novels ohne übergeordnete Reihe."
+    "id": "7-detektive",
+    "title": "7 Detektive",
+    "comics": [
+      "9783962194819",
+      "9783962194826",
+      "9783962194833",
+      "9783962194840",
+      "9783962194857",
+      "9783962194864",
+      "9783962194949"
+    ]
+  },
+  {
+    "id": "arthus-trivium",
+    "title": "Arthus Trivium",
+    "comics": [
+      "9783958394247",
+      "9783958394254",
+      "9783958394261",
+      "9783962191696"
+    ]
+  },
+  {
+    "id": "auf-die-barrikaden",
+    "title": "Auf die Barrikaden!",
+    "comics": [
+      "9783958392793",
+      "9783958392809"
+    ]
+  },
+  {
+    "id": "azimut",
+    "title": "Azimut",
+    "comics": [
+      "9783962192006",
+      "9783962192013"
+    ]
+  },
+  {
+    "id": "das-paris-der-wunder",
+    "title": "Das Paris der Wunder",
+    "comics": [
+      "9783949987052",
+      "9783949987069"
+    ]
+  },
+  {
+    "id": "der-mann-der-keine-feuerwaffen-mochte",
+    "title": "Der Mann, der keine Feuerwaffen mochte",
+    "comics": [
+      "9783868695182"
+    ]
+  },
+  {
+    "id": "der-schreckliche-papst",
+    "title": "Der schreckliche Papst",
+    "comics": [
+      "9783962191689"
+    ]
+  },
+  {
+    "id": "der-wolf-im-slip",
+    "title": "Der Wolf im Slip",
+    "comics": [
+      "9783962190118"
+    ]
+  },
+  {
+    "id": "die-adoption",
+    "title": "Die Adoption",
+    "comics": [
+      "9783958395299",
+      "9783958395305",
+      "9783987213380"
+    ]
+  },
+  {
+    "id": "die-alten-knacker",
+    "title": "Die alten Knacker",
+    "comics": [
+      "9783958391505",
+      "9783962192167",
+      "9783962192174",
+      "9783987210822"
+    ]
+  },
+  {
+    "id": "die-geheimnisse-des-maison-fleury",
+    "title": "Die Geheimnisse des Maison Fleury",
+    "comics": [
+      "9783987212635",
+      "9783987212642",
+      "9783987212659"
+    ]
+  },
+  {
+    "id": "katanga",
+    "title": "Katanga",
+    "comics": [
+      "9783962191320",
+      "9783962191337"
+    ]
+  },
+  {
+    "id": "nautilus",
+    "title": "Nautilus",
+    "comics": [
+      "9783967923001"
+    ]
+  },
+  {
+    "id": "pik-as",
+    "title": "Pik As",
+    "comics": [
+      "9783868692167",
+      "9783868692174"
+    ]
+  },
+  {
+    "id": "rip",
+    "title": "RIP",
+    "comics": [
+      "9783967923469"
+    ]
+  },
+  {
+    "id": "schloss-der-tiere",
+    "title": "Schloss der Tiere",
+    "comics": [
+      "9783962191856",
+      "9783962191863",
+      "9783962191870"
+    ]
+  },
+  {
+    "id": "splitter-double",
+    "title": "Splitter double",
+    "comics": [
+      "9783958394537",
+      "9783962192983",
+      "9783958391970"
+    ]
   }
 ]
