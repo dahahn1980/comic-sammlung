@@ -1,94 +1,199 @@
-const state={comics:[],view:'dashboard',previousView:'collection',search:'',status:'all',publisher:'all',sort:'title'};
-const demoTitles=['Die verlorene Stadt','Orbit 7','Der letzte Leuchtturm','Morgenrot','Das mechanische Herz','Nordwärts','Die Chroniken von Argo','Jenseits der Linie'];
-const demoColors=[['#ee5e40','#572d87'],['#0b7891','#edc34d'],['#1c315c','#e87050'],['#991f45','#f0a05d'],['#305244','#b9cc65'],['#3549a2','#f56d87'],['#592c70','#2fb5a3'],['#1c1d24','#d19442']];
-const demos=demoTitles.map((title,i)=>({id:`demo-${i}`,title,subtitle:'Demo-Platzhalter',publisher:'Demo',year:2000+i,publicationDate:`${2000+i}-01-01`,status:'demo',read:false,favorite:false,isDemo:true,demoColors:demoColors[i],authors:['Beispieldatensatz'],genre:['Demo'],seriesId:i<3?'demo-series':null,volume:i<3?i+1:null,addedDate:`2026-07-${String(10-i).padStart(2,'0')}`}));
+const state = {
+  comics: [], series: [], view: "dashboard", query: "", seriesQuery: "",
+  status: "all", publisher: "all", seriesFilter: "all", year: "all",
+  sort: "title", wishlist: new Set(), lastView: "collection"
+};
 
-const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
-const formatDate=v=>v?new Intl.DateTimeFormat('de-DE',{day:'2-digit',month:'long',year:'numeric'}).format(new Date(v)): '–';
-const esc=v=>String(v??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+const $ = (id) => document.getElementById(id);
+const esc = (value="") => String(value).replace(/[&<>"']/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[ch]));
+const formatDate = value => value ? new Intl.DateTimeFormat("de-DE",{year:"numeric",month:"long",day:"numeric"}).format(new Date(value)) : "Nicht angegeben";
+const formatMoney = value => value == null ? "Nicht angegeben" : new Intl.NumberFormat("de-DE",{style:"currency",currency:"EUR"}).format(value);
+const yearOf = comic => comic.publicationDate ? String(comic.publicationDate).slice(0,4) : "";
+const volumeNumber = value => { const n = Number.parseInt(value,10); return Number.isFinite(n) ? n : null; };
+const byId = id => state.comics.find(comic => comic.id === id);
 
 async function init(){
-  const response=await fetch('data/comics.json');state.comics=await response.json();
-  state.comics=state.comics.map((c,i)=>({...c,year:Number(c.publicationDate?.slice(0,4)),addedDate:c.addedDate||`2026-07-${19-i}`,genre:c.genre||['Graphic Novel'],favorite:Boolean(c.favorite),read:Boolean(c.read)}));
-  bindNavigation();populatePublishers();renderDashboard();renderCollection();renderSeries();
+  try {
+    const [comicsResponse, seriesResponse] = await Promise.all([fetch("data/comics.json"),fetch("data/series.json")]);
+    if(!comicsResponse.ok || !seriesResponse.ok) throw new Error("Daten konnten nicht geladen werden");
+    state.comics = await comicsResponse.json();
+    state.series = await seriesResponse.json();
+    populateFilters();
+    bindEvents();
+    renderAll();
+  } catch(error) {
+    $("app").innerHTML = '<section class="load-error"><h1>Der Katalog konnte nicht geladen werden.</h1><p>Bitte die Seite neu laden.</p></section>';
+    console.error(error);
+  }
 }
 
-function bindNavigation(){
-  $$('[data-view-link]').forEach(b=>b.addEventListener('click',()=>showView(b.dataset.viewLink)));
-  $('#mobileMenu').addEventListener('click',()=>$('.main-nav').classList.toggle('open'));
-  $('#searchInput').addEventListener('input',e=>{state.search=e.target.value;renderCollection()});
-  $('#statusFilter').addEventListener('change',e=>{state.status=e.target.value;renderCollection()});
-  $('#publisherFilter').addEventListener('change',e=>{state.publisher=e.target.value;renderCollection()});
-  $('#sortSelect').addEventListener('change',e=>{state.sort=e.target.value;renderCollection()});
-  $('#backButton').addEventListener('click',()=>showView(state.previousView));
+function populateFilters(){
+  const publishers=[...new Set(state.comics.map(c=>c.publisher).filter(Boolean))].sort((a,b)=>a.localeCompare(b,"de"));
+  $("publisherFilter").insertAdjacentHTML("beforeend",publishers.map(v=>'<option value="'+esc(v)+'">'+esc(v)+'</option>').join(""));
+  $("seriesFilter").insertAdjacentHTML("beforeend",state.series.map(s=>'<option value="'+esc(s.id)+'">'+esc(s.title)+'</option>').join(""));
+  const years=[...new Set(state.comics.map(yearOf).filter(Boolean))].sort((a,b)=>b.localeCompare(a));
+  $("yearFilter").insertAdjacentHTML("beforeend",years.map(v=>'<option value="'+v+'">'+v+'</option>').join(""));
 }
 
-function showView(name){
-  if(name!=='detail')state.previousView=name;
-  state.view=name;$$('.view').forEach(v=>v.classList.toggle('active',v.id===`${name}View`));
-  $$('.main-nav button').forEach(b=>b.classList.toggle('active',b.dataset.viewLink===name));$('.main-nav').classList.remove('open');window.scrollTo({top:0,behavior:'smooth'});
-  if(name==='wishlist')renderWishlist();
+function bindEvents(){
+  document.addEventListener("click",event=>{
+    const nav=event.target.closest("[data-view-link]");
+    if(nav){ showView(nav.dataset.viewLink); return; }
+    const card=event.target.closest("[data-comic-id]");
+    if(card){ openDetail(card.dataset.comicId); return; }
+    const series=event.target.closest("[data-series-id]");
+    if(series){ openSeries(series.dataset.seriesId); return; }
+  });
+  $("searchInput").addEventListener("input",e=>{state.query=e.target.value;renderCollection();});
+  $("seriesSearchInput").addEventListener("input",e=>{state.seriesQuery=e.target.value;renderSeries();});
+  ["statusFilter","publisherFilter","seriesFilter","yearFilter","sortSelect"].forEach(id=>{
+    $(id).addEventListener("change",e=>{
+      const key={statusFilter:"status",publisherFilter:"publisher",seriesFilter:"seriesFilter",yearFilter:"year",sortSelect:"sort"}[id];
+      state[key]=e.target.value;renderCollection();
+    });
+  });
+  $("backButton").addEventListener("click",()=>showView(state.lastView));
+  $("mobileMenu").addEventListener("click",()=>document.querySelector(".main-nav").classList.toggle("open"));
+}
+
+function showView(view){
+  if(view!=="detail") state.lastView=view;
+  state.view=view;
+  document.querySelectorAll(".view").forEach(el=>el.classList.toggle("active",el.id===view+"View"));
+  document.querySelectorAll("[data-view-link]").forEach(el=>el.classList.toggle("active",el.dataset.viewLink===view));
+  document.querySelector(".main-nav").classList.remove("open");
+  if(view==="collection") renderCollection();
+  if(view==="series") renderSeries();
+  if(view==="wishlist") renderWishlist();
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+function renderAll(){
+  renderDashboard(); renderCollection(); renderSeries(); renderWishlist();
 }
 
 function renderDashboard(){
-  const owned=state.comics.filter(c=>c.status==='owned');const unread=owned.filter(c=>!c.read);const wished=state.comics.filter(c=>c.status==='wishlist');
-  $('#stats').innerHTML=[['Comics im Bestand',owned.length],['Reihen',new Set(owned.map(c=>c.seriesId).filter(Boolean)).size],['Ungelesen',unread.length],['Wunschliste',wished.length]].map(([label,value])=>`<div class="stat"><strong>${value}</strong><span>${label}</span></div>`).join('');
-  $('#wishCount').textContent=wished.length;
-  $('#recentGrid').innerHTML=owned.slice().sort((a,b)=>b.addedDate.localeCompare(a.addedDate)).slice(0,2).map(recentCard).join('');
-  $$('#recentGrid [data-open]').forEach(b=>b.addEventListener('click',()=>openDetail(b.dataset.open)));
+  const owned=state.comics.filter(c=>c.status==="owned").length;
+  const unread=state.comics.filter(c=>!c.read).length;
+  const standalone=state.comics.filter(c=>!c.seriesId).length;
+  $("stats").innerHTML=[
+    [state.comics.length,"Comics gesamt"],[state.series.length,"Reihen"],[unread,"Noch ungelesen"],[standalone,"Einzelbände"]
+  ].map(([number,label])=>'<article class="stat"><strong>'+number+'</strong><span>'+label+'</span></article>').join("");
+  const recent=[...state.comics].sort((a,b)=>(b.addedDate||"").localeCompare(a.addedDate||"")).slice(0,4);
+  $("recentGrid").innerHTML=recent.map(recentCard).join("");
+  if(recent[0]) $("heroCoverA").src=recent[0].cover;
+  if(recent[1]) $("heroCoverB").src=recent[1].cover;
+  $("wishCount").textContent=state.wishlist.size;
 }
 
-function recentCard(c){return `<button class="recent-card" data-open="${c.id}"><img src="${c.cover}" alt="Cover von ${esc(c.title)}"><div class="recent-info"><small>${c.publisher} · ${c.year}</small><h3>${esc(c.title)}</h3><p>${esc((c.authors||[]).join(' · '))}</p></div></button>`}
-
-function populatePublishers(){const values=[...new Set(state.comics.map(c=>c.publisher))].sort();$('#publisherFilter').insertAdjacentHTML('beforeend',values.map(v=>`<option value="${esc(v)}">${esc(v)}</option>`).join(''))}
+function recentCard(c){
+  return '<article class="recent-card" data-comic-id="'+esc(c.id)+'" tabindex="0"><img src="'+esc(c.cover)+'" alt="Cover von '+esc(c.title)+'" loading="lazy"><div class="recent-info"><p class="kicker">'+esc(c.publisher||"")+'</p><h3>'+esc(c.title)+'</h3><p>'+esc(c.authors.join(", "))+'</p></div></article>';
+}
 
 function filteredComics(){
-  const q=state.search.trim().toLowerCase();let list=[...state.comics,...demos].filter(c=>{
-    const hay=[c.title,c.subtitle,c.publisher,c.isbn13,...(c.authors||[])].join(' ').toLowerCase();
-    const status=state.status==='all'||(state.status==='owned'&&c.status==='owned')||(state.status==='unread'&&c.status==='owned'&&!c.read)||(state.status==='favorite'&&c.favorite);
-    return (!q||hay.includes(q))&&status&&(state.publisher==='all'||c.publisher===state.publisher);
+  const q=state.query.trim().toLocaleLowerCase("de");
+  return state.comics.filter(c=>{
+    const hay=[c.title,c.subtitle,c.publisher,c.isbn13,c.series,...(c.authors||[])].filter(Boolean).join(" ").toLocaleLowerCase("de");
+    const status=state.status==="all" || (state.status==="owned"&&c.status==="owned") || (state.status==="unread"&&!c.read) || (state.status==="favorite"&&c.favorite);
+    const series=state.seriesFilter==="all" || (state.seriesFilter==="standalone"&&!c.seriesId) || c.seriesId===state.seriesFilter;
+    return (!q||hay.includes(q)) && status && (state.publisher==="all"||c.publisher===state.publisher) && series && (state.year==="all"||yearOf(c)===state.year);
+  }).sort((a,b)=>{
+    if(state.sort==="year-desc") return yearOf(b).localeCompare(yearOf(a)) || a.title.localeCompare(b.title,"de");
+    if(state.sort==="added-desc") return (b.addedDate||"").localeCompare(a.addedDate||"") || a.title.localeCompare(b.title,"de");
+    return a.title.localeCompare(b.title,"de");
   });
-  list.sort((a,b)=>state.sort==='year-desc'?b.year-a.year:state.sort==='added-desc'?b.addedDate.localeCompare(a.addedDate):a.title.localeCompare(b.title,'de'));return list;
 }
 
 function renderCollection(){
-  const list=filteredComics();$('#resultCount').textContent=`${list.filter(c=>!c.isDemo).length} echte Comics · ${list.filter(c=>c.isDemo).length} Demo-Platzhalter`;
-  $('#comicGrid').innerHTML=list.map(comicCard).join('');$('#emptyState').hidden=list.length!==0;
-  const labels=[];if(state.search)labels.push(`Suche: „${esc(state.search)}“`);if(state.status!=='all')labels.push($('#statusFilter').selectedOptions[0].textContent);if(state.publisher!=='all')labels.push(state.publisher);$('#activeFilters').innerHTML=labels.length?`Aktiv: ${labels.join(' · ')}`:'Alle Comics werden angezeigt';
-  $$('#comicGrid [data-open]').forEach(b=>b.addEventListener('click',()=>{const id=b.dataset.open;if(id.startsWith('demo-'))return;b.blur();openDetail(id)}));
+  const items=filteredComics();
+  $("resultCount").textContent=items.length+" von "+state.comics.length+" Comics";
+  $("comicGrid").innerHTML=items.map(comicCard).join("");
+  $("emptyState").hidden=items.length>0;
+  const chips=[];
+  if(state.query) chips.push("Suche: "+state.query);
+  if(state.publisher!=="all") chips.push(state.publisher);
+  if(state.seriesFilter!=="all") chips.push(state.seriesFilter==="standalone"?"Einzelbände":state.series.find(s=>s.id===state.seriesFilter)?.title||state.seriesFilter);
+  if(state.year!=="all") chips.push(state.year);
+  if(state.status!=="all") chips.push({owned:"Im Bestand",unread:"Ungelesen",favorite:"Favoriten"}[state.status]);
+  $("activeFilters").innerHTML=chips.map(chip=>'<span>'+esc(chip)+'</span>').join("");
 }
 
 function comicCard(c){
-  const visual=c.isDemo?`<div class="demo-cover" style="--demo-a:${c.demoColors[0]};--demo-b:${c.demoColors[1]}"><small>DEMO · ${c.year}</small><strong>${esc(c.title)}</strong></div>`:`<img src="${c.cover}" loading="lazy" alt="Cover von ${esc(c.title)}">`;
-  return `<button class="comic-card" data-open="${c.id}"><div class="cover-frame">${visual}${c.isDemo?'<span class="card-badge demo-label">Platzhalter</span>':c.read?'<span class="card-badge">Gelesen</span>':''}</div><h3>${esc(c.title)}</h3><p>${esc(c.publisher)} · ${c.year}${c.volume?` · Band ${c.volume}`:''}</p></button>`;
+  const line=c.series ? esc(c.series)+(c.volume?" · Band "+esc(c.volume):"") : [c.publisher,yearOf(c)].filter(Boolean).map(esc).join(" · ");
+  return '<article class="comic-card" data-comic-id="'+esc(c.id)+'" tabindex="0"><div class="cover-frame"><img src="'+esc(c.cover)+'" alt="Cover von '+esc(c.title)+'" loading="lazy"><span class="status-dot '+(c.read?"read":"unread")+'" title="'+(c.read?"Gelesen":"Ungelesen")+'"></span></div><p class="card-meta">'+line+'</p><h3>'+esc(c.title)+'</h3><p class="card-author">'+esc((c.authors||[]).join(", "))+'</p></article>';
+}
+
+function seriesStats(items){
+  const nums=items.map(c=>volumeNumber(c.volume)).filter(n=>n!==null);
+  if(!nums.length) return {percent:100,label:items.length+" Ausgaben",gap:"Keine Bandnummern hinterlegt"};
+  const min=Math.min(...nums),max=Math.max(...nums),unique=[...new Set(nums)].sort((a,b)=>a-b);
+  const missing=[]; for(let n=min;n<=max;n++) if(!unique.includes(n)) missing.push(n);
+  return {percent:Math.round(unique.length/(max-min+1)*100),label:"Bände "+unique.join(", "),gap:missing.length?"Fehlt: Band "+missing.join(", "):"Innerhalb der erfassten Spanne lückenfrei"};
 }
 
 function renderSeries(){
-  const groups=[{title:'Einzelbände',owned:state.comics.filter(c=>!c.seriesId).length,total:state.comics.filter(c=>!c.seriesId).length,copy:'Abgeschlossene Geschichten ohne übergeordnete Reihe.'},{title:'Demo-Reihe',owned:0,total:3,copy:'Beispiel für eine künftige Reihenansicht. Wird durch echte Reihen ersetzt.',demo:true},{title:'Noch nicht zugeordnet',owned:0,total:0,copy:'Neue Reihen erscheinen automatisch, sobald Comics eine Reihen-ID erhalten.'}];
-  $('#seriesGrid').innerHTML=groups.map(g=>`<article class="series-card"><div><p class="kicker">${g.demo?'Demo':'Sammlungsstruktur'}</p><h2>${g.title}</h2><p>${g.copy}</p></div><div><strong>${g.owned}${g.total?` von ${g.total}`:''} ${g.owned===1?'Comic':'Comics'}</strong><div class="progress"><span style="width:${g.total?g.owned/g.total*100:0}%"></span></div></div></article>`).join('');
+  const q=state.seriesQuery.trim().toLocaleLowerCase("de");
+  const groups=state.series.map(series=>{
+    const items=series.comics.map(byId).filter(Boolean);
+    return {...series,items};
+  }).filter(s=>!q||s.title.toLocaleLowerCase("de").includes(q));
+  const standalone=state.comics.filter(c=>!c.seriesId);
+  $("seriesResultCount").textContent=groups.length+" Reihen · "+standalone.length+" Einzelbände";
+  $("seriesGrid").innerHTML=groups.map(seriesCard).join("")+(q?"":standaloneCard(standalone));
 }
 
-function renderWishlist(){
-  const wished=state.comics.filter(c=>c.status==='wishlist');if(!wished.length){$('#wishlistContent').innerHTML='<div class="empty-icon">♡</div><h2>Die Wunschliste ist noch leer.</h2><p>Auf der Detailseite kannst du einen Comic vom Bestand auf die Wunschliste setzen.</p><button class="primary-action" data-go-collection>Sammlung öffnen <span>→</span></button>';$('#wishlistContent [data-go-collection]').addEventListener('click',()=>showView('collection'));return}
-  $('#wishlistContent').innerHTML=`<div class="comic-grid">${wished.map(comicCard).join('')}</div>`;
+function coverStack(items){
+  return '<div class="series-covers">'+items.slice(0,3).map(c=>'<img src="'+esc(c.cover)+'" alt="" loading="lazy">').join("")+'</div>';
 }
 
-function openDetail(id){const c=state.comics.find(x=>x.id===id);if(!c)return;state.previousView=state.view==='dashboard'?'dashboard':'collection';$('#detailContent').innerHTML=detailTemplate(c);showView('detail');bindDetail(c)}
-
-function rows(items){return items.map(([k,v])=>`<div class="data-row"><span>${k}</span><strong>${esc(v||'–')}</strong></div>`).join('')}
-function detailTemplate(c){
-  const creators=(c.authors||[]).join(' · ');const bibliographic=[['Verlag',c.publisher],['Erscheinungsdatum',formatDate(c.publicationDate)],['Auflage',c.edition],['Einband',c.binding],['Seiten',`${c.pages} Seiten`],['Sprache',c.language],['ISBN',c.isbn13],['Genre',(c.genre||[]).join(', ')]];
-  const personal=[['Status',c.status==='owned'?'Im Bestand':'Wunschliste'],['Gelesen',c.read?'Ja':'Nein'],['Zustand',c.condition],['Regal / Karton',c.shelf],['Kaufpreis',c.purchasePrice],['Kaufdatum',c.purchaseDate],['Kaufort',c.purchasePlace],['Bewertung',c.rating?`${c.rating} / 5`:'–']];
-  return `<article><div class="detail-hero"><div class="detail-visual"><img src="${c.cover}" alt="Cover von ${esc(c.title)}"></div><div class="detail-main"><p class="kicker">${esc((c.genre||['Comic']).join(' · '))}</p><h1>${esc(c.title)}</h1><p class="detail-byline">${esc(creators)}</p><div class="status-actions"><button class="active" data-detail-state="owned">✓ Im Bestand</button><button class="${c.read?'active':''}" data-detail-state="read">${c.read?'✓ Gelesen':'Ungelesen'}</button><button data-detail-state="wish">♡ Wunschliste</button><button class="${c.favorite?'active':''}" data-detail-state="favorite">★ Favorit</button></div></div></div><div class="detail-sections"><section class="info-section"><p class="kicker">Ausgabe</p><h2>Bibliografische Daten</h2><div class="data-list">${rows(bibliographic)}</div></section><section class="info-section private-block"><p class="kicker">Nur für dich</p><h2>Meine Sammlung</h2><div class="data-list">${rows(personal)}</div><p class="privacy-note">Diese Angaben werden im späteren geschützten Bereich verwaltet und nicht öffentlich ausgegeben.</p></section></div></article>`;
+function seriesCard(s){
+  const stats=seriesStats(s.items);
+  return '<button class="series-card" data-series-id="'+esc(s.id)+'">'+coverStack(s.items)+'<div class="series-card-body"><p class="kicker">'+s.items.length+' Ausgaben</p><h2>'+esc(s.title)+'</h2><p>'+esc(stats.label)+'</p><div class="progress" aria-label="'+stats.percent+' Prozent"><span style="width:'+stats.percent+'%"></span></div><p class="series-gap">'+esc(stats.gap)+'</p><strong>Reihe öffnen →</strong></div></button>';
 }
 
-function bindDetail(c){
-  $$('[data-detail-state]').forEach(b=>b.addEventListener('click',()=>{
-    if(b.dataset.detailState==='read'){c.read=!c.read;b.classList.toggle('active',c.read);b.textContent=c.read?'✓ Gelesen':'Ungelesen'}
-    if(b.dataset.detailState==='favorite'){c.favorite=!c.favorite;b.classList.toggle('active',c.favorite)}
-    if(b.dataset.detailState==='wish'){c.status=c.status==='wishlist'?'owned':'wishlist';b.classList.toggle('active',c.status==='wishlist');$$('[data-detail-state="owned"]')[0].classList.toggle('active',c.status==='owned')}
-    renderDashboard();renderCollection();
+function standaloneCard(items){
+  return '<button class="series-card standalone-card" data-series-id="standalone">'+coverStack(items)+'<div class="series-card-body"><p class="kicker">'+items.length+' Comics</p><h2>Einzelbände</h2><p>Abgeschlossene Geschichten und noch nicht zugeordnete Ausgaben.</p><strong>Einzelbände öffnen →</strong></div></button>';
+}
+
+function openSeries(id){
+  state.seriesFilter=id;
+  $("seriesFilter").value=id;
+  showView("collection");
+}
+
+function openDetail(id){
+  const c=byId(id); if(!c) return;
+  state.lastView=state.view==="detail"?"collection":state.view;
+  renderDetail(c); showView("detail");
+}
+
+function dataRow(label,value){
+  return '<div class="data-row"><span>'+esc(label)+'</span><strong>'+esc(value==null||value===""?"Nicht angegeben":value)+'</strong></div>';
+}
+
+function renderDetail(c){
+  const seriesLabel=c.series ? c.series+(c.volume?" · Band "+c.volume:"") : "Einzelband";
+  $("detailContent").innerHTML='<div class="detail-hero"><div class="detail-visual"><img src="'+esc(c.cover)+'" alt="Cover von '+esc(c.title)+'"></div><div class="detail-main"><p class="kicker">'+esc(seriesLabel)+'</p><h1>'+esc(c.title)+'</h1><p class="detail-byline">'+esc((c.authors||[]).join(" · "))+'</p><p>'+esc(c.subtitle||"")+'</p><div class="status-actions"><button class="'+(c.read?"active":"")+'" data-action="read">✓ Gelesen</button><button class="'+(c.favorite?"active":"")+'" data-action="favorite">★ Favorit</button><button class="'+(state.wishlist.has(c.id)?"active":"")+'" data-action="wishlist">♡ Wunschliste</button></div></div></div><div class="detail-sections"><section class="info-section"><h2>Bibliografische Daten</h2><div class="data-list">'+
+  dataRow("Reihe",c.series||"Einzelband")+dataRow("Band",c.volume)+dataRow("Verlag",c.publisher)+dataRow("Erscheinungsdatum",formatDate(c.publicationDate))+dataRow("Auflage",c.edition)+dataRow("Einband",c.binding)+dataRow("Seiten",c.pages)+dataRow("Sprache",c.language)+dataRow("ISBN",c.isbn13||"Ohne ISBN")+dataRow("Genre",(c.genre||[]).join(", "))+dataRow("Datenquelle",c.metadataSource)+
+  '</div></section><section class="private-block"><h2>Meine Sammlung</h2><div class="data-list">'+dataRow("Status",c.status==="owned"?"Im Bestand":c.status)+dataRow("Zustand",c.condition)+dataRow("Standort",c.shelf)+dataRow("Kaufpreis",formatMoney(c.purchasePrice))+dataRow("Kaufdatum",formatDate(c.purchaseDate))+dataRow("Kaufort",c.purchasePlace)+dataRow("Bewertung",c.rating?c.rating+" / 5":"Noch nicht bewertet")+'</div><p class="privacy-note">Diese persönlichen Angaben bleiben Bestandteil deines privaten Katalogs.</p></section></div>';
+  document.querySelectorAll("[data-action]").forEach(button=>button.addEventListener("click",()=>{
+    const action=button.dataset.action;
+    if(action==="read") c.read=!c.read;
+    if(action==="favorite") c.favorite=!c.favorite;
+    if(action==="wishlist"){state.wishlist.has(c.id)?state.wishlist.delete(c.id):state.wishlist.add(c.id);}
+    renderDetail(c);renderDashboard();renderCollection();renderWishlist();
   }));
 }
 
-init().catch(error=>{$('#app').innerHTML=`<div class="empty-state"><h2>Der Katalog konnte nicht geladen werden.</h2><p>${esc(error.message)}</p></div>`;console.error(error)});
+function renderWishlist(){
+  const items=state.comics.filter(c=>state.wishlist.has(c.id));
+  if(!items.length){
+    $("wishlistContent").className="empty-wishlist";
+    $("wishlistContent").innerHTML='<div class="empty-icon">♡</div><h2>Die Wunschliste ist noch leer.</h2><p>Auf der Detailseite kannst du einen Comic vormerken.</p><button class="primary-action" data-view-link="collection">Sammlung öffnen <span>→</span></button>';
+  } else {
+    $("wishlistContent").className="comic-grid wishlist-grid";
+    $("wishlistContent").innerHTML=items.map(comicCard).join("");
+  }
+}
+
+init();
