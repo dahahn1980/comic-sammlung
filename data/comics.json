@@ -1,0 +1,20 @@
+[
+  {
+    "id": "9783987214608",
+    "isbn13": "978-3-98721-460-8",
+    "title": "Peter Pan in Kensington Gardens",
+    "subtitle": "Graphic Novel",
+    "authors": ["José Luis Munuera", "James Matthew Barrie"],
+    "translator": "Hanna Reininger",
+    "publisher": "Splitter",
+    "publicationDate": "2024-10-24",
+    "edition": "1. Auflage",
+    "binding": "Hardcover",
+    "pages": 96,
+    "language": "Deutsch",
+    "priceEur": 19.8,
+    "status": "owned",
+    "read": false,
+    "cover": "assets/peter-pan-cover.jpg"
+  }
+]
