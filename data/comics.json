@@ -16,5 +16,22 @@
     "status": "owned",
     "read": false,
     "cover": "assets/peter-pan-cover.jpg"
+  },
+  {
+    "id": "9783958399037",
+    "isbn13": "978-3-95839-903-7",
+    "title": "Pinocchio",
+    "subtitle": "Abgeschlossener Einzelband",
+    "authors": ["Carlo Collodi", "David Chauvel", "Tim McBurnie"],
+    "publisher": "Splitter",
+    "publicationDate": "2015-05-25",
+    "edition": "1. Auflage",
+    "binding": "Hardcover",
+    "pages": 80,
+    "language": "Deutsch",
+    "priceEur": 15.95,
+    "status": "owned",
+    "read": false,
+    "cover": "assets/pinocchio-cover.jpg"
   }
 ]
