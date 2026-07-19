@@ -60,6 +60,8 @@
     "id": "azimut",
     "title": "Azimut",
     "comics": [
+      "9783868696332",
+      "9783868696349",
       "9783962192006",
       "9783962192013"
     ]
@@ -84,6 +86,8 @@
     "id": "blacksad",
     "title": "Blacksad",
     "comics": [
+      "9783551747617",
+      "9783551747624",
       "9783551747631",
       "9783551747648",
       "9783551747655",
@@ -108,6 +112,32 @@
     ]
   },
   {
+    "id": "das-schmetterlings-netzwerk",
+    "title": "Das Schmetterlings-Netzwerk",
+    "comics": [
+      "9783868692860",
+      "9783868692877",
+      "9783868692884"
+    ]
+  },
+  {
+    "id": "der-araber-von-morgen",
+    "title": "Der Araber von morgen",
+    "comics": [
+      "9783813506662",
+      "9783813507249",
+      "9783813507669"
+    ]
+  },
+  {
+    "id": "der-gloeckner-von-notre-dame",
+    "title": "Der Glöckner von Notre Dame",
+    "comics": [
+      "9783868695700",
+      "9783868695717"
+    ]
+  },
+  {
     "id": "der-killer",
     "title": "Der Killer",
     "comics": [
@@ -128,6 +158,9 @@
     "id": "der-mann-der-keine-feuerwaffen-mochte",
     "title": "Der Mann, der keine Feuerwaffen mochte",
     "comics": [
+      "9783868694864",
+      "9783868694871",
+      "9783868694888",
       "9783868695182"
     ]
   },
@@ -135,6 +168,9 @@
     "id": "der-schreckliche-papst",
     "title": "Der schreckliche Papst",
     "comics": [
+      "9783868691610",
+      "9783868691627",
+      "9783868694611",
       "9783962191689"
     ]
   },
@@ -166,6 +202,9 @@
     "id": "die-alten-knacker",
     "title": "Die alten Knacker",
     "comics": [
+      "9783958391475",
+      "9783958391482",
+      "9783958391499",
       "9783958391505",
       "9783962192167",
       "9783962192174",
@@ -214,6 +253,15 @@
     ]
   },
   {
+    "id": "ich-rene-tardi-stalag-iib",
+    "title": "Ich, René Tardi, Kriegsgefangener im Stalag II B",
+    "comics": [
+      "9783037311127",
+      "9783037311363",
+      "9783037311899"
+    ]
+  },
+  {
     "id": "kaiserin-charlotte",
     "title": "Kaiserin Charlotte",
     "comics": [
@@ -227,6 +275,15 @@
     "comics": [
       "9783962191320",
       "9783962191337"
+    ]
+  },
+  {
+    "id": "ladies-with-guns",
+    "title": "Ladies with Guns",
+    "comics": [
+      "9783967923926",
+      "9783967923933",
+      "9783967923940"
     ]
   },
   {
@@ -255,6 +312,9 @@
     "id": "pik-as",
     "title": "Pik As",
     "comics": [
+      "9783868692129",
+      "9783868692136",
+      "9783868692143",
       "9783868692167",
       "9783868692174"
     ]
@@ -265,6 +325,16 @@
     "comics": [
       "9783967923780",
       "9783967923797"
+    ]
+  },
+  {
+    "id": "ring-circus",
+    "title": "Ring Circus",
+    "comics": [
+      "9783899080940",
+      "9783899081367",
+      "9783899081374",
+      "9783899082340"
     ]
   },
   {
@@ -292,17 +362,11 @@
     ]
   },
   {
-    "id": "spillter-double",
-    "title": "Spillter double",
-    "comics": [
-      "9783962195038"
-    ]
-  },
-  {
     "id": "splitter-double",
     "title": "Splitter double",
     "comics": [
       "9783958394537",
+      "9783962195038",
       "9783962192983",
       "9783958391970"
     ]
@@ -326,6 +390,17 @@
     "title": "Vom Winde verweht",
     "comics": [
       "9783987212673"
+    ]
+  },
+  {
+    "id": "wundervolle-sommer",
+    "title": "Wundervolle Sommer",
+    "comics": [
+      "9783899086331",
+      "9783899086355",
+      "9783899087109",
+      "9783899087123",
+      "9783899087147"
     ]
   }
 ]
