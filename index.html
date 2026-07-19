@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Daniels Comicarchiv – Prototyp</title>
+  <style>
+    :root{--ink:#171714;--paper:#f2ecdf;--acid:#d7ff3f;--blue:#3569ff;--muted:#786f64;--line:#cdc3b3}
+    *{box-sizing:border-box} body{margin:0;background:var(--ink);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif}
+    button,input{font:inherit}.shell{min-height:100vh;background:var(--paper);max-width:1180px;margin:auto;box-shadow:0 0 80px #0008}
+    header{display:flex;align-items:center;justify-content:space-between;padding:22px 5vw;border-bottom:1px solid var(--line);gap:20px}
+    .brand{font-weight:900;letter-spacing:-.04em;font-size:clamp(21px,3vw,34px)}.brand i{font-style:normal;color:var(--blue)}
+    .count{font-size:12px;text-transform:uppercase;letter-spacing:.13em;color:var(--muted)}
+    main{display:grid;grid-template-columns:minmax(260px,42%) 1fr;min-height:calc(100vh - 84px)}
+    .visual{position:relative;padding:7vw 5vw;background:#d9d0c2;display:grid;place-items:center;overflow:hidden}
+    .visual:before{content:"01";position:absolute;right:-12px;top:-44px;font-weight:950;font-size:180px;color:#c8bdad;line-height:1}
+    .cover-wrap{position:relative;width:min(100%,380px);z-index:1;transform:rotate(-1.4deg);transition:.35s ease}
+    .cover-wrap:hover{transform:rotate(0) translateY(-7px)}
+    .cover{display:block;width:100%;aspect-ratio:23/32;object-fit:cover;background:#202a39;box-shadow:20px 26px 0 #171714,0 32px 60px #3a302a66;border-radius:2px}
+    .sticker{position:absolute;right:-28px;bottom:30px;background:var(--acid);padding:12px 14px;font-weight:900;text-transform:uppercase;font-size:12px;letter-spacing:.08em;transform:rotate(4deg);box-shadow:5px 5px 0 var(--ink)}
+    .details{padding:clamp(34px,6vw,78px);display:flex;flex-direction:column;justify-content:center}
+    .eyebrow{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:18px}
+    h1{font-size:clamp(40px,6vw,78px);letter-spacing:-.065em;line-height:.88;margin:0 0 26px;max-width:700px}
+    .byline{font-family:Georgia,serif;font-style:italic;font-size:20px;margin:0 0 38px;color:#4e4942}
+    .facts{display:grid;grid-template-columns:repeat(2,minmax(120px,1fr));border-top:1px solid var(--line);margin-bottom:34px}
+    .fact{padding:15px 8px 15px 0;border-bottom:1px solid var(--line)}.fact small{display:block;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:4px}.fact strong{font-size:14px}
+    .actions{display:flex;flex-wrap:wrap;gap:10px}.actions button{border:1px solid var(--ink);background:transparent;padding:13px 16px;border-radius:100px;font-weight:800;cursor:pointer;transition:.2s}
+    .actions button.active{background:var(--ink);color:var(--paper)}.actions button:hover{transform:translateY(-2px)}
+    .note{margin-top:28px;color:var(--muted);font-size:12px;line-height:1.5;max-width:530px}
+    @media(max-width:720px){header{padding:18px 22px}.count{display:none}main{grid-template-columns:1fr}.visual{min-height:55vh;padding:54px}.cover-wrap{width:min(72vw,310px)}.details{padding:42px 24px 56px}h1{font-size:48px}.facts{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header><div class="brand">DANIELS <i>COMICARCHIV</i></div><div class="count">Prototyp · 1 von ca. 300 Comics</div></header>
+    <main>
+      <section class="visual">
+        <div class="cover-wrap">
+          <img class="cover" src="assets/peter-pan-cover.jpg" alt="Cover von Peter Pan in Kensington Gardens">
+          <div class="sticker" id="sticker">Im Bestand</div>
+        </div>
+      </section>
+      <section class="details">
+        <div class="eyebrow">Graphic Novel · Fantasy · Literaturadaption</div>
+        <h1>Peter Pan in Kensington Gardens</h1>
+        <p class="byline">José Luis Munuera · nach J. M. Barrie</p>
+        <div class="facts">
+          <div class="fact"><small>Verlag</small><strong>Splitter</strong></div>
+          <div class="fact"><small>Erschienen</small><strong>24. Oktober 2024</strong></div>
+          <div class="fact"><small>Ausgabe</small><strong>1. Auflage · Hardcover</strong></div>
+          <div class="fact"><small>Umfang</small><strong>96 Seiten · farbig</strong></div>
+          <div class="fact"><small>ISBN</small><strong>978-3-98721-460-8</strong></div>
+          <div class="fact"><small>Listenpreis</small><strong>19,80 €</strong></div>
+        </div>
+        <div class="actions">
+          <button class="active" data-state="owned">✓ Im Bestand</button>
+          <button data-state="read">Gelesen</button>
+          <button data-state="wish">Zur Wunschliste</button>
+        </div>
+        <p class="note">Testansicht: Die Buttons funktionieren bereits. In der späteren Version kommen Coverwand, Suche, Reihenansicht, eigene Bewertung, Regalstandort und eine einfache Erfassung per ISBN-Foto hinzu.</p>
+      </section>
+    </main>
+  </div>
+  <script>
+    const buttons=[...document.querySelectorAll('button[data-state]')], sticker=document.querySelector('#sticker');
+    buttons.forEach(b=>b.addEventListener('click',()=>{
+      if(b.dataset.state==='wish'){
+        const on=b.classList.toggle('active');
+        buttons.find(x=>x.dataset.state==='owned').classList.toggle('active',!on);
+        b.textContent=on?'♥ Auf Wunschliste':'Zur Wunschliste'; sticker.textContent=on?'Wunschliste':'Im Bestand';
+      }else if(b.dataset.state==='owned'){
+        b.classList.add('active'); const w=buttons.find(x=>x.dataset.state==='wish');w.classList.remove('active');w.textContent='Zur Wunschliste';sticker.textContent='Im Bestand';
+      }else{b.classList.toggle('active');b.textContent=b.classList.contains('active')?'✓ Gelesen':'Gelesen'}
+    }));
+  </script>
+</body>
+</html>
