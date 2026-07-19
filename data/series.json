@@ -1,5 +1,13 @@
 [
   {
+    "id": "120-rue-de-la-gare",
+    "title": "120, Rue de la Gare",
+    "comics": [
+      "9783907010341",
+      "9783907010396"
+    ]
+  },
+  {
     "id": "7-detektive",
     "title": "7 Detektive",
     "comics": [
@@ -57,10 +65,29 @@
     ]
   },
   {
+    "id": "batman-der-dunkle-prinz",
+    "title": "Batman: Der Dunkle Prinz",
+    "comics": [
+      "9783741607332",
+      "batman-der-dunkle-prinz-1-variant",
+      "9783741607349"
+    ]
+  },
+  {
     "id": "bitter-root",
     "title": "Bitter Root",
     "comics": [
       "9783962194734"
+    ]
+  },
+  {
+    "id": "blacksad",
+    "title": "Blacksad",
+    "comics": [
+      "9783551747631",
+      "9783551747648",
+      "9783551747655",
+      "9783551747662"
     ]
   },
   {
@@ -78,6 +105,15 @@
     "comics": [
       "9783949987052",
       "9783949987069"
+    ]
+  },
+  {
+    "id": "der-killer",
+    "title": "Der Killer",
+    "comics": [
+      "9783936068245",
+      "9783770408221",
+      "9783770408245"
     ]
   },
   {
@@ -100,6 +136,14 @@
     "title": "Der schreckliche Papst",
     "comics": [
       "9783962191689"
+    ]
+  },
+  {
+    "id": "der-tag-x",
+    "title": "Der Tag X",
+    "comics": [
+      "9783957984500",
+      "9783957984548"
     ]
   },
   {
@@ -170,11 +214,26 @@
     ]
   },
   {
+    "id": "kaiserin-charlotte",
+    "title": "Kaiserin Charlotte",
+    "comics": [
+      "9783551724724",
+      "9783551726971"
+    ]
+  },
+  {
     "id": "katanga",
     "title": "Katanga",
     "comics": [
       "9783962191320",
       "9783962191337"
+    ]
+  },
+  {
+    "id": "merci",
+    "title": "Merci",
+    "comics": [
+      "9783741602498"
     ]
   },
   {
