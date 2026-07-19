@@ -126,7 +126,7 @@ function comicCard(c){
 function seriesStats(items){
   const nums=items.map(c=>volumeNumber(c.volume)).filter(n=>n!==null);
   if(!nums.length) return {percent:100,label:items.length+" Ausgaben",gap:"Keine Bandnummern hinterlegt"};
-  const min=Math.min(...nums),max=Math.max(...nums),unique=[...new Set(nums)].sort((a,b)=>a-b);
+  const min=1,max=Math.max(...nums),unique=[...new Set(nums)].sort((a,b)=>a-b);
   const missing=[]; for(let n=min;n<=max;n++) if(!unique.includes(n)) missing.push(n);
   return {percent:Math.round(unique.length/(max-min+1)*100),label:"Bände "+unique.join(", "),gap:missing.length?"Fehlt: Band "+missing.join(", "):"Innerhalb der erfassten Spanne lückenfrei"};
 }
