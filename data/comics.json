@@ -15,6 +15,17 @@
     "priceEur": 19.8,
     "status": "owned",
     "read": false,
+    "favorite": false,
+    "genre": ["Graphic Novel", "Fantasy", "Literaturadaption"],
+    "condition": "Noch nicht bewertet",
+    "shelf": null,
+    "purchasePrice": null,
+    "purchaseDate": null,
+    "purchasePlace": null,
+    "rating": null,
+    "seriesId": null,
+    "volume": null,
+    "addedDate": "2026-07-19",
     "cover": "assets/peter-pan-cover.jpg"
   },
   {
@@ -32,6 +43,17 @@
     "priceEur": 15.95,
     "status": "owned",
     "read": false,
+    "favorite": false,
+    "genre": ["Comic", "Literaturadaption", "Abenteuer"],
+    "condition": "Noch nicht bewertet",
+    "shelf": null,
+    "purchasePrice": null,
+    "purchaseDate": null,
+    "purchasePlace": null,
+    "rating": null,
+    "seriesId": null,
+    "volume": null,
+    "addedDate": "2026-07-19",
     "cover": "assets/pinocchio-cover.jpg"
   }
 ]
