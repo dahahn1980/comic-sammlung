@@ -13,6 +13,24 @@
     ]
   },
   {
+    "id": "annas-paradies",
+    "title": "Annas Paradies",
+    "comics": [
+      "9783868692976",
+      "9783868692983",
+      "9783868692990"
+    ]
+  },
+  {
+    "id": "aristophania",
+    "title": "Aristophania",
+    "comics": [
+      "9783962193898",
+      "9783962193904",
+      "9783962193911"
+    ]
+  },
+  {
     "id": "arthus-trivium",
     "title": "Arthus Trivium",
     "comics": [
@@ -39,11 +57,35 @@
     ]
   },
   {
+    "id": "bitter-root",
+    "title": "Bitter Root",
+    "comics": [
+      "9783962194734"
+    ]
+  },
+  {
+    "id": "das-narrenschiff",
+    "title": "Das Narrenschiff",
+    "comics": [
+      "narrenschiff-1",
+      "narrenschiff-2",
+      "narrenschiff-3"
+    ]
+  },
+  {
     "id": "das-paris-der-wunder",
     "title": "Das Paris der Wunder",
     "comics": [
       "9783949987052",
       "9783949987069"
+    ]
+  },
+  {
+    "id": "der-letzte-schatten",
+    "title": "Der letzte Schatten",
+    "comics": [
+      "9783967921847",
+      "9783967921854"
     ]
   },
   {
@@ -87,12 +129,44 @@
     ]
   },
   {
+    "id": "die-arche-neo",
+    "title": "Die Arche Neo",
+    "comics": [
+      "9783962194222",
+      "9783962194239"
+    ]
+  },
+  {
+    "id": "die-daltons",
+    "title": "Die Daltons",
+    "comics": [
+      "9783958394933",
+      "9783958394940"
+    ]
+  },
+  {
     "id": "die-geheimnisse-des-maison-fleury",
     "title": "Die Geheimnisse des Maison Fleury",
     "comics": [
       "9783987212635",
       "9783987212642",
       "9783987212659"
+    ]
+  },
+  {
+    "id": "die-meisterkartographen",
+    "title": "Die Meisterkartographen",
+    "comics": [
+      "9783868691771"
+    ]
+  },
+  {
+    "id": "hitler-ist-tot",
+    "title": "Hitler ist tot",
+    "comics": [
+      "9783967923032",
+      "9783967923049",
+      "9783967923056"
     ]
   },
   {
@@ -111,6 +185,14 @@
     ]
   },
   {
+    "id": "nottingham",
+    "title": "Nottingham",
+    "comics": [
+      "9783967921595",
+      "9783967921601"
+    ]
+  },
+  {
     "id": "pik-as",
     "title": "Pik As",
     "comics": [
@@ -119,10 +201,26 @@
     ]
   },
   {
+    "id": "psycho-investigator",
+    "title": "Psycho Investigator",
+    "comics": [
+      "9783967923780",
+      "9783967923797"
+    ]
+  },
+  {
     "id": "rip",
     "title": "RIP",
     "comics": [
       "9783967923469"
+    ]
+  },
+  {
+    "id": "robilar-der-gestiefelte-kater",
+    "title": "Robilar – der gestiefelte Kater",
+    "comics": [
+      "9783967921267",
+      "9783967921274"
     ]
   },
   {
@@ -135,12 +233,40 @@
     ]
   },
   {
+    "id": "spillter-double",
+    "title": "Spillter double",
+    "comics": [
+      "9783962195038"
+    ]
+  },
+  {
     "id": "splitter-double",
     "title": "Splitter double",
     "comics": [
       "9783958394537",
       "9783962192983",
       "9783958391970"
+    ]
+  },
+  {
+    "id": "sweet-paprika",
+    "title": "Sweet Paprika",
+    "comics": [
+      "9783967922585"
+    ]
+  },
+  {
+    "id": "tagebuch-eines-diplomaten",
+    "title": "Tagebuch eines Diplomaten",
+    "comics": [
+      "9783967922837"
+    ]
+  },
+  {
+    "id": "vom-winde-verweht",
+    "title": "Vom Winde verweht",
+    "comics": [
+      "9783987212673"
     ]
   }
 ]
