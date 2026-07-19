@@ -196,4 +196,6 @@ function renderWishlist(){
   }
 }
 
+window.addEventListener("beforeprint",()=>document.querySelectorAll('img[loading="lazy"]').forEach(img=>img.loading="eager"));
+
 init();
