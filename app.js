@@ -39,10 +39,14 @@ function bindEvents(){
   document.addEventListener("click",event=>{
     const nav=event.target.closest("[data-view-link]");
     if(nav){ showView(nav.dataset.viewLink); return; }
-    const card=event.target.closest("[data-comic-id]");
-    if(card){ openDetail(card.dataset.comicId); return; }
+    const person=event.target.closest("[data-person]");
+    if(person){ openPerson(person.dataset.person); return; }
+    const publisher=event.target.closest("[data-publisher]");
+    if(publisher){ openPublisher(publisher.dataset.publisher); return; }
     const series=event.target.closest("[data-series-id]");
     if(series){ openSeries(series.dataset.seriesId); return; }
+    const card=event.target.closest("[data-comic-id]");
+    if(card){ openDetail(card.dataset.comicId); return; }
   });
   $("searchInput").addEventListener("input",e=>{state.query=e.target.value;renderCollection();});
   $("seriesSearchInput").addEventListener("input",e=>{state.seriesQuery=e.target.value;renderSeries();});
@@ -190,9 +194,30 @@ function standaloneCard(items){
   return '<button class="series-card standalone-card" data-series-id="standalone">'+coverStack(items)+'<div class="series-card-body"><p class="kicker">'+items.length+' Comics</p><h2>Einzelbände</h2><p>Abgeschlossene Geschichten und noch nicht zugeordnete Ausgaben.</p><strong>Einzelbände öffnen →</strong></div></button>';
 }
 
+function resetCollectionFilters(){
+  state.query=""; state.status="all"; state.publisher="all"; state.seriesFilter="all"; state.year="all";
+  $("searchInput").value="";
+  $("statusFilter").value="all"; $("publisherFilter").value="all"; $("seriesFilter").value="all"; $("yearFilter").value="all";
+}
+
 function openSeries(id){
+  resetCollectionFilters();
   state.seriesFilter=id;
   $("seriesFilter").value=id;
+  showView("collection");
+}
+
+function openPerson(name){
+  resetCollectionFilters();
+  state.query=name;
+  $("searchInput").value=name;
+  showView("collection");
+}
+
+function openPublisher(name){
+  resetCollectionFilters();
+  state.publisher=name;
+  $("publisherFilter").value=name;
   showView("collection");
 }
 
@@ -206,11 +231,27 @@ function dataRow(label,value){
   return '<div class="data-row"><span>'+esc(label)+'</span><strong>'+esc(value==null||value===""?"Nicht angegeben":value)+'</strong></div>';
 }
 
+function linkedDataRow(label,html){
+  return '<div class="data-row"><span>'+esc(label)+'</span><strong>'+html+'</strong></div>';
+}
+
 function renderDetail(c){
-  const seriesLabel=c.series ? c.series+(c.volume?" · Band "+c.volume:"") : "Einzelband";
-  $("detailContent").innerHTML='<div class="detail-hero"><div class="detail-visual"><img src="'+esc(c.cover)+'" alt="Cover von '+esc(c.title)+'"></div><div class="detail-main"><p class="kicker">'+esc(seriesLabel)+'</p><h1>'+esc(c.title)+'</h1><p class="detail-byline">'+esc((c.authors||[]).join(" · "))+'</p><p>'+esc(c.subtitle||"")+'</p><div class="status-actions"><button class="'+(c.read?"active":"")+'" data-action="read">✓ Gelesen</button><button class="'+(c.favorite?"active":"")+'" data-action="favorite">★ Favorit</button><button class="'+(state.wishlist.has(c.id)?"active":"")+'" data-action="wishlist">♡ Wunschliste</button></div></div></div><div class="detail-sections"><section class="info-section"><h2>Bibliografische Daten</h2><div class="data-list">'+
-  dataRow("Reihe",c.series||"Einzelband")+dataRow("Band",c.volume)+dataRow("Verlag",c.publisher)+dataRow("Erscheinungsdatum",formatDate(c.publicationDate))+dataRow("Auflage",c.edition)+dataRow("Einband",c.binding)+dataRow("Seiten",c.pages)+dataRow("Sprache",c.language)+dataRow("ISBN",c.isbn13||"Ohne ISBN")+dataRow("Genre",(c.genre||[]).join(", "))+dataRow("Datenquelle",c.metadataSource)+
-  '</div></section><section class="private-block"><h2>Meine Sammlung</h2><div class="data-list">'+dataRow("Status",c.status==="owned"?"Im Bestand":c.status)+dataRow("Zustand",c.condition)+dataRow("Standort",c.shelf)+dataRow("Kaufpreis",formatMoney(c.purchasePrice))+dataRow("Kaufdatum",formatDate(c.purchaseDate))+dataRow("Kaufort",c.purchasePlace)+dataRow("Bewertung",c.rating?c.rating+" / 5":"Noch nicht bewertet")+'</div><p class="privacy-note">Diese persönlichen Angaben bleiben Bestandteil deines privaten Katalogs.</p></section></div>';
+  const hasSeries=Boolean(c.seriesId&&c.series);
+  const seriesText=c.series+(c.volume?" · Band "+c.volume:"");
+  const seriesLink=hasSeries
+    ? '<button class="entity-link series-link" data-series-id="'+esc(c.seriesId)+'">'+esc(seriesText)+' <span aria-hidden="true">→</span></button>'
+    : '<span>Einzelband</span>';
+  const people=(c.authors||[]);
+  const peopleLinks=people.length
+    ? people.map(name=>'<button class="entity-link person-link" data-person="'+esc(name)+'">'+esc(name)+'</button>').join('<span class="entity-separator"> · </span>')
+    : '<span>Nicht angegeben</span>';
+  const publisherLink=c.publisher
+    ? '<button class="entity-link" data-publisher="'+esc(c.publisher)+'">'+esc(c.publisher)+'</button>'
+    : '<span>Nicht angegeben</span>';
+
+  $("detailContent").innerHTML='<div class="detail-hero"><div class="detail-visual"><img src="'+esc(c.cover)+'" alt="Cover von '+esc(c.title)+'"></div><div class="detail-main"><div class="kicker detail-series-link">'+seriesLink+'</div><h1>'+esc(c.title)+'</h1><div class="detail-byline">'+peopleLinks+'</div><p>'+esc(c.subtitle||"")+'</p><div class="status-actions"><button class="'+(c.read?"active":"")+'" data-action="read">✓ Gelesen</button><button class="'+(c.favorite?"active":"")+'" data-action="favorite">★ Favorit</button><button class="'+(state.wishlist.has(c.id)?"active":"")+'" data-action="wishlist">♡ Wunschliste</button></div></div></div><div class="detail-sections"><section class="info-section"><h2>Bibliografische Daten</h2><div class="data-list">'+
+  linkedDataRow("Reihe",seriesLink)+dataRow("Band",c.volume)+linkedDataRow("Beteiligte",peopleLinks)+linkedDataRow("Verlag",publisherLink)+dataRow("Erscheinungsdatum",formatDate(c.publicationDate))+dataRow("Auflage",c.edition)+dataRow("Einband",c.binding)+dataRow("Seiten",c.pages)+dataRow("Sprache",c.language)+dataRow("ISBN",c.isbn13||"Ohne ISBN")+dataRow("Genre",(c.genre||[]).join(", "))+dataRow("Datenquelle",c.metadataSource)+
+  '</div><p class="detail-link-hint">Reihe, Beteiligte und Verlag sind anklickbar.</p></section><section class="private-block"><h2>Meine Sammlung</h2><div class="data-list">'+dataRow("Status",c.status==="owned"?"Im Bestand":c.status)+dataRow("Zustand",c.condition)+dataRow("Standort",c.shelf)+dataRow("Kaufpreis",formatMoney(c.purchasePrice))+dataRow("Kaufdatum",formatDate(c.purchaseDate))+dataRow("Kaufort",c.purchasePlace)+dataRow("Bewertung",c.rating?c.rating+" / 5":"Noch nicht bewertet")+'</div><p class="privacy-note">Diese persönlichen Angaben bleiben Bestandteil deines privaten Katalogs.</p></section></div>';
   document.querySelectorAll("[data-action]").forEach(button=>button.addEventListener("click",()=>{
     const action=button.dataset.action;
     if(action==="read") c.read=!c.read;
