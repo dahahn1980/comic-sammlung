@@ -56,3 +56,14 @@
 .band-missing .missing-mark{font-size:1.35rem;line-height:1;margin:.12rem 0}
 .band-missing strong{font-size:.62rem;line-height:1.18;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
 @media(max-width:640px){.band-slot{flex-basis:68px;width:68px}.series-card{border-left-width:4px}}
+
+/* Verknüpfte bibliografische Angaben */
+.entity-link{appearance:none;border:0;background:none;color:inherit;font:inherit;font-weight:800;padding:0;cursor:pointer;text-align:left;text-decoration-line:underline;text-decoration-thickness:1px;text-underline-offset:4px;text-decoration-color:color-mix(in srgb,currentColor 38%,transparent);transition:color .18s ease,text-decoration-color .18s ease}
+.entity-link:hover,.entity-link:focus-visible{color:var(--blue);text-decoration-color:currentColor}
+.entity-link:focus-visible{outline:2px solid var(--blue);outline-offset:4px;border-radius:2px}
+.detail-series-link{margin:0}
+.detail-series-link .entity-link{text-transform:uppercase;letter-spacing:inherit}
+.detail-byline .entity-link{font-family:inherit;font-style:inherit;font-weight:inherit}
+.entity-separator{color:var(--muted)}
+.data-row strong .entity-link{font-size:14px}
+.detail-link-hint{margin:14px 0 0;color:var(--muted);font-size:12px}
