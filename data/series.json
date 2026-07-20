@@ -5,7 +5,22 @@
     "comics": [
       "9783907010341",
       "9783907010396"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 2,
+      "status": "complete",
+      "ongoing": false,
+      "missing": [],
+      "note": "Die Sammlung enthält die zweiteilige deutsche Ausgabe einschließlich Gesamtausgabe; keine fortlaufende nummerierte Albumreihe.",
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.editionmoderne.ch/"
+        }
+      ]
+    }
   },
   {
     "id": "7-detektive",
@@ -18,7 +33,22 @@
       "9783962194857",
       "9783962194864",
       "9783962194949"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 7,
+      "status": "complete",
+      "ongoing": false,
+      "missing": [],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.ppm-vertrieb.de/index.php?cPath=198_8&site=print_katalog"
+        }
+      ]
+    }
   },
   {
     "id": "annas-paradies",
@@ -27,7 +57,22 @@
       "9783868692976",
       "9783868692983",
       "9783868692990"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 3,
+      "status": "complete",
+      "ongoing": false,
+      "missing": [],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.ppm-vertrieb.de/index.php?cPath=198_8&site=print_katalog"
+        }
+      ]
+    }
   },
   {
     "id": "aristophania",
@@ -36,7 +81,28 @@
       "9783962193898",
       "9783962193904",
       "9783962193911"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 4,
+      "status": "incomplete",
+      "ongoing": false,
+      "missing": [
+        {
+          "volume": "4",
+          "title": "Der rote Berg",
+          "isbn13": "9783962193928"
+        }
+      ],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.ppm-vertrieb.de/Aristophania-4%3A%3A316385.html"
+        }
+      ]
+    }
   },
   {
     "id": "arthus-trivium",
@@ -46,7 +112,22 @@
       "9783958394254",
       "9783958394261",
       "9783962191696"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 4,
+      "status": "complete",
+      "ongoing": false,
+      "missing": [],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.ppm-vertrieb.de/index.php?cPath=198_8&site=print_katalog"
+        }
+      ]
+    }
   },
   {
     "id": "auf-die-barrikaden",
@@ -54,7 +135,28 @@
     "comics": [
       "9783958392793",
       "9783958392809"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 3,
+      "status": "incomplete",
+      "ongoing": false,
+      "missing": [
+        {
+          "volume": "1",
+          "title": "Der Mysteriöse Monsieur Choublanc",
+          "isbn13": "9783958392786"
+        }
+      ],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.ppm-vertrieb.de/index.php?cPath=198_8&site=print_katalog"
+        }
+      ]
+    }
   },
   {
     "id": "azimut",
@@ -64,7 +166,28 @@
       "9783868696349",
       "9783962192006",
       "9783962192013"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 5,
+      "status": "incomplete",
+      "ongoing": false,
+      "missing": [
+        {
+          "volume": "3",
+          "title": "Die Flusspferdmenschen des Nihil",
+          "isbn13": "9783868696356"
+        }
+      ],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.ppm-vertrieb.de/index.php?cPath=198_8&site=print_katalog"
+        }
+      ]
+    }
   },
   {
     "id": "batman-der-dunkle-prinz",
@@ -73,14 +196,55 @@
       "9783741607332",
       "batman-der-dunkle-prinz-1-variant",
       "9783741607349"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 2,
+      "status": "complete",
+      "ongoing": false,
+      "missing": [],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.paninishop.de/"
+        }
+      ]
+    }
   },
   {
     "id": "bitter-root",
     "title": "Bitter Root",
     "comics": [
       "9783962194734"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 3,
+      "status": "incomplete",
+      "ongoing": false,
+      "missing": [
+        {
+          "volume": "2",
+          "title": "Zorn und Erlösung",
+          "isbn13": "9783962194741"
+        },
+        {
+          "volume": "3",
+          "title": "Vermächtnis",
+          "isbn13": "9783962194758"
+        }
+      ],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.ppm-vertrieb.de/Bitter-Root-3%3A%3A318694.html"
+        }
+      ]
+    }
   },
   {
     "id": "blacksad",
@@ -92,7 +256,28 @@
       "9783551747648",
       "9783551747655",
       "9783551747662"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 7,
+      "status": "incomplete",
+      "ongoing": false,
+      "missing": [
+        {
+          "volume": "7",
+          "title": "Wenn alles fällt – Teil 2",
+          "isbn13": "9783551747679"
+        }
+      ],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.carlsen.de/reihe/blacksad"
+        }
+      ]
+    }
   },
   {
     "id": "das-narrenschiff",
@@ -101,7 +286,58 @@
       "narrenschiff-1",
       "narrenschiff-2",
       "narrenschiff-3"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 10,
+      "status": "incomplete",
+      "ongoing": false,
+      "missing": [
+        {
+          "volume": "4",
+          "title": "Barabbas",
+          "isbn13": null
+        },
+        {
+          "volume": "5",
+          "title": "Rätselhafte Länder",
+          "isbn13": null
+        },
+        {
+          "volume": "6",
+          "title": "Puzzle",
+          "isbn13": null
+        },
+        {
+          "volume": "7",
+          "title": "Terminous",
+          "isbn13": null
+        },
+        {
+          "volume": "8",
+          "title": "Das verwunschene Land",
+          "isbn13": null
+        },
+        {
+          "volume": "9",
+          "title": "Das Labyrinth",
+          "isbn13": null
+        },
+        {
+          "volume": "10",
+          "title": "Das letzte Kapitel",
+          "isbn13": null
+        }
+      ],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.comicguide.de/series/1857/Das-Narrenschiff"
+        }
+      ]
+    }
   },
   {
     "id": "das-paris-der-wunder",
@@ -109,7 +345,22 @@
     "comics": [
       "9783949987052",
       "9783949987069"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 2,
+      "status": "complete",
+      "ongoing": false,
+      "missing": [],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.ppm-vertrieb.de/index.php?cPath=198_8&site=print_katalog"
+        }
+      ]
+    }
   },
   {
     "id": "das-schmetterlings-netzwerk",
@@ -118,7 +369,22 @@
       "9783868692860",
       "9783868692877",
       "9783868692884"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 3,
+      "status": "complete",
+      "ongoing": false,
+      "missing": [],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.ppm-vertrieb.de/index.php?cPath=198_8&site=print_katalog"
+        }
+      ]
+    }
   },
   {
     "id": "der-araber-von-morgen",
@@ -127,7 +393,38 @@
       "9783813506662",
       "9783813507249",
       "9783813507669"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 6,
+      "status": "incomplete",
+      "ongoing": false,
+      "missing": [
+        {
+          "volume": "4",
+          "title": "Eine Kindheit im Nahen Osten (1987–1992)",
+          "isbn13": "9783813508024"
+        },
+        {
+          "volume": "5",
+          "title": "Eine Jugend im Nahen Osten (1992–1994)",
+          "isbn13": "9783813508376"
+        },
+        {
+          "volume": "6",
+          "title": "Eine Jugend im Nahen Osten (1994–2011)",
+          "isbn13": "9783813508741"
+        }
+      ],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://reprodukt.com/collections/riad-sattouf"
+        }
+      ]
+    }
   },
   {
     "id": "der-gloeckner-von-notre-dame",
@@ -135,7 +432,22 @@
     "comics": [
       "9783868695700",
       "9783868695717"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 2,
+      "status": "complete",
+      "ongoing": false,
+      "missing": [],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.ppm-vertrieb.de/index.php?cPath=198_8&site=print_katalog"
+        }
+      ]
+    }
   },
   {
     "id": "der-killer",
@@ -144,7 +456,33 @@
       "9783936068245",
       "9783770408221",
       "9783770408245"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 5,
+      "status": "incomplete",
+      "ongoing": false,
+      "missing": [
+        {
+          "volume": "3",
+          "title": "Schulden",
+          "isbn13": null
+        },
+        {
+          "volume": "5",
+          "title": "Seelensterben",
+          "isbn13": null
+        }
+      ],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.schreiberundleser.de/der-killer"
+        }
+      ]
+    }
   },
   {
     "id": "der-letzte-schatten",
@@ -152,7 +490,22 @@
     "comics": [
       "9783967921847",
       "9783967921854"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 2,
+      "status": "complete",
+      "ongoing": false,
+      "missing": [],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.ppm-vertrieb.de/index.php?cPath=198_8&site=print_katalog"
+        }
+      ]
+    }
   },
   {
     "id": "der-mann-der-keine-feuerwaffen-mochte",
@@ -162,7 +515,22 @@
       "9783868694871",
       "9783868694888",
       "9783868695182"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 4,
+      "status": "complete",
+      "ongoing": false,
+      "missing": [],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.ppm-vertrieb.de/index.php?cPath=198_8&site=print_katalog"
+        }
+      ]
+    }
   },
   {
     "id": "der-schreckliche-papst",
@@ -172,7 +540,22 @@
       "9783868691627",
       "9783868694611",
       "9783962191689"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 4,
+      "status": "complete",
+      "ongoing": false,
+      "missing": [],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.ppm-vertrieb.de/index.php?cPath=198_8&site=print_katalog"
+        }
+      ]
+    }
   },
   {
     "id": "der-tag-x",
@@ -180,14 +563,141 @@
     "comics": [
       "9783957984500",
       "9783957984548"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 15,
+      "status": "incomplete",
+      "ongoing": false,
+      "missing": [
+        {
+          "volume": "3",
+          "title": "Der Tag X – Band 3",
+          "isbn13": null
+        },
+        {
+          "volume": "4",
+          "title": "Der Tag X – Band 4",
+          "isbn13": null
+        },
+        {
+          "volume": "5",
+          "title": "Der Tag X – Band 5",
+          "isbn13": null
+        },
+        {
+          "volume": "6",
+          "title": "Der Tag X – Band 6",
+          "isbn13": null
+        },
+        {
+          "volume": "7",
+          "title": "Der Tag X – Band 7",
+          "isbn13": null
+        },
+        {
+          "volume": "8",
+          "title": "Der Tag X – Band 8",
+          "isbn13": null
+        },
+        {
+          "volume": "9",
+          "title": "Der Tag X – Band 9",
+          "isbn13": null
+        },
+        {
+          "volume": "10",
+          "title": "Der Tag X – Band 10",
+          "isbn13": null
+        },
+        {
+          "volume": "11",
+          "title": "Der Tag X – Band 11",
+          "isbn13": null
+        },
+        {
+          "volume": "12",
+          "title": "Der Tag X – Band 12",
+          "isbn13": null
+        },
+        {
+          "volume": "13",
+          "title": "Der Tag X – Band 13",
+          "isbn13": null
+        },
+        {
+          "volume": "14",
+          "title": "Der Tag X – Band 14",
+          "isbn13": null
+        },
+        {
+          "volume": "15",
+          "title": "Der Tag X – Band 15",
+          "isbn13": null
+        }
+      ],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.paninishop.de/serie/comics-alben-graphic-novels-der-tag-x"
+        }
+      ]
+    }
   },
   {
     "id": "der-wolf-im-slip",
     "title": "Der Wolf im Slip",
     "comics": [
       "9783962190118"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 7,
+      "status": "incomplete",
+      "ongoing": false,
+      "missing": [
+        {
+          "volume": "2",
+          "title": "Der Wolf im Slip friert sich einen ab",
+          "isbn13": "9783962190125"
+        },
+        {
+          "volume": "3",
+          "title": "Slip hip hurra!",
+          "isbn13": "9783962190132"
+        },
+        {
+          "volume": "4",
+          "title": "Der tut ja nix!",
+          "isbn13": "9783962190194"
+        },
+        {
+          "volume": "5",
+          "title": "Der Wolf im Slip hat die Hosen an",
+          "isbn13": "9783987210112"
+        },
+        {
+          "volume": "6",
+          "title": "Die Nusseule",
+          "isbn13": "9783987210129"
+        },
+        {
+          "volume": "7",
+          "title": "Bricht auf",
+          "isbn13": "9783689500948"
+        }
+      ],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.splitter-verlag.de/serien/serien-w/der-wolf-im-slip-4073/"
+        }
+      ]
+    }
   },
   {
     "id": "die-adoption",
@@ -196,7 +706,22 @@
       "9783958395299",
       "9783958395305",
       "9783987213380"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 4,
+      "status": "complete",
+      "ongoing": false,
+      "missing": [],
+      "note": "Der vorhandene Doppelband Wajdi umfasst die Einzelbände 3 und 4.",
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.ppm-vertrieb.de/index.php?cPath=198_8&site=print_katalog"
+        }
+      ]
+    }
   },
   {
     "id": "die-alten-knacker",
@@ -209,7 +734,28 @@
       "9783962192167",
       "9783962192174",
       "9783987210822"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 8,
+      "status": "incomplete",
+      "ongoing": false,
+      "missing": [
+        {
+          "volume": "8",
+          "title": "Die kleinen Strolche",
+          "isbn13": "9783987210839"
+        }
+      ],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.ppm-vertrieb.de/Die-alten-Knacker-8%3A%3A319865.html"
+        }
+      ]
+    }
   },
   {
     "id": "die-arche-neo",
@@ -217,7 +763,22 @@
     "comics": [
       "9783962194222",
       "9783962194239"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 2,
+      "status": "complete",
+      "ongoing": false,
+      "missing": [],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.ppm-vertrieb.de/index.php?cPath=198_8&site=print_katalog"
+        }
+      ]
+    }
   },
   {
     "id": "die-daltons",
@@ -225,7 +786,22 @@
     "comics": [
       "9783958394933",
       "9783958394940"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 2,
+      "status": "complete",
+      "ongoing": false,
+      "missing": [],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.ppm-vertrieb.de/index.php?cPath=198_8&site=print_katalog"
+        }
+      ]
+    }
   },
   {
     "id": "die-geheimnisse-des-maison-fleury",
@@ -234,14 +810,55 @@
       "9783987212635",
       "9783987212642",
       "9783987212659"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 3,
+      "status": "complete",
+      "ongoing": false,
+      "missing": [],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.ppm-vertrieb.de/index.php?cPath=198_8&site=print_katalog"
+        }
+      ]
+    }
   },
   {
     "id": "die-meisterkartographen",
     "title": "Die Meisterkartographen",
     "comics": [
       "9783868691771"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 3,
+      "status": "incomplete",
+      "ongoing": false,
+      "missing": [
+        {
+          "volume": "2",
+          "title": "Das Meer der Qualen & Die Weltenschlange",
+          "isbn13": null
+        },
+        {
+          "volume": "3",
+          "title": "Der Schrei des Plouillon & Die andere Welt",
+          "isbn13": null
+        }
+      ],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.splitter-verlag.de/serien/serien-m/die-meisterkartographen-523/"
+        }
+      ]
+    }
   },
   {
     "id": "hitler-ist-tot",
@@ -250,7 +867,22 @@
       "9783967923032",
       "9783967923049",
       "9783967923056"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 3,
+      "status": "complete",
+      "ongoing": false,
+      "missing": [],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.ppm-vertrieb.de/index.php?cPath=198_8&site=print_katalog"
+        }
+      ]
+    }
   },
   {
     "id": "ich-rene-tardi-stalag-iib",
@@ -259,7 +891,22 @@
       "9783037311127",
       "9783037311363",
       "9783037311899"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 3,
+      "status": "complete",
+      "ongoing": false,
+      "missing": [],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://reprodukt.com/collections/jacques-tardi"
+        }
+      ]
+    }
   },
   {
     "id": "kaiserin-charlotte",
@@ -267,7 +914,28 @@
     "comics": [
       "9783551724724",
       "9783551726971"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 3,
+      "status": "incomplete",
+      "ongoing": true,
+      "missing": [
+        {
+          "volume": "3",
+          "title": "Adios, Carlotta",
+          "isbn13": null
+        }
+      ],
+      "note": "Band 4 ist angekündigt, aber zum Prüfdatum noch nicht als regulär erschienene deutsche Ausgabe gezählt.",
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.finix-comic.de/kaiserin-charlotte/"
+        }
+      ]
+    }
   },
   {
     "id": "katanga",
@@ -275,7 +943,28 @@
     "comics": [
       "9783962191320",
       "9783962191337"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 3,
+      "status": "incomplete",
+      "ongoing": false,
+      "missing": [
+        {
+          "volume": "1",
+          "title": "Diamanten",
+          "isbn13": "9783962191313"
+        }
+      ],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.ppm-vertrieb.de/index.php?cPath=198_8&site=print_katalog"
+        }
+      ]
+    }
   },
   {
     "id": "ladies-with-guns",
@@ -284,21 +973,83 @@
       "9783967923926",
       "9783967923933",
       "9783967923940"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 4,
+      "status": "incomplete",
+      "ongoing": true,
+      "missing": [
+        {
+          "volume": "4",
+          "title": "Ladies with Guns 4",
+          "isbn13": "9783689500931"
+        }
+      ],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.ppm-vertrieb.de/Ladies-with-Guns-4%3A%3A321460.html"
+        }
+      ]
+    }
   },
   {
     "id": "merci",
     "title": "Merci",
     "comics": [
       "9783741602498"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 1,
+      "status": "complete",
+      "ongoing": false,
+      "missing": [],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.paninishop.de/"
+        }
+      ]
+    }
   },
   {
     "id": "nautilus",
     "title": "Nautilus",
     "comics": [
       "9783967923001"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 3,
+      "status": "incomplete",
+      "ongoing": false,
+      "missing": [
+        {
+          "volume": "2",
+          "title": "Mobilis in Mobile",
+          "isbn13": "9783967923018"
+        },
+        {
+          "volume": "3",
+          "title": "Das Erbe des Kapitän Nemo",
+          "isbn13": "9783967923025"
+        }
+      ],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.ppm-vertrieb.de/index.php?cPath=198_8&site=print_katalog"
+        }
+      ]
+    }
   },
   {
     "id": "nottingham",
@@ -306,7 +1057,28 @@
     "comics": [
       "9783967921595",
       "9783967921601"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 3,
+      "status": "incomplete",
+      "ongoing": false,
+      "missing": [
+        {
+          "volume": "3",
+          "title": "Robin",
+          "isbn13": "9783967921618"
+        }
+      ],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.ppm-vertrieb.de/index.php?cPath=198_8&site=print_katalog"
+        }
+      ]
+    }
   },
   {
     "id": "pik-as",
@@ -317,7 +1089,38 @@
       "9783868692143",
       "9783868692167",
       "9783868692174"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 8,
+      "status": "incomplete",
+      "ongoing": false,
+      "missing": [
+        {
+          "volume": "4",
+          "title": "Im Varieté der Vampire",
+          "isbn13": "9783868692150"
+        },
+        {
+          "volume": "7",
+          "title": "Eine Mumie zum Tee",
+          "isbn13": "9783962195328"
+        },
+        {
+          "volume": "8",
+          "title": "Drei kleine Tricks und dann nichts wie weg",
+          "isbn13": "9783962195335"
+        }
+      ],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.ppm-vertrieb.de/index.php?cPath=198_8&site=print_katalog"
+        }
+      ]
+    }
   },
   {
     "id": "psycho-investigator",
@@ -325,7 +1128,22 @@
     "comics": [
       "9783967923780",
       "9783967923797"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 2,
+      "status": "complete",
+      "ongoing": false,
+      "missing": [],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.ppm-vertrieb.de/index.php?cPath=198_8&site=print_katalog"
+        }
+      ]
+    }
   },
   {
     "id": "ring-circus",
@@ -335,14 +1153,70 @@
       "9783899081367",
       "9783899081374",
       "9783899082340"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 4,
+      "status": "complete",
+      "ongoing": false,
+      "missing": [],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://salleckpublications.de/"
+        }
+      ]
+    }
   },
   {
     "id": "rip",
     "title": "RIP",
     "comics": [
       "9783967923469"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 6,
+      "status": "incomplete",
+      "ongoing": false,
+      "missing": [
+        {
+          "volume": "1",
+          "title": "Derrick – Ich werde den Tod nicht überleben",
+          "isbn13": "9783967923414"
+        },
+        {
+          "volume": "2",
+          "title": "Maurice – Die Fliegen folgen immer dem Aas",
+          "isbn13": "9783967923421"
+        },
+        {
+          "volume": "3",
+          "title": "Ahmed – Am richtigen Ort zur falschen Zeit",
+          "isbn13": "9783967923438"
+        },
+        {
+          "volume": "4",
+          "title": "Albert – Möge deine Seele mit mir sein!",
+          "isbn13": "9783967923445"
+        },
+        {
+          "volume": "5",
+          "title": "Fanette – Das Schlechte in der Haut der Anderen",
+          "isbn13": "9783967923452"
+        }
+      ],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.ppm-vertrieb.de/index.php?cPath=198_8&site=print_katalog"
+        }
+      ]
+    }
   },
   {
     "id": "robilar-der-gestiefelte-kater",
@@ -350,7 +1224,28 @@
     "comics": [
       "9783967921267",
       "9783967921274"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 3,
+      "status": "incomplete",
+      "ongoing": false,
+      "missing": [
+        {
+          "volume": "3",
+          "title": "Fort Animo",
+          "isbn13": "9783967921281"
+        }
+      ],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.ppm-vertrieb.de/index.php?cPath=198_8&site=print_katalog"
+        }
+      ]
+    }
   },
   {
     "id": "schloss-der-tiere",
@@ -359,7 +1254,28 @@
       "9783962191856",
       "9783962191863",
       "9783962191870"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 4,
+      "status": "incomplete",
+      "ongoing": false,
+      "missing": [
+        {
+          "volume": "4",
+          "title": "Das Blut des Königs",
+          "isbn13": "9783962191887"
+        }
+      ],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.ppm-vertrieb.de/Schloss-der-Tiere-4%3A%3A318390.html"
+        }
+      ]
+    }
   },
   {
     "id": "splitter-double",
@@ -369,28 +1285,105 @@
       "9783962195038",
       "9783962192983",
       "9783958391970"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": null,
+      "status": "not-applicable",
+      "ongoing": false,
+      "missing": [],
+      "note": "Splitter double ist eine Editionslinie und keine fortlaufende Handlung. Eine Vollständigkeitsquote wäre irreführend.",
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.splitter-verlag.de/"
+        }
+      ]
+    }
   },
   {
     "id": "sweet-paprika",
     "title": "Sweet Paprika",
     "comics": [
       "9783967922585"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 3,
+      "status": "incomplete",
+      "ongoing": false,
+      "missing": [
+        {
+          "volume": "2",
+          "title": "Sweet Paprika 2",
+          "isbn13": "9783967922592"
+        },
+        {
+          "volume": "3",
+          "title": "Sweet Paprika 3",
+          "isbn13": "9783967922608"
+        }
+      ],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.ppm-vertrieb.de/index.php?cPath=198_8&site=print_katalog"
+        }
+      ]
+    }
   },
   {
     "id": "tagebuch-eines-diplomaten",
     "title": "Tagebuch eines Diplomaten",
     "comics": [
       "9783967922837"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 1,
+      "status": "complete",
+      "ongoing": false,
+      "missing": [],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.ppm-vertrieb.de/index.php?cPath=198_8&site=print_katalog"
+        }
+      ]
+    }
   },
   {
     "id": "vom-winde-verweht",
     "title": "Vom Winde verweht",
     "comics": [
       "9783987212673"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 2,
+      "status": "incomplete",
+      "ongoing": false,
+      "missing": [
+        {
+          "volume": "2",
+          "title": "Vom Winde verweht 2",
+          "isbn13": "9783987212680"
+        }
+      ],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://www.ppm-vertrieb.de/index.php?cPath=198_8&site=print_katalog"
+        }
+      ]
+    }
   },
   {
     "id": "wundervolle-sommer",
@@ -401,6 +1394,27 @@
       "9783899087109",
       "9783899087123",
       "9783899087147"
-    ]
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "publishedCount": 6,
+      "status": "incomplete",
+      "ongoing": false,
+      "missing": [
+        {
+          "volume": "6",
+          "title": "Die Auszeit",
+          "isbn13": "9783899087161"
+        }
+      ],
+      "note": null,
+      "checkedAt": "2026-07-20",
+      "sources": [
+        {
+          "label": "Verlags- bzw. Vertriebsnachweis",
+          "url": "https://salleckpublications.de/"
+        }
+      ]
+    }
   }
 ]
