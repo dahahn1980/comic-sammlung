@@ -9,7 +9,7 @@ const esc = (value="") => String(value).replace(/[&<>"']/g, ch => ({"&":"&amp;",
 const formatDate = value => value ? new Intl.DateTimeFormat("de-DE",{year:"numeric",month:"long",day:"numeric"}).format(new Date(value)) : "Nicht angegeben";
 const formatMoney = value => value == null ? "Nicht angegeben" : new Intl.NumberFormat("de-DE",{style:"currency",currency:"EUR"}).format(value);
 const yearOf = comic => comic.publicationDate ? String(comic.publicationDate).slice(0,4) : "";
-const volumeNumber = value => { const n = Number.parseInt(value,10); return Number.isFinite(n) ? n : null; };
+const volumeNumber = value => { const match=String(value??"").match(/\d+/); const n=match?Number.parseInt(match[0],10):null; return Number.isFinite(n) ? n : null; };
 const byId = id => state.comics.find(comic => comic.id === id);
 
 async function init(){
@@ -147,12 +147,43 @@ function coverStack(items){
   return '<div class="series-covers">'+items.slice(0,3).map(c=>'<img src="'+esc(c.cover)+'" alt="" loading="lazy">').join("")+'</div>';
 }
 
+function seriesVisualState(c){
+  if(!c||c.status==="not-applicable") return "series-neutral";
+  if(c.status==="incomplete") return "series-incomplete";
+  if(c.ongoing) return "series-current";
+  return "series-complete";
+}
+
+function seriesBandStrip(s){
+  const c=s.completeness;
+  if(!c?.publishedCount||c.status==="not-applicable") return "";
+  const missing=new Map((c.missing||[]).map(m=>[Number.parseInt(m.volume,10),m]));
+  const ownedByVolume=new Map();
+  const unassigned=[];
+  s.items.forEach(item=>{
+    const n=volumeNumber(item.volume);
+    if(n&&!ownedByVolume.has(n)) ownedByVolume.set(n,item); else unassigned.push(item);
+  });
+  const slots=[];
+  for(let n=1;n<=c.publishedCount;n++){
+    const gap=missing.get(n);
+    if(gap){
+      slots.push('<div class="band-slot band-missing" title="Fehlt: '+esc(gap.title)+'"><span class="band-number">Band '+n+'</span><span class="missing-mark">＋</span><strong>'+esc(gap.title)+'</strong></div>');
+      continue;
+    }
+    const item=ownedByVolume.get(n)||unassigned.shift();
+    if(item) slots.push('<div class="band-slot band-owned" title="'+esc(item.title)+'"><img src="'+esc(item.cover)+'" alt="Band '+n+': '+esc(item.title)+'" loading="lazy"><span class="band-number">Band '+n+'</span></div>');
+  }
+  return '<div class="band-strip" aria-label="Vorhandene und fehlende Bände">'+slots.join("")+'</div>';
+}
+
 function seriesCard(s){
   const stats=seriesStats(s,s.items);
   const c=s.completeness;
+  const visual=seriesVisualState(c);
   const sources=(c?.sources||[]).map(src=>'<a class="series-source" href="'+esc(src.url)+'" target="_blank" rel="noopener" onclick="event.stopPropagation()">Quelle ↗</a>').join("");
   const checked=c?.checkedAt?'<span class="series-checked">Geprüft '+new Intl.DateTimeFormat("de-DE").format(new Date(c.checkedAt))+'</span>':"";
-  return '<article class="series-card" data-series-id="'+esc(s.id)+'" tabindex="0">'+coverStack(s.items)+'<div class="series-card-body"><p class="kicker">'+esc(stats.status)+' · '+s.items.length+' Ausgaben</p><h2>'+esc(s.title)+'</h2><p>'+esc(stats.label)+'</p><div class="progress" aria-label="'+stats.percent+' Prozent"><span style="width:'+stats.percent+'%"></span></div><p class="series-gap">'+esc(stats.gap)+'</p><div class="series-proof">'+checked+sources+'</div><strong>Reihe öffnen →</strong></div></article>';
+  return '<article class="series-card '+visual+'" data-series-id="'+esc(s.id)+'" tabindex="0">'+coverStack(s.items)+'<div class="series-card-body"><div class="series-status-row"><span class="series-status-dot"></span><p class="kicker">'+esc(stats.status)+' · '+s.items.length+' Ausgaben</p></div><h2>'+esc(s.title)+'</h2><p>'+esc(stats.label)+'</p><div class="progress" aria-label="'+stats.percent+' Prozent"><span style="width:'+stats.percent+'%"></span></div>'+seriesBandStrip(s)+'<p class="series-gap">'+esc(stats.gap)+'</p><div class="series-proof">'+checked+sources+'</div><strong>Reihe öffnen →</strong></div></article>';
 }
 
 function standaloneCard(items){
