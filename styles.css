@@ -32,3 +32,27 @@
 .series-source:hover{color:var(--accent,#1f5eff)}
 .series-checked{white-space:nowrap}
 .series-card[tabindex]{cursor:pointer}
+
+
+/* Bandlücken und optischer Reihenstatus */
+.series-card{border-left:5px solid transparent}
+.series-card.series-complete{border-left-color:#2f9e69;background:linear-gradient(90deg,rgba(47,158,105,.08),transparent 32%)}
+.series-card.series-incomplete{border-left-color:#d66a43;background:linear-gradient(90deg,rgba(214,106,67,.09),transparent 32%)}
+.series-card.series-current{border-left-color:#3978c7;background:linear-gradient(90deg,rgba(57,120,199,.09),transparent 32%)}
+.series-card.series-neutral{border-left-color:#98a2b3}
+.series-status-row{display:flex;align-items:center;gap:.5rem}
+.series-status-row .kicker{margin:0}
+.series-status-dot{width:.65rem;height:.65rem;border-radius:50%;background:#98a2b3;flex:0 0 auto}
+.series-complete .series-status-dot{background:#2f9e69;box-shadow:0 0 0 4px rgba(47,158,105,.13)}
+.series-incomplete .series-status-dot{background:#d66a43;box-shadow:0 0 0 4px rgba(214,106,67,.13)}
+.series-current .series-status-dot{background:#3978c7;box-shadow:0 0 0 4px rgba(57,120,199,.13)}
+.band-strip{display:flex;gap:.65rem;overflow-x:auto;padding:.9rem .1rem .75rem;margin:.35rem 0;scrollbar-width:thin;overscroll-behavior-inline:contain}
+.band-slot{position:relative;flex:0 0 76px;width:76px;aspect-ratio:2/3;border-radius:7px;overflow:hidden}
+.band-owned{background:#e8ebef;box-shadow:0 3px 10px rgba(16,24,40,.13)}
+.band-owned img{width:100%;height:100%;object-fit:cover;display:block}
+.band-number{position:absolute;left:4px;right:4px;bottom:4px;padding:.22rem .3rem;border-radius:4px;background:rgba(20,24,31,.82);color:white;font-size:.63rem;font-weight:700;text-align:center;line-height:1.15}
+.band-missing{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:.45rem;border:2px dashed #d66a43;background:rgba(255,255,255,.72);color:#8f3f28;text-align:center}
+.band-missing .band-number{position:static;background:transparent;color:inherit;padding:0;margin-bottom:.2rem}
+.band-missing .missing-mark{font-size:1.35rem;line-height:1;margin:.12rem 0}
+.band-missing strong{font-size:.62rem;line-height:1.18;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+@media(max-width:640px){.band-slot{flex-basis:68px;width:68px}.series-card{border-left-width:4px}}
