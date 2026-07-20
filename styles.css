@@ -24,3 +24,11 @@
 .filters{flex-wrap:wrap}
 .filters select{flex:1 1 145px}
 @media(max-width:780px){.series-toolbar{justify-content:stretch}.series-toolbar .search{width:100%}.series-covers{height:210px}}
+
+
+/* Recherchierte Reihen-Vollständigkeit */
+.series-proof{display:flex;flex-wrap:wrap;gap:.55rem;align-items:center;margin-top:.8rem;font-size:.78rem;color:var(--muted,#667085)}
+.series-source{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.series-source:hover{color:var(--accent,#1f5eff)}
+.series-checked{white-space:nowrap}
+.series-card[tabindex]{cursor:pointer}
