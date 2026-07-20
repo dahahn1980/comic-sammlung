@@ -133,21 +133,16 @@
     "id": "auf-die-barrikaden",
     "title": "Auf die Barrikaden!",
     "comics": [
+      "9783958392786",
       "9783958392793",
       "9783958392809"
     ],
     "completeness": {
       "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
       "publishedCount": 3,
-      "status": "incomplete",
+      "status": "complete",
       "ongoing": false,
-      "missing": [
-        {
-          "volume": "1",
-          "title": "Der Mysteriöse Monsieur Choublanc",
-          "isbn13": "9783958392786"
-        }
-      ],
+      "missing": [],
       "note": null,
       "checkedAt": "2026-07-20",
       "sources": [
@@ -164,21 +159,16 @@
     "comics": [
       "9783868696332",
       "9783868696349",
+      "9783868696356",
       "9783962192006",
       "9783962192013"
     ],
     "completeness": {
       "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
       "publishedCount": 5,
-      "status": "incomplete",
+      "status": "complete",
       "ongoing": false,
-      "missing": [
-        {
-          "volume": "3",
-          "title": "Die Flusspferdmenschen des Nihil",
-          "isbn13": "9783868696356"
-        }
-      ],
+      "missing": [],
       "note": null,
       "checkedAt": "2026-07-20",
       "sources": [
@@ -280,6 +270,34 @@
     }
   },
   {
+    "id": "clockwerx",
+    "title": "Clockwerx",
+    "comics": [
+      "9783868692105"
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "ongoing": false,
+      "checkedAt": "2026-07-20",
+      "publishedCount": 2,
+      "status": "incomplete",
+      "missing": [
+        {
+          "volume": "2",
+          "title": "Sintflut",
+          "isbn13": "9783868692112"
+        }
+      ],
+      "note": null,
+      "sources": [
+        {
+          "label": "PPM-Verlags- und Vertriebskatalog",
+          "url": "https://www.ppm-vertrieb.de/index.php?cPath=198_8&site=print_katalog"
+        }
+      ]
+    }
+  },
+  {
     "id": "das-narrenschiff",
     "title": "Das Narrenschiff",
     "comics": [
@@ -358,6 +376,39 @@
         {
           "label": "Verlags- bzw. Vertriebsnachweis",
           "url": "https://www.ppm-vertrieb.de/index.php?cPath=198_8&site=print_katalog"
+        }
+      ]
+    }
+  },
+  {
+    "id": "das-reich-ohne-namen",
+    "title": "Das Reich ohne Namen",
+    "comics": [
+      "9783987214028"
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "ongoing": false,
+      "checkedAt": "2026-07-20",
+      "publishedCount": 3,
+      "status": "incomplete",
+      "missing": [
+        {
+          "volume": "2",
+          "title": "Das Reich ohne Namen 2",
+          "isbn13": "9783987214035"
+        },
+        {
+          "volume": "3",
+          "title": "Das Reich ohne Namen 3",
+          "isbn13": "9783987214042"
+        }
+      ],
+      "note": "Trilogie in drei Akten.",
+      "sources": [
+        {
+          "label": "PPM: Das Reich ohne Namen 1",
+          "url": "https://www.ppm-vertrieb.de/Das-Reich-ohne-Namen-1%3A%3A318701.html"
         }
       ]
     }
@@ -861,6 +912,34 @@
     }
   },
   {
+    "id": "die-suesseste-aller-fruechte",
+    "title": "Die süßeste aller Früchte",
+    "comics": [
+      "9783689500702"
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "ongoing": false,
+      "checkedAt": "2026-07-20",
+      "publishedCount": 2,
+      "status": "incomplete",
+      "missing": [
+        {
+          "volume": "2",
+          "title": "Die süßeste aller Früchte Band 2",
+          "isbn13": "9783689501846"
+        }
+      ],
+      "note": null,
+      "sources": [
+        {
+          "label": "PPM: Die süßeste aller Früchte 2",
+          "url": "https://www.ppm-vertrieb.de/Die-suesseste-aller-Fruechte-2%3A%3A322380.html"
+        }
+      ]
+    }
+  },
+  {
     "id": "hitler-ist-tot",
     "title": "Hitler ist tot",
     "comics": [
@@ -997,6 +1076,34 @@
     }
   },
   {
+    "id": "marcel-pagnol",
+    "title": "Marcel Pagnol",
+    "comics": [
+      "9783958395329"
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "ongoing": false,
+      "checkedAt": "2026-07-20",
+      "publishedCount": 2,
+      "status": "incomplete",
+      "missing": [
+        {
+          "volume": "1",
+          "title": "Der Ruhm meines Vaters",
+          "isbn13": "9783958395312"
+        }
+      ],
+      "note": null,
+      "sources": [
+        {
+          "label": "Splitter: Das Schloss meiner Mutter",
+          "url": "https://www.splitter-verlag.de/das-schloss-meiner-mutter.html"
+        }
+      ]
+    }
+  },
+  {
     "id": "merci",
     "title": "Merci",
     "comics": [
@@ -1087,6 +1194,7 @@
       "9783868692129",
       "9783868692136",
       "9783868692143",
+      "9783868692150",
       "9783868692167",
       "9783868692174"
     ],
@@ -1096,11 +1204,6 @@
       "status": "incomplete",
       "ongoing": false,
       "missing": [
-        {
-          "volume": "4",
-          "title": "Im Varieté der Vampire",
-          "isbn13": "9783868692150"
-        },
         {
           "volume": "7",
           "title": "Eine Mumie zum Tee",
@@ -1273,6 +1376,58 @@
         {
           "label": "Verlags- bzw. Vertriebsnachweis",
           "url": "https://www.ppm-vertrieb.de/Schloss-der-Tiere-4%3A%3A318390.html"
+        }
+      ]
+    }
+  },
+  {
+    "id": "sherlock-holmes-society",
+    "title": "Sherlock Holmes – Society",
+    "comics": [
+      "9783958392755",
+      "9783958392762"
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "ongoing": false,
+      "checkedAt": "2026-07-20",
+      "publishedCount": 3,
+      "status": "incomplete",
+      "missing": [
+        {
+          "volume": "3",
+          "title": "Die Sünden des Sohnes",
+          "isbn13": "9783958395985"
+        }
+      ],
+      "note": null,
+      "sources": [
+        {
+          "label": "PPM: Sherlock Holmes Society 3",
+          "url": "https://www.ppm-vertrieb.de/Sherlock-Holmes-Society-3%3A%3A311810.html"
+        }
+      ]
+    }
+  },
+  {
+    "id": "silas-corey",
+    "title": "Silas Corey",
+    "comics": [
+      "9783958392571",
+      "9783958392588"
+    ],
+    "completeness": {
+      "referenceScope": "Deutschsprachig veröffentlichte reguläre Ausgaben",
+      "ongoing": false,
+      "checkedAt": "2026-07-20",
+      "publishedCount": 2,
+      "status": "complete",
+      "missing": [],
+      "note": null,
+      "sources": [
+        {
+          "label": "PPM-Verlags- und Vertriebskatalog",
+          "url": "https://www.ppm-vertrieb.de/index.php?cPath=198_8&site=print_katalog"
         }
       ]
     }
