@@ -123,12 +123,13 @@ function comicCard(c){
   return '<article class="comic-card" data-comic-id="'+esc(c.id)+'" tabindex="0"><div class="cover-frame"><img src="'+esc(c.cover)+'" alt="Cover von '+esc(c.title)+'" loading="lazy"><span class="status-dot '+(c.read?"read":"unread")+'" title="'+(c.read?"Gelesen":"Ungelesen")+'"></span></div><p class="card-meta">'+line+'</p><h3>'+esc(c.title)+'</h3><p class="card-author">'+esc((c.authors||[]).join(", "))+'</p></article>';
 }
 
-function seriesStats(items){
-  const nums=items.map(c=>volumeNumber(c.volume)).filter(n=>n!==null);
-  if(!nums.length) return {percent:100,label:items.length+" Ausgaben",gap:"Keine Bandnummern hinterlegt"};
-  const min=1,max=Math.max(...nums),unique=[...new Set(nums)].sort((a,b)=>a-b);
-  const missing=[]; for(let n=min;n<=max;n++) if(!unique.includes(n)) missing.push(n);
-  return {percent:Math.round(unique.length/(max-min+1)*100),label:"Bände "+unique.join(", "),gap:missing.length?"Fehlt: Band "+missing.join(", "):"Innerhalb der erfassten Spanne lückenfrei"};
+function seriesStats(series,items){
+  const c=series.completeness;
+  if(!c || c.status==="not-applicable") return {percent:100,label:items.length+" Ausgaben",gap:c?.note||"Keine fortlaufende Albumreihe",status:"Nicht anwendbar"};
+  const total=c.publishedCount||items.length;
+  const owned=Math.max(0,total-(c.missing||[]).length);
+  const complete=c.status==="complete";
+  return {percent:total?Math.round(owned/total*100):100,label:owned+" von "+total+" deutschsprachigen Bänden",gap:complete?(c.ongoing?"Aktuell vollständig · Reihe läuft":"Vollständig"):"Fehlend: "+(c.missing||[]).map(m=>"Band "+m.volume+" „"+m.title+"“").join(", "),status:complete?"Vollständig":"Unvollständig"};
 }
 
 function renderSeries(){
@@ -147,8 +148,11 @@ function coverStack(items){
 }
 
 function seriesCard(s){
-  const stats=seriesStats(s.items);
-  return '<button class="series-card" data-series-id="'+esc(s.id)+'">'+coverStack(s.items)+'<div class="series-card-body"><p class="kicker">'+s.items.length+' Ausgaben</p><h2>'+esc(s.title)+'</h2><p>'+esc(stats.label)+'</p><div class="progress" aria-label="'+stats.percent+' Prozent"><span style="width:'+stats.percent+'%"></span></div><p class="series-gap">'+esc(stats.gap)+'</p><strong>Reihe öffnen →</strong></div></button>';
+  const stats=seriesStats(s,s.items);
+  const c=s.completeness;
+  const sources=(c?.sources||[]).map(src=>'<a class="series-source" href="'+esc(src.url)+'" target="_blank" rel="noopener" onclick="event.stopPropagation()">Quelle ↗</a>').join("");
+  const checked=c?.checkedAt?'<span class="series-checked">Geprüft '+new Intl.DateTimeFormat("de-DE").format(new Date(c.checkedAt))+'</span>':"";
+  return '<article class="series-card" data-series-id="'+esc(s.id)+'" tabindex="0">'+coverStack(s.items)+'<div class="series-card-body"><p class="kicker">'+esc(stats.status)+' · '+s.items.length+' Ausgaben</p><h2>'+esc(s.title)+'</h2><p>'+esc(stats.label)+'</p><div class="progress" aria-label="'+stats.percent+' Prozent"><span style="width:'+stats.percent+'%"></span></div><p class="series-gap">'+esc(stats.gap)+'</p><div class="series-proof">'+checked+sources+'</div><strong>Reihe öffnen →</strong></div></article>';
 }
 
 function standaloneCard(items){
