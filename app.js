@@ -355,12 +355,29 @@ function renderReleases(){
     button.classList.toggle("active",key===state.releaseFilter);
     button.textContent=button.textContent.replace(/\s·\s\d+$/,"")+" · "+counts[key];
   });
-  $("releaseGrid").innerHTML=releases.map(releaseCard).join("");
+  const grouped=releases.reduce((groups,release)=>{
+    const key=release.calendarWeek||calendarWeek(release.firstSeenAt||release.releaseDate);
+    (groups[key]??=[]).push(release);
+    return groups;
+  },{});
+  $("releaseGrid").innerHTML=Object.entries(grouped).map(([week,items])=>
+    '<section class="release-week"><div class="release-week-heading"><span>'+esc(week)+'</span><strong>'+items.length+' Titel</strong></div><div class="release-week-grid">'+items.map(releaseCard).join("")+'</div></section>'
+  ).join("");
   $("releaseEmpty").hidden=releases.length>0;
   const dates=state.releases.map(r=>r.releaseDate).filter(Boolean).sort();
   $("releaseSourceNote").textContent=dates.length
     ?"Datenstand: PPM-Neuheiten vom "+formatDate(dates[0])+" bis "+formatDate(dates.at(-1))+" · "+state.releases.length+" geprüfte Titel · Quellenangaben öffnen jeweils den Originaleintrag bei PPM."
     :"Quellenangaben öffnen jeweils den verifizierten Originaleintrag bei PPM.";
+}
+
+function calendarWeek(value){
+  if(!value) return "Frühere Neuheiten";
+  const date=new Date(value+"T12:00:00");
+  const utc=new Date(Date.UTC(date.getFullYear(),date.getMonth(),date.getDate()));
+  utc.setUTCDate(utc.getUTCDate()+4-(utc.getUTCDay()||7));
+  const start=new Date(Date.UTC(utc.getUTCFullYear(),0,1));
+  const week=Math.ceil((((utc-start)/86400000)+1)/7);
+  return utc.getUTCFullYear()+"-KW"+String(week).padStart(2,"0");
 }
 
 function releaseCard(release){
@@ -370,9 +387,13 @@ function releaseCard(release){
   else if(release.knownPerson) relevance='<div class="release-match">Von '+esc(release.knownPerson)+' – bereits in deiner Sammlung vertreten</div>';
   else if(release.owned) relevance='<div class="release-match owned">Bereits in deiner Sammlung</div>';
   const active=key=>decision===key?" active":"";
+  const scopeLabel={"splitter":"Splitter komplett","franco-belgisch":"Frankobelgisch","sammlungsbezug":"Passt zu deiner Sammlung","redaktionell":"Redaktionelle Auswahl"}[release.scope]||"Kuratierte Auswahl";
+  const edition=release.editionType&&release.editionType!=="regular"
+    ? '<span class="edition-badge">'+(release.editionType==="variant"?"Variante":"Neu-/Gesamtausgabe")+'</span>'
+    : "";
   return '<article class="release-card">'+
     '<div class="release-cover"><img src="'+esc(release.cover)+'" alt="Cover von '+esc(release.title)+'" loading="lazy" onerror="this.closest(\'.release-cover\').classList.add(\'cover-error\');this.remove()"><span class="source-badge">PPM</span><span class="cover-fallback">Cover bei PPM ansehen</span></div>'+
-    '<div class="release-body">'+relevance+'<p class="card-meta">'+esc(release.publisher)+' · '+formatDate(release.releaseDate)+'</p><h2>'+esc(release.title)+'</h2><p class="release-subtitle">'+esc(release.subtitle||"")+'</p><p class="release-authors">'+esc((release.authors||[]).join(", "))+'</p><div class="release-facts"><span>'+esc(release.isbn13)+'</span><strong>'+formatMoney(release.price)+'</strong></div>'+
+    '<div class="release-body">'+relevance+'<div class="release-labels"><span class="scope-badge">'+esc(scopeLabel)+'</span>'+edition+'</div><p class="card-meta">'+esc(release.publisher)+' · erfasst '+formatDate(release.firstSeenAt||release.releaseDate)+'</p><h2>'+esc(release.title)+'</h2><p class="release-subtitle">'+esc(release.subtitle||"")+'</p><p class="release-authors">'+esc((release.authors||[]).join(", "))+'</p><div class="release-facts"><span>'+esc(release.isbn13)+'</span><strong>'+formatMoney(release.price)+'</strong></div>'+
     '<div class="release-actions"><button class="wish'+active("wishlist")+'" data-release-id="'+esc(release.id)+'" data-release-decision="wishlist">♡ Wunschliste</button><button class="'+active("later")+'" data-release-id="'+esc(release.id)+'" data-release-decision="later">Später</button><button class="'+active("dismissed")+'" data-release-id="'+esc(release.id)+'" data-release-decision="dismissed">Nicht interessant</button></div>'+
     '<a class="release-source" href="'+esc(release.sourceUrl)+'" target="_blank" rel="noopener">Original bei PPM ansehen ↗</a></div></article>';
 }
