@@ -1,99 +1,431 @@
 [
   {
-    "id": "ppm-9783968043760",
-    "isbn13": "9783968043760",
-    "title": "Alles Rudi Gesamtausgabe 2",
-    "subtitle": "",
-    "publisher": "All Verlag",
-    "authors": ["Peter Puck"],
-    "price": 19.8,
-    "releaseDate": "2026-07-01",
-    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322622-20260114121628.jpg",
-    "sourceUrl": "https://www.ppm-vertrieb.de/Alles-Rudi-Gesamtausgabe-2%3A%3A322622.html"
+    "id": "ppm-9783956403187",
+    "isbn13": "9783956403187",
+    "title": "Welt ohne Ende",
+    "subtitle": "Vom Energiewunder zum Klimawandel",
+    "publisher": "Reprodukt",
+    "authors": [
+      "Christophe Blain",
+      "Jean-Marc Jancovici",
+      "Ulrich Pröfrock"
+    ],
+    "price": 39.0,
+    "releaseDate": "2026-07-23",
+    "calendarWeek": "2026-KW30",
+    "firstSeenAt": "2026-07-23",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323024-20260518140728.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Welt-ohne-Ende::323024.html",
+    "scope": "sammlungsbezug",
+    "editionType": "regular"
   },
   {
-    "id": "ppm-9783968043807",
-    "isbn13": "9783968043807",
-    "title": "Hägar – Gesammelte Chroniken 2022",
+    "id": "ppm-9783968043890",
+    "isbn13": "9783968043890",
+    "title": "Voyeur 1 VZA",
     "subtitle": "",
     "publisher": "All Verlag",
-    "authors": ["Dik Browne"],
-    "price": 19.8,
-    "releaseDate": "2026-07-01",
-    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322626-20260113131812.jpg",
-    "sourceUrl": "https://www.ppm-vertrieb.de/Haegar-Gesammelte-Chroniken-2022%3A%3A322626.html"
+    "authors": [
+      "Horacio Altuna"
+    ],
+    "price": 49.8,
+    "releaseDate": "2026-07-23",
+    "calendarWeek": "2026-KW30",
+    "firstSeenAt": "2026-07-23",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322635-20260113133736.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Voyeur-1-VZA::322635.html",
+    "scope": "franco-belgisch",
+    "editionType": "variant"
   },
   {
-    "id": "ppm-9783968043784",
-    "isbn13": "9783968043784",
-    "title": "Talk Dirty 1",
+    "id": "ppm-9783968043975",
+    "isbn13": "9783968043975",
+    "title": "Tommy Banco Gesamtausgabe VZA",
     "subtitle": "",
     "publisher": "All Verlag",
-    "authors": ["Matthias Schultheiss"],
+    "authors": [
+      "Greg",
+      "Eddy Paape"
+    ],
+    "price": 44.8,
+    "releaseDate": "2026-07-23",
+    "calendarWeek": "2026-KW30",
+    "firstSeenAt": "2026-07-23",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322643-20260113134807.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Tommy-Banco-Gesamtausgabe-VZA::322643.html",
+    "scope": "franco-belgisch",
+    "editionType": "variant"
+  },
+  {
+    "id": "ppm-9783968043968",
+    "isbn13": "9783968043968",
+    "title": "Tommy Banco Gesamtausgabe",
+    "subtitle": "",
+    "publisher": "All Verlag",
+    "authors": [
+      "Greg",
+      "Eddy Paape"
+    ],
+    "price": 29.8,
+    "releaseDate": "2026-07-23",
+    "calendarWeek": "2026-KW30",
+    "firstSeenAt": "2026-07-23",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322642-20260113134655.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Tommy-Banco-Gesamtausgabe::322642.html",
+    "scope": "franco-belgisch",
+    "editionType": "new-edition"
+  },
+  {
+    "id": "ppm-9783946842552",
+    "isbn13": "9783946842552",
+    "title": "Prinz Eisenherz - Die Yeates-Jahre 25 (Neuauflage)",
+    "subtitle": "Jahrgang 2019 - 2020",
+    "publisher": "Bocola",
+    "authors": [
+      "Thomas Yeates"
+    ],
+    "price": 24.9,
+    "releaseDate": "2026-07-23",
+    "calendarWeek": "2026-KW30",
+    "firstSeenAt": "2026-07-23",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/314223-20201126153305.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Prinz-Eisenherz-Die-Yeates-Jahre-25::314223.html",
+    "scope": "franco-belgisch",
+    "editionType": "new-edition"
+  },
+  {
+    "id": "ppm-9783939625513",
+    "isbn13": "9783939625513",
+    "title": "Prinz Eisenherz - Die Murphy-Jahre 11 (Neuauflage)",
+    "subtitle": "Jahrgang 1991 - 1992",
+    "publisher": "Bocola",
+    "authors": [
+      "John Cullen Murphy"
+    ],
+    "price": 24.9,
+    "releaseDate": "2026-07-23",
+    "calendarWeek": "2026-KW30",
+    "firstSeenAt": "2026-07-23",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/308238-20150113113113.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Prinz-Eisenherz-Die-Murphy-Jahre-11::308238.html",
+    "scope": "franco-belgisch",
+    "editionType": "new-edition"
+  },
+  {
+    "id": "ppm-9783968043838",
+    "isbn13": "9783968043838",
+    "title": "Leo Gwenn Gesamtausgabe VZA",
+    "subtitle": "",
+    "publisher": "All Verlag",
+    "authors": [
+      "Vicq",
+      "Daniel Hulet"
+    ],
+    "price": 39.8,
+    "releaseDate": "2026-07-23",
+    "calendarWeek": "2026-KW30",
+    "firstSeenAt": "2026-07-23",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322629-20260113132148.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Leo-Gwenn-Gesamtausgabe-VZA::322629.html",
+    "scope": "franco-belgisch",
+    "editionType": "variant"
+  },
+  {
+    "id": "ppm-9783968043852",
+    "isbn13": "9783968043852",
+    "title": "Kasimir 9 VZA",
+    "subtitle": "",
+    "publisher": "All Verlag",
+    "authors": [
+      "Berck",
+      "René Goscinny"
+    ],
+    "price": 39.8,
+    "releaseDate": "2026-07-23",
+    "calendarWeek": "2026-KW30",
+    "firstSeenAt": "2026-07-23",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322631-20260113132947.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Kasimir-9-VZA::322631.html",
+    "scope": "franco-belgisch",
+    "editionType": "variant"
+  },
+  {
+    "id": "ppm-9783968043876",
+    "isbn13": "9783968043876",
+    "title": "Kasimir 10 VZA",
+    "subtitle": "",
+    "publisher": "All Verlag",
+    "authors": [
+      "Berck",
+      "René Goscinny"
+    ],
+    "price": 39.8,
+    "releaseDate": "2026-07-23",
+    "calendarWeek": "2026-KW30",
+    "firstSeenAt": "2026-07-23",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322633-20260113133118.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Kasimir-10-VZA::322633.html",
+    "scope": "franco-belgisch",
+    "editionType": "variant"
+  },
+  {
+    "id": "ppm-9783968043951",
+    "isbn13": "9783968043951",
+    "title": "Jerry Spring 12 VZA",
+    "subtitle": "",
+    "publisher": "All Verlag",
+    "authors": [
+      "Jijé"
+    ],
+    "price": 39.8,
+    "releaseDate": "2026-07-23",
+    "calendarWeek": "2026-KW30",
+    "firstSeenAt": "2026-07-23",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322641-20260113134449.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Jerry-Spring-12-VZA::322641.html",
+    "scope": "franco-belgisch",
+    "editionType": "variant"
+  },
+  {
+    "id": "ppm-9783968043944",
+    "isbn13": "9783968043944",
+    "title": "Jerry Spring 12",
+    "subtitle": "El Zopilote",
+    "publisher": "All Verlag",
+    "authors": [
+      "Jijé"
+    ],
+    "price": 17.8,
+    "releaseDate": "2026-07-23",
+    "calendarWeek": "2026-KW30",
+    "firstSeenAt": "2026-07-23",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322640-20260113134412.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Jerry-Spring-12::322640.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783968043937",
+    "isbn13": "9783968043937",
+    "title": "Jerry Spring 11 VZA",
+    "subtitle": "",
+    "publisher": "All Verlag",
+    "authors": [
+      "Jijé"
+    ],
+    "price": 39.8,
+    "releaseDate": "2026-07-23",
+    "calendarWeek": "2026-KW30",
+    "firstSeenAt": "2026-07-23",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322639-20260113134308.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Jerry-Spring-11-VZA::322639.html",
+    "scope": "franco-belgisch",
+    "editionType": "variant"
+  },
+  {
+    "id": "ppm-9783968043920",
+    "isbn13": "9783968043920",
+    "title": "Jerry Spring 11",
+    "subtitle": "Der Weg nach Coronado",
+    "publisher": "All Verlag",
+    "authors": [
+      "Jijé"
+    ],
+    "price": 17.8,
+    "releaseDate": "2026-07-23",
+    "calendarWeek": "2026-KW30",
+    "firstSeenAt": "2026-07-23",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322638-20260113134224.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Jerry-Spring-11::322638.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783968043913",
+    "isbn13": "9783968043913",
+    "title": "Hermann Kurzgeschichten VZA",
+    "subtitle": "",
+    "publisher": "All Verlag",
+    "authors": [
+      "Hermann"
+    ],
+    "price": 44.8,
+    "releaseDate": "2026-07-23",
+    "calendarWeek": "2026-KW30",
+    "firstSeenAt": "2026-07-23",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322637-20260113134045.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Hermann-Kurzgeschichten-VZA::322637.html",
+    "scope": "franco-belgisch",
+    "editionType": "variant"
+  },
+  {
+    "id": "ppm-9783968043906",
+    "isbn13": "9783968043906",
+    "title": "Hermann Kurzgeschichten",
+    "subtitle": "",
+    "publisher": "All Verlag",
+    "authors": [
+      "Hermann"
+    ],
     "price": 24.8,
-    "releaseDate": "2026-07-01",
-    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322624-20260113131455.jpg",
-    "sourceUrl": "https://www.ppm-vertrieb.de/Talk-Dirty-1%3A%3A322624.html"
+    "releaseDate": "2026-07-23",
+    "calendarWeek": "2026-KW30",
+    "firstSeenAt": "2026-07-23",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322636-20260113133948.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Hermann-Kurzgeschichten::322636.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
   },
   {
-    "id": "ppm-9783964451545",
-    "isbn13": "9783964451545",
-    "title": "Beuys",
-    "subtitle": "Die Erfindung der Wahrheit",
-    "publisher": "avant-verlag",
-    "authors": ["Lenz Mosbacher"],
-    "price": 30,
-    "releaseDate": "2026-07-01",
-    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322438-20251204143315.jpg",
-    "sourceUrl": "https://www.ppm-vertrieb.de/Beuys%3A%3A322438.html"
-  },
-  {
-    "id": "ppm-9783964451484",
-    "isbn13": "9783964451484",
-    "title": "Bunny war böse",
+    "id": "ppm-9783964305145",
+    "isbn13": "9783964305145",
+    "title": "Die Zentauren Sparpaket (Kult Comics)",
     "subtitle": "",
-    "publisher": "avant-verlag",
-    "authors": ["Lilli Loge"],
-    "price": 29,
-    "releaseDate": "2026-07-01",
-    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322439-20251204143553.jpg",
-    "sourceUrl": "https://www.ppm-vertrieb.de/Bunny-war-boese%3A%3A322439.html"
+    "publisher": "Kult Comics",
+    "authors": [
+      "Pierre Seron"
+    ],
+    "price": 50.0,
+    "releaseDate": "2026-07-23",
+    "calendarWeek": "2026-KW30",
+    "firstSeenAt": "2026-07-23",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323371-20260629141745.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Die-Zentauren-Sparpaket-Kult-Comics::323371.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
   },
   {
-    "id": "ppm-9783964451613",
-    "isbn13": "9783964451613",
-    "title": "Madeleine, die Widerständige 4",
-    "subtitle": "Der Engel des Todes",
-    "publisher": "avant-verlag",
-    "authors": ["Dominique Bertail", "Jean-David Morvan", "Madeleine Riffaud"],
-    "price": 29,
-    "releaseDate": "2026-07-01",
-    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322436-20251204142934.jpg",
-    "sourceUrl": "https://www.ppm-vertrieb.de/Madeleine-die-Widerstaendige-4%3A%3A322436.html"
+    "id": "ppm-9783899088304",
+    "isbn13": "9783899088304",
+    "title": "Die Abenteuer von Jacques Gibrat 11 - VZA",
+    "subtitle": "",
+    "publisher": "Salleck",
+    "authors": [
+      "Thierry Dubois",
+      "Jean-Luc Delvaux"
+    ],
+    "price": 39.0,
+    "releaseDate": "2026-07-23",
+    "calendarWeek": "2026-KW30",
+    "firstSeenAt": "2026-07-23",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322916-20260420132516.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Die-Abenteuer-von-Jacques-Gibrat-11-VZA::322916.html",
+    "scope": "franco-belgisch",
+    "editionType": "variant"
   },
   {
-    "id": "ppm-9783962341022",
-    "isbn13": "9783962341022",
-    "title": "Das Trivialepos der DDR",
-    "subtitle": "Mosaik und seine Quellen",
-    "publisher": "Bachmann Verlag",
-    "authors": ["Thomas Kramer"],
-    "price": 29.9,
-    "releaseDate": "2026-07-01",
-    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322820-20260305133339.jpg",
-    "sourceUrl": "https://www.ppm-vertrieb.de/Das-Trivialepos-der-DDR%3A%3A322820.html"
+    "id": "ppm-9783899088298",
+    "isbn13": "9783899088298",
+    "title": "Die Abenteuer von Jacques Gibrat 11",
+    "subtitle": "Der große Preis von Angoulême",
+    "publisher": "Salleck",
+    "authors": [
+      "Thierry Dubois",
+      "Jean-Luc Delvaux"
+    ],
+    "price": 15.0,
+    "releaseDate": "2026-07-23",
+    "calendarWeek": "2026-KW30",
+    "firstSeenAt": "2026-07-23",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322915-20260420132237.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Die-Abenteuer-von-Jacques-Gibrat-11::322915.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
   },
   {
-    "id": "ppm-9783986668488",
-    "isbn13": "9783986668488",
-    "title": "Avatar – Der Herr der Elemente 09 Premium",
-    "subtitle": "Feuer und Familie",
-    "publisher": "Cross Cult",
-    "authors": ["Gene Luen Yang", "Gurihiru"],
-    "price": 40,
-    "releaseDate": "2026-07-01",
-    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322022-20260311124854.jpg",
-    "sourceUrl": "https://www.ppm-vertrieb.de/Avatar-Der-Herr-der-Elemente-09-Premium%3A%3A322022.html"
+    "id": "ppm-9783964304629",
+    "isbn13": "9783964304629",
+    "title": "Carbeau 4",
+    "subtitle": "Lotus Evija",
+    "publisher": "Kult Comics",
+    "authors": [
+      "Eric Heuvel",
+      "Noel Ummels"
+    ],
+    "price": 17.0,
+    "releaseDate": "2026-07-23",
+    "calendarWeek": "2026-KW30",
+    "firstSeenAt": "2026-07-23",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322966-20260513121045.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Carbeau-4::322966.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783964301574",
+    "isbn13": "9783964301574",
+    "title": "Bud Broadway 9",
+    "subtitle": "",
+    "publisher": "Kult Comics",
+    "authors": [
+      "Eric Heuvel"
+    ],
+    "price": 35.0,
+    "releaseDate": "2026-07-23",
+    "calendarWeek": "2026-KW30",
+    "firstSeenAt": "2026-07-23",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322931-20260511144025.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Bud-Broadway-9::322931.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783956405235",
+    "isbn13": "9783956405235",
+    "title": "Brodecks Bericht",
+    "subtitle": "",
+    "publisher": "Reprodukt",
+    "authors": [
+      "Manu Larcenet",
+      "Philippe Claudel",
+      "Ulrich Pröfrock"
+    ],
+    "price": 39.0,
+    "releaseDate": "2026-07-23",
+    "calendarWeek": "2026-KW30",
+    "firstSeenAt": "2026-07-23",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323083-20260520140455.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Brodecks-Bericht::323083.html",
+    "scope": "sammlungsbezug",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783910965065",
+    "isbn13": "9783910965065",
+    "title": "Boule & Bill 41",
+    "subtitle": "Freunde fürs Leben",
+    "publisher": "Finix-Comics",
+    "authors": [
+      "Laurent Verron"
+    ],
+    "price": 15.8,
+    "releaseDate": "2026-07-23",
+    "calendarWeek": "2026-KW30",
+    "firstSeenAt": "2026-07-23",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/321959-20260623132210.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Boule-Bill-41::321959.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783910965416",
+    "isbn13": "9783910965416",
+    "title": "Agent Alpha 19",
+    "subtitle": "Black Holes",
+    "publisher": "Finix-Comics",
+    "authors": [
+      "Youri Jigounov",
+      "Emmanuel Herzet",
+      "Alain Queireix"
+    ],
+    "price": 15.8,
+    "releaseDate": "2026-07-23",
+    "calendarWeek": "2026-KW30",
+    "firstSeenAt": "2026-07-23",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322869-20260617145820.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Agent-Alpha-19::322869.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
   },
   {
     "id": "ppm-9783986668709",
@@ -101,11 +433,72 @@
     "title": "We Stand on Guard – Neue Edition",
     "subtitle": "",
     "publisher": "Cross Cult",
-    "authors": ["Brian K. Vaughan", "Steve Skroce"],
+    "authors": [
+      "Brian K. Vaughan",
+      "Steve Skroce"
+    ],
     "price": 30,
     "releaseDate": "2026-07-01",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322850-20260319145516.jpg",
     "sourceUrl": "https://www.ppm-vertrieb.de/We-Stand-on-Guard-Neue-Edition%3A%3A322850.html"
+  },
+  {
+    "id": "ppm-9783968043784",
+    "isbn13": "9783968043784",
+    "title": "Talk Dirty 1",
+    "subtitle": "",
+    "publisher": "All Verlag",
+    "authors": [
+      "Matthias Schultheiss"
+    ],
+    "price": 24.8,
+    "releaseDate": "2026-07-01",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322624-20260113131455.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Talk-Dirty-1%3A%3A322624.html"
+  },
+  {
+    "id": "ppm-9783964451613",
+    "isbn13": "9783964451613",
+    "title": "Madeleine, die Widerständige 4",
+    "subtitle": "Der Engel des Todes",
+    "publisher": "avant-verlag",
+    "authors": [
+      "Dominique Bertail",
+      "Jean-David Morvan",
+      "Madeleine Riffaud"
+    ],
+    "price": 29,
+    "releaseDate": "2026-07-01",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322436-20251204142934.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Madeleine-die-Widerstaendige-4%3A%3A322436.html"
+  },
+  {
+    "id": "ppm-9783968043807",
+    "isbn13": "9783968043807",
+    "title": "Hägar – Gesammelte Chroniken 2022",
+    "subtitle": "",
+    "publisher": "All Verlag",
+    "authors": [
+      "Dik Browne"
+    ],
+    "price": 19.8,
+    "releaseDate": "2026-07-01",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322626-20260113131812.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Haegar-Gesammelte-Chroniken-2022%3A%3A322626.html"
+  },
+  {
+    "id": "ppm-9783962341022",
+    "isbn13": "9783962341022",
+    "title": "Das Trivialepos der DDR",
+    "subtitle": "Mosaik und seine Quellen",
+    "publisher": "Bachmann Verlag",
+    "authors": [
+      "Thomas Kramer"
+    ],
+    "price": 29.9,
+    "releaseDate": "2026-07-01",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322820-20260305133339.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Das-Trivialepos-der-DDR%3A%3A322820.html"
   },
   {
     "id": "ppm-9783689020361",
@@ -113,10 +506,69 @@
     "title": "Das Neil Gaiman Bibliothek-Bundle",
     "subtitle": "Drei Bände",
     "publisher": "Dantes Verlag",
-    "authors": ["Neil Gaiman"],
+    "authors": [
+      "Neil Gaiman"
+    ],
     "price": 28,
     "releaseDate": "2026-07-01",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322818-20260304134452.jpg",
     "sourceUrl": "https://www.ppm-vertrieb.de/Das-Neil-Gaiman-Bibliothek-Bundle%3A%3A322818.html"
+  },
+  {
+    "id": "ppm-9783964451484",
+    "isbn13": "9783964451484",
+    "title": "Bunny war böse",
+    "subtitle": "",
+    "publisher": "avant-verlag",
+    "authors": [
+      "Lilli Loge"
+    ],
+    "price": 29,
+    "releaseDate": "2026-07-01",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322439-20251204143553.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Bunny-war-boese%3A%3A322439.html"
+  },
+  {
+    "id": "ppm-9783964451545",
+    "isbn13": "9783964451545",
+    "title": "Beuys",
+    "subtitle": "Die Erfindung der Wahrheit",
+    "publisher": "avant-verlag",
+    "authors": [
+      "Lenz Mosbacher"
+    ],
+    "price": 30,
+    "releaseDate": "2026-07-01",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322438-20251204143315.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Beuys%3A%3A322438.html"
+  },
+  {
+    "id": "ppm-9783986668488",
+    "isbn13": "9783986668488",
+    "title": "Avatar – Der Herr der Elemente 09 Premium",
+    "subtitle": "Feuer und Familie",
+    "publisher": "Cross Cult",
+    "authors": [
+      "Gene Luen Yang",
+      "Gurihiru"
+    ],
+    "price": 40,
+    "releaseDate": "2026-07-01",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322022-20260311124854.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Avatar-Der-Herr-der-Elemente-09-Premium%3A%3A322022.html"
+  },
+  {
+    "id": "ppm-9783968043760",
+    "isbn13": "9783968043760",
+    "title": "Alles Rudi Gesamtausgabe 2",
+    "subtitle": "",
+    "publisher": "All Verlag",
+    "authors": [
+      "Peter Puck"
+    ],
+    "price": 19.8,
+    "releaseDate": "2026-07-01",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322622-20260114121628.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Alles-Rudi-Gesamtausgabe-2%3A%3A322622.html"
   }
 ]
