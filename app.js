@@ -1,7 +1,8 @@
 const state = {
   comics: [], series: [], view: "dashboard", query: "", seriesQuery: "",
   status: "all", publisher: "all", seriesFilter: "all", year: "all",
-  sort: "title", wishlist: new Set(), lastView: "collection"
+  sort: "title", wishlist: new Set(), lastView: "collection",
+  releases: [], releaseFilter: "open", releaseDecisions: {}
 };
 
 const $ = (id) => document.getElementById(id);
@@ -14,10 +15,13 @@ const byId = id => state.comics.find(comic => comic.id === id);
 
 async function init(){
   try {
-    const [comicsResponse, seriesResponse] = await Promise.all([fetch("data/comics.json"),fetch("data/series.json")]);
-    if(!comicsResponse.ok || !seriesResponse.ok) throw new Error("Daten konnten nicht geladen werden");
+    const [comicsResponse, seriesResponse, releasesResponse] = await Promise.all([fetch("data/comics.json"),fetch("data/series.json"),fetch("data/new-releases.json")]);
+    if(!comicsResponse.ok || !seriesResponse.ok || !releasesResponse.ok) throw new Error("Daten konnten nicht geladen werden");
     state.comics = await comicsResponse.json();
     state.series = await seriesResponse.json();
+    state.releases = await releasesResponse.json();
+    loadLocalState();
+    enrichReleases();
     populateFilters();
     bindEvents();
     renderAll();
@@ -47,6 +51,10 @@ function bindEvents(){
     if(series){ openSeries(series.dataset.seriesId); return; }
     const card=event.target.closest("[data-comic-id]");
     if(card){ openDetail(card.dataset.comicId); return; }
+    const decision=event.target.closest("[data-release-decision]");
+    if(decision){ setReleaseDecision(decision.dataset.releaseId,decision.dataset.releaseDecision); return; }
+    const releaseFilter=event.target.closest("[data-release-filter]");
+    if(releaseFilter){ state.releaseFilter=releaseFilter.dataset.releaseFilter; renderReleases(); return; }
   });
   $("searchInput").addEventListener("input",e=>{state.query=e.target.value;renderCollection();});
   $("seriesSearchInput").addEventListener("input",e=>{state.seriesQuery=e.target.value;renderSeries();});
@@ -58,6 +66,11 @@ function bindEvents(){
   });
   $("backButton").addEventListener("click",()=>showView(state.lastView));
   $("mobileMenu").addEventListener("click",()=>document.querySelector(".main-nav").classList.toggle("open"));
+  $("resetReleaseDecisions").addEventListener("click",()=>{
+    if(window.confirm("Alle Entscheidungen im Neuheiten-Katalog zurücksetzen?")){
+      state.releaseDecisions={}; saveLocalState(); renderReleases(); renderWishlist(); renderDashboard();
+    }
+  });
 }
 
 function showView(view){
@@ -69,11 +82,38 @@ function showView(view){
   if(view==="collection") renderCollection();
   if(view==="series") renderSeries();
   if(view==="wishlist") renderWishlist();
+  if(view==="newreleases") renderReleases();
   window.scrollTo({top:0,behavior:"smooth"});
 }
 
 function renderAll(){
-  renderDashboard(); renderCollection(); renderSeries(); renderWishlist();
+  renderDashboard(); renderCollection(); renderSeries(); renderWishlist(); renderReleases();
+}
+
+function loadLocalState(){
+  try{
+    state.releaseDecisions=JSON.parse(localStorage.getItem("comicarchiv-release-decisions")||"{}");
+    state.wishlist=new Set(JSON.parse(localStorage.getItem("comicarchiv-comic-wishlist")||"[]"));
+  }catch(error){ console.warn("Lokaler Stand konnte nicht geladen werden",error); }
+}
+
+function saveLocalState(){
+  localStorage.setItem("comicarchiv-release-decisions",JSON.stringify(state.releaseDecisions));
+  localStorage.setItem("comicarchiv-comic-wishlist",JSON.stringify([...state.wishlist]));
+}
+
+function enrichReleases(){
+  const ownedIsbns=new Set(state.comics.map(c=>c.isbn13).filter(Boolean));
+  const missingByIsbn=new Map();
+  state.series.forEach(series=>(series.completeness?.missing||[]).forEach(missing=>{
+    if(missing.isbn13) missingByIsbn.set(missing.isbn13,{seriesId:series.id,seriesTitle:series.title,volume:missing.volume});
+  }));
+  const ownedPeople=new Set(state.comics.flatMap(c=>c.authors||[]).map(v=>v.toLocaleLowerCase("de")));
+  state.releases=state.releases.map(release=>{
+    const gap=missingByIsbn.get(release.isbn13);
+    const knownPerson=(release.authors||[]).find(name=>ownedPeople.has(name.toLocaleLowerCase("de")));
+    return {...release,owned:ownedIsbns.has(release.isbn13),gap,knownPerson,relevant:Boolean(gap||knownPerson)};
+  });
 }
 
 function renderDashboard(){
@@ -87,7 +127,7 @@ function renderDashboard(){
   $("recentGrid").innerHTML=recent.map(recentCard).join("");
   if(recent[0]) $("heroCoverA").src=recent[0].cover;
   if(recent[1]) $("heroCoverB").src=recent[1].cover;
-  $("wishCount").textContent=state.wishlist.size;
+  $("wishCount").textContent=state.wishlist.size+state.releases.filter(r=>state.releaseDecisions[r.id]==="wishlist").length;
 }
 
 function recentCard(c){
@@ -256,20 +296,68 @@ function renderDetail(c){
     const action=button.dataset.action;
     if(action==="read") c.read=!c.read;
     if(action==="favorite") c.favorite=!c.favorite;
-    if(action==="wishlist"){state.wishlist.has(c.id)?state.wishlist.delete(c.id):state.wishlist.add(c.id);}
+    if(action==="wishlist"){state.wishlist.has(c.id)?state.wishlist.delete(c.id):state.wishlist.add(c.id);saveLocalState();}
     renderDetail(c);renderDashboard();renderCollection();renderWishlist();
   }));
 }
 
 function renderWishlist(){
   const items=state.comics.filter(c=>state.wishlist.has(c.id));
-  if(!items.length){
+  const releases=state.releases.filter(r=>state.releaseDecisions[r.id]==="wishlist");
+  if(!items.length&&!releases.length){
     $("wishlistContent").className="empty-wishlist";
     $("wishlistContent").innerHTML='<div class="empty-icon">♡</div><h2>Die Wunschliste ist noch leer.</h2><p>Auf der Detailseite kannst du einen Comic vormerken.</p><button class="primary-action" data-view-link="collection">Sammlung öffnen <span>→</span></button>';
   } else {
-    $("wishlistContent").className="comic-grid wishlist-grid";
-    $("wishlistContent").innerHTML=items.map(comicCard).join("");
+    $("wishlistContent").className="wishlist-combined";
+    $("wishlistContent").innerHTML=(releases.length?'<div class="wishlist-section"><div class="section-heading compact"><div><p class="kicker">Aus dem Neuheiten-Katalog</p><h2>Vorgemerkte Neuheiten</h2></div></div><div class="release-grid wishlist-release-grid">'+releases.map(releaseCard).join("")+'</div></div>':"")+(items.length?'<div class="wishlist-section"><div class="section-heading compact"><div><p class="kicker">Aus deinem Bestand</p><h2>Weitere Vormerkungen</h2></div></div><div class="comic-grid wishlist-grid">'+items.map(comicCard).join("")+'</div></div>':"");
   }
+}
+
+function setReleaseDecision(id,decision){
+  state.releaseDecisions[id]=decision;
+  saveLocalState();
+  renderReleases(); renderWishlist(); renderDashboard();
+}
+
+function releaseMatchesFilter(release){
+  const decision=state.releaseDecisions[release.id]||"open";
+  if(state.releaseFilter==="open") return decision==="open"&&!release.owned;
+  if(state.releaseFilter==="relevant") return release.relevant&&decision!=="dismissed"&&!release.owned;
+  return decision===state.releaseFilter;
+}
+
+function renderReleases(){
+  if(!$("releaseGrid")) return;
+  const releases=state.releases.filter(releaseMatchesFilter);
+  const counts={
+    open:state.releases.filter(r=>(state.releaseDecisions[r.id]||"open")==="open"&&!r.owned).length,
+    relevant:state.releases.filter(r=>r.relevant&&(state.releaseDecisions[r.id]||"open")!=="dismissed"&&!r.owned).length,
+    wishlist:state.releases.filter(r=>state.releaseDecisions[r.id]==="wishlist").length,
+    later:state.releases.filter(r=>state.releaseDecisions[r.id]==="later").length,
+    dismissed:state.releases.filter(r=>state.releaseDecisions[r.id]==="dismissed").length
+  };
+  $("releaseSummary").innerHTML='<article><strong>'+counts.open+'</strong><span>Noch offen</span></article><article><strong>'+counts.relevant+'</strong><span>Für dich relevant</span></article><article><strong>'+counts.wishlist+'</strong><span>Auf Wunschliste</span></article>';
+  $("releaseTabs").querySelectorAll("[data-release-filter]").forEach(button=>{
+    const key=button.dataset.releaseFilter;
+    button.classList.toggle("active",key===state.releaseFilter);
+    button.textContent=button.textContent.replace(/\s·\s\d+$/,"")+" · "+counts[key];
+  });
+  $("releaseGrid").innerHTML=releases.map(releaseCard).join("");
+  $("releaseEmpty").hidden=releases.length>0;
+}
+
+function releaseCard(release){
+  const decision=state.releaseDecisions[release.id]||"open";
+  let relevance="";
+  if(release.gap) relevance='<div class="release-match strong">Schließt deine Lücke: '+esc(release.gap.seriesTitle)+' · Band '+esc(release.gap.volume)+'</div>';
+  else if(release.knownPerson) relevance='<div class="release-match">Von '+esc(release.knownPerson)+' – bereits in deiner Sammlung vertreten</div>';
+  else if(release.owned) relevance='<div class="release-match owned">Bereits in deiner Sammlung</div>';
+  const active=key=>decision===key?" active":"";
+  return '<article class="release-card">'+
+    '<div class="release-cover"><img src="'+esc(release.cover)+'" alt="Cover von '+esc(release.title)+'" loading="lazy"><span class="source-badge">PPM</span></div>'+
+    '<div class="release-body">'+relevance+'<p class="card-meta">'+esc(release.publisher)+' · '+formatDate(release.releaseDate)+'</p><h2>'+esc(release.title)+'</h2><p class="release-subtitle">'+esc(release.subtitle||"")+'</p><p class="release-authors">'+esc((release.authors||[]).join(", "))+'</p><div class="release-facts"><span>'+esc(release.isbn13)+'</span><strong>'+formatMoney(release.price)+'</strong></div>'+
+    '<div class="release-actions"><button class="wish'+active("wishlist")+'" data-release-id="'+esc(release.id)+'" data-release-decision="wishlist">♡ Wunschliste</button><button class="'+active("later")+'" data-release-id="'+esc(release.id)+'" data-release-decision="later">Später</button><button class="'+active("dismissed")+'" data-release-id="'+esc(release.id)+'" data-release-decision="dismissed">Nicht interessant</button></div>'+
+    '<a class="release-source" href="'+esc(release.sourceUrl)+'" target="_blank" rel="noopener">Original bei PPM ansehen ↗</a></div></article>';
 }
 
 window.addEventListener("beforeprint",()=>document.querySelectorAll('img[loading="lazy"]').forEach(img=>img.loading="eager"));
