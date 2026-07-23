@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "description": "Redaktioneller Filter für Daniels persönlichen PPM-Neuheiten-Katalog",
+  "alwaysIncludePublishers": ["Splitter"],
+  "francoBelgianPublishers": [
+    "All Verlag", "BD Must", "Bocola", "Bunte Dimensionen", "comicplus+",
+    "Dark Dragon Books", "Erko", "Finix-Comics", "Kult Comics", "Piredda",
+    "Salleck", "Schreiber & Leser", "Splitter", "toonfish", "Zack Edition"
+  ],
+  "excludedPublishers": [
+    "Loewe Manga", "Manga Cult", "Manhwa Cult", "Splitter Manga+", "Yomeru"
+  ],
+  "excludedTerms": [
+    "Marvel", "DC Comics", "Manga", "Manhwa", "Manhua", "Light Novel",
+    "Webtoon", "Lesezeichen", "Verlagskatalog", "Merchandise"
+  ],
+  "variantTerms": ["VZA", "Variantcover", "Vorzugsausgabe", "Luxusausgabe"],
+  "editionTerms": ["Neuauflage", "Neue Edition", "Gesamtausgabe", "Bundle", "Schuber"]
+}
