@@ -13,7 +13,7 @@ from urllib.parse import urljoin
 from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
-PPM_URL = "https://www.ppm-vertrieb.de/index.php?filter=letzten-wochen&site=print_katalog"
+PPM_URL = "https://www.ppm-vertrieb.de/katalog.html%26filter%3Dletzten-wochen"
 USER_AGENT = "Daniel-Hahn-Comicarchiv/1.0 (+private curated catalogue)"
 
 
@@ -48,74 +48,82 @@ def classify(item: dict, rules: dict, known_people: set[str], known_series: set[
     return False, "outside-scope"
 
 
-def parse_catalog(html: bytes, today: date, rules: dict, comics: list[dict], series: list[dict]) -> list[dict]:
-    from bs4 import BeautifulSoup
-    from bs4.element import NavigableString
+def fetch(url: str) -> bytes:
+    request = Request(url, headers={"User-Agent": USER_AGENT})
+    with urlopen(request, timeout=45) as response:
+        return response.read()
 
-    soup = BeautifulSoup(html, "html.parser")
+
+def catalog_pages(first_html: bytes) -> list[bytes]:
+    from bs4 import BeautifulSoup
+
+    soup = BeautifulSoup(first_html, "html.parser")
+    page_numbers = {
+        int(link.get_text(strip=True))
+        for link in soup.select("ul.pagination a.page-link")
+        if link.get_text(strip=True).isdigit()
+    }
+    last_page = max(page_numbers, default=1)
+    pages = [first_html]
+    for page in range(2, last_page + 1):
+        url = f"https://www.ppm-vertrieb.de/katalog.html%26filter%3Dletzten-wochen%26page%3D{page}"
+        pages.append(fetch(url))
+    return pages
+
+
+def parse_catalog(pages: list[bytes], today: date, rules: dict, comics: list[dict], series: list[dict]) -> list[dict]:
+    from bs4 import BeautifulSoup
+
     known_people = {author.casefold() for comic in comics for author in comic.get("authors", [])}
     known_series = {entry["title"].casefold() for entry in series if entry.get("title")}
-    recognized_publishers = set(
-        rules["alwaysIncludePublishers"] + rules["francoBelgianPublishers"] + rules["excludedPublishers"]
-    )
-    all_links = soup.find_all("a", href=True)
-    products = [
-        link for link in all_links
-        if re.search(r"::(\d+)\.html", link["href"]) and normalized(link.get_text(" ", strip=True))
-    ]
-    link_positions = {id(link): index for index, link in enumerate(all_links)}
     releases = []
-    for index, link in enumerate(products):
-        next_link = products[index + 1] if index + 1 < len(products) else None
-        strings = []
-        for element in link.next_elements:
-            if element is next_link:
-                break
-            if isinstance(element, NavigableString):
-                strings.append(str(element))
-        text = normalized(" ".join(strings))
-        isbn_match = re.search(r"ISBN:\s*([0-9Xx-]{10,17})", text)
-        price_match = re.search(r"(\d+[,.]\d{2})\s*€", text)
-        if not isbn_match or not price_match:
-            continue
-        title = normalized(link.get_text(" ", strip=True))
-        current_position = link_positions[id(link)]
-        previous_position = link_positions[id(products[index - 1])] if index else 0
-        preceding = [
-            normalized(anchor.get_text(" ", strip=True))
-            for anchor in all_links[previous_position + 1:current_position]
-            if normalized(anchor.get_text(" ", strip=True))
-        ]
-        publisher = next((name for name in preceding if name in recognized_publishers), "")
-        if not publisher:
-            publisher = preceding[0] if preceding else ""
-        authors = [name for name in preceding if name not in {publisher, title} and len(name) > 2][-4:]
-        image = link.find_previous("img")
-        isbn = isbn_match.group(1).replace("-", "")
-        release = {
-            "id": f"ppm-{isbn}",
-            "isbn13": isbn,
-            "title": title,
-            "subtitle": "",
-            "publisher": publisher,
-            "authors": authors,
-            "price": float(price_match.group(1).replace(",", ".")),
-            "releaseDate": today.isoformat(),
-            "calendarWeek": iso_week(today),
-            "firstSeenAt": today.isoformat(),
-            "cover": urljoin(PPM_URL, image.get("src", "")) if image else "",
-            "sourceUrl": urljoin(PPM_URL, link["href"]),
-        }
-        include, scope = classify(release, rules, known_people, known_series)
-        if not include:
-            continue
-        release["scope"] = scope
-        release["editionType"] = (
-            "variant" if contains_any(text, rules["variantTerms"])
-            else "new-edition" if contains_any(text, rules["editionTerms"])
-            else "regular"
-        )
-        releases.append(release)
+    for html in pages:
+        soup = BeautifulSoup(html, "html.parser")
+        for heading in soup.select("h4.product-listing-name"):
+            row = heading.find_parent("div", class_="row")
+            if not row:
+                continue
+            link = heading.find("a", href=True)
+            isbn_match = re.search(r"ISBN:\s*([0-9Xx-]{10,17})", row.get_text(" ", strip=True))
+            price_node = row.select_one(".product-listing-products-price")
+            price_match = re.search(r"(\d+[,.]\d{2})\s*€", price_node.get_text(" ", strip=True) if price_node else "")
+            if not link or not isbn_match or not price_match:
+                continue
+            publisher_link = row.select_one('a[href*=":.:"]')
+            publisher = normalized(publisher_link.get_text(" ", strip=True) if publisher_link else "")
+            subtitle_node = row.select_one(".product-listing-name-2")
+            authors = [
+                normalized(author.get_text(" ", strip=True))
+                for author in row.select('a[href*="/autor/"]')
+                if normalized(author.get_text(" ", strip=True))
+            ]
+            image = row.find("img")
+            isbn = isbn_match.group(1).replace("-", "")
+            text = normalized(row.get_text(" ", strip=True))
+            release = {
+                "id": f"ppm-{isbn}",
+                "isbn13": isbn,
+                "title": normalized(link.get_text(" ", strip=True)),
+                "subtitle": normalized(subtitle_node.get_text(" ", strip=True) if subtitle_node else ""),
+                "publisher": publisher,
+                "authors": authors,
+                "price": float(price_match.group(1).replace(",", ".")),
+                "releaseDate": today.isoformat(),
+                "calendarWeek": iso_week(today),
+                "firstSeenAt": today.isoformat(),
+                "cover": urljoin(PPM_URL, image.get("src", "")) if image else "",
+                "sourceUrl": urljoin(PPM_URL, link["href"]),
+            }
+            include, scope = classify(release, rules, known_people, known_series)
+            if not include:
+                continue
+            release["scope"] = scope
+            release["editionType"] = (
+                "variant" if contains_any(text, rules["variantTerms"])
+                else "new-edition" if contains_any(text, rules["editionTerms"])
+                else "regular"
+            )
+            releases.append(release)
     return releases
 
 
@@ -144,10 +152,9 @@ def main() -> int:
     if args.fixture:
         html = args.fixture.read_bytes()
     else:
-        request = Request(PPM_URL, headers={"User-Agent": USER_AGENT})
-        with urlopen(request, timeout=45) as response:
-            html = response.read()
-    incoming = parse_catalog(html, today, rules, comics, series)
+        html = fetch(PPM_URL)
+    pages = [html] if args.fixture else catalog_pages(html)
+    incoming = parse_catalog(pages, today, rules, comics, series)
     if not incoming:
         print("Fehler: Der PPM-Abruf ergab keine passenden Titel.", file=sys.stderr)
         return 2
