@@ -2,7 +2,7 @@ const state = {
   comics: [], series: [], view: "dashboard", query: "", seriesQuery: "",
   status: "all", publisher: "all", seriesFilter: "all", year: "all",
   sort: "title", wishlist: new Set(), lastView: "collection",
-  releases: [], releaseFilter: "open", releaseDecisions: {}
+  releases: [], releaseFilter: "open", releaseDecisions: {}, releaseQuery: "", releaseSort: "date-desc"
 };
 
 const $ = (id) => document.getElementById(id);
@@ -58,6 +58,8 @@ function bindEvents(){
   });
   $("searchInput").addEventListener("input",e=>{state.query=e.target.value;renderCollection();});
   $("seriesSearchInput").addEventListener("input",e=>{state.seriesQuery=e.target.value;renderSeries();});
+  $("releaseSearchInput").addEventListener("input",e=>{state.releaseQuery=e.target.value;renderReleases();});
+  $("releaseSortSelect").addEventListener("change",e=>{state.releaseSort=e.target.value;renderReleases();});
   ["statusFilter","publisherFilter","seriesFilter","yearFilter","sortSelect"].forEach(id=>{
     $(id).addEventListener("change",e=>{
       const key={statusFilter:"status",publisherFilter:"publisher",seriesFilter:"seriesFilter",yearFilter:"year",sortSelect:"sort"}[id];
@@ -314,27 +316,38 @@ function renderWishlist(){
 }
 
 function setReleaseDecision(id,decision){
-  state.releaseDecisions[id]=decision;
+  if(state.releaseDecisions[id]===decision) delete state.releaseDecisions[id];
+  else state.releaseDecisions[id]=decision;
   saveLocalState();
   renderReleases(); renderWishlist(); renderDashboard();
 }
 
 function releaseMatchesFilter(release){
   const decision=state.releaseDecisions[release.id]||"open";
+  const q=state.releaseQuery.trim().toLocaleLowerCase("de");
+  const hay=[release.title,release.subtitle,release.publisher,release.isbn13,...(release.authors||[])].filter(Boolean).join(" ").toLocaleLowerCase("de");
+  if(q&&!hay.includes(q)) return false;
   if(state.releaseFilter==="open") return decision==="open"&&!release.owned;
   if(state.releaseFilter==="relevant") return release.relevant&&decision!=="dismissed"&&!release.owned;
+  if(state.releaseFilter==="owned") return release.owned;
   return decision===state.releaseFilter;
 }
 
 function renderReleases(){
   if(!$("releaseGrid")) return;
-  const releases=state.releases.filter(releaseMatchesFilter);
+  const releases=state.releases.filter(releaseMatchesFilter).sort((a,b)=>{
+    if(state.releaseSort==="relevance") return Number(b.relevant)-Number(a.relevant)||(b.releaseDate||"").localeCompare(a.releaseDate||"");
+    if(state.releaseSort==="title") return a.title.localeCompare(b.title,"de");
+    if(state.releaseSort==="price-asc") return (a.price??Number.MAX_VALUE)-(b.price??Number.MAX_VALUE);
+    return (b.releaseDate||"").localeCompare(a.releaseDate||"")||a.title.localeCompare(b.title,"de");
+  });
   const counts={
     open:state.releases.filter(r=>(state.releaseDecisions[r.id]||"open")==="open"&&!r.owned).length,
     relevant:state.releases.filter(r=>r.relevant&&(state.releaseDecisions[r.id]||"open")!=="dismissed"&&!r.owned).length,
     wishlist:state.releases.filter(r=>state.releaseDecisions[r.id]==="wishlist").length,
     later:state.releases.filter(r=>state.releaseDecisions[r.id]==="later").length,
-    dismissed:state.releases.filter(r=>state.releaseDecisions[r.id]==="dismissed").length
+    dismissed:state.releases.filter(r=>state.releaseDecisions[r.id]==="dismissed").length,
+    owned:state.releases.filter(r=>r.owned).length
   };
   $("releaseSummary").innerHTML='<article><strong>'+counts.open+'</strong><span>Noch offen</span></article><article><strong>'+counts.relevant+'</strong><span>Für dich relevant</span></article><article><strong>'+counts.wishlist+'</strong><span>Auf Wunschliste</span></article>';
   $("releaseTabs").querySelectorAll("[data-release-filter]").forEach(button=>{
@@ -344,6 +357,10 @@ function renderReleases(){
   });
   $("releaseGrid").innerHTML=releases.map(releaseCard).join("");
   $("releaseEmpty").hidden=releases.length>0;
+  const dates=state.releases.map(r=>r.releaseDate).filter(Boolean).sort();
+  $("releaseSourceNote").textContent=dates.length
+    ?"Datenstand: PPM-Neuheiten vom "+formatDate(dates[0])+" bis "+formatDate(dates.at(-1))+" · "+state.releases.length+" geprüfte Titel · Quellenangaben öffnen jeweils den Originaleintrag bei PPM."
+    :"Quellenangaben öffnen jeweils den verifizierten Originaleintrag bei PPM.";
 }
 
 function releaseCard(release){
@@ -354,7 +371,7 @@ function releaseCard(release){
   else if(release.owned) relevance='<div class="release-match owned">Bereits in deiner Sammlung</div>';
   const active=key=>decision===key?" active":"";
   return '<article class="release-card">'+
-    '<div class="release-cover"><img src="'+esc(release.cover)+'" alt="Cover von '+esc(release.title)+'" loading="lazy"><span class="source-badge">PPM</span></div>'+
+    '<div class="release-cover"><img src="'+esc(release.cover)+'" alt="Cover von '+esc(release.title)+'" loading="lazy" onerror="this.closest(\'.release-cover\').classList.add(\'cover-error\');this.remove()"><span class="source-badge">PPM</span><span class="cover-fallback">Cover bei PPM ansehen</span></div>'+
     '<div class="release-body">'+relevance+'<p class="card-meta">'+esc(release.publisher)+' · '+formatDate(release.releaseDate)+'</p><h2>'+esc(release.title)+'</h2><p class="release-subtitle">'+esc(release.subtitle||"")+'</p><p class="release-authors">'+esc((release.authors||[]).join(", "))+'</p><div class="release-facts"><span>'+esc(release.isbn13)+'</span><strong>'+formatMoney(release.price)+'</strong></div>'+
     '<div class="release-actions"><button class="wish'+active("wishlist")+'" data-release-id="'+esc(release.id)+'" data-release-decision="wishlist">♡ Wunschliste</button><button class="'+active("later")+'" data-release-id="'+esc(release.id)+'" data-release-decision="later">Später</button><button class="'+active("dismissed")+'" data-release-id="'+esc(release.id)+'" data-release-decision="dismissed">Nicht interessant</button></div>'+
     '<a class="release-source" href="'+esc(release.sourceUrl)+'" target="_blank" rel="noopener">Original bei PPM ansehen ↗</a></div></article>';
