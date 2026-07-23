@@ -95,18 +95,23 @@
         </div>
         <div class="release-summary" id="releaseSummary"></div>
         <div class="release-toolbar">
+          <label class="search release-search"><span>⌕</span><input id="releaseSearchInput" type="search" placeholder="Titel, ISBN, Person oder Verlag suchen …"></label>
+          <select id="releaseSortSelect" class="release-sort" aria-label="Neuheiten sortieren"><option value="date-desc">Neueste zuerst</option><option value="relevance">Relevanz zuerst</option><option value="title">Titel A–Z</option><option value="price-asc">Preis aufsteigend</option></select>
+        </div>
+        <div class="release-toolbar release-filter-toolbar">
           <div class="release-tabs" id="releaseTabs">
             <button class="active" data-release-filter="open">Offen</button>
             <button data-release-filter="relevant">Für dich relevant</button>
             <button data-release-filter="wishlist">Vorgemerkt</button>
             <button data-release-filter="later">Später</button>
             <button data-release-filter="dismissed">Ausgeblendet</button>
+            <button data-release-filter="owned">Vorhanden</button>
           </div>
           <button class="secondary-action" id="resetReleaseDecisions">Entscheidungen zurücksetzen</button>
         </div>
         <div class="release-grid" id="releaseGrid"></div>
         <div class="empty-state" id="releaseEmpty" hidden><h2>Hier ist gerade alles erledigt.</h2><p>Wähle einen anderen Bereich oder setze Entscheidungen zurück.</p></div>
-        <p class="release-source-note">Datenstand: PPM-Neuheiten Juli 2026 · Quellenangaben öffnen jeweils den Originaleintrag bei PPM.</p>
+        <p class="release-source-note" id="releaseSourceNote">Quellenangaben öffnen jeweils den verifizierten Originaleintrag bei PPM.</p>
       </section>
 
       <section class="view" id="detailView">
