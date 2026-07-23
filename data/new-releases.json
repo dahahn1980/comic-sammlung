@@ -1,0 +1,122 @@
+[
+  {
+    "id": "ppm-9783968043760",
+    "isbn13": "9783968043760",
+    "title": "Alles Rudi Gesamtausgabe 2",
+    "subtitle": "",
+    "publisher": "All Verlag",
+    "authors": ["Peter Puck"],
+    "price": 19.8,
+    "releaseDate": "2026-07-01",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322622-20260114121628.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/katalog.html&filter=letzten-wochen"
+  },
+  {
+    "id": "ppm-9783968043807",
+    "isbn13": "9783968043807",
+    "title": "Hägar – Gesammelte Chroniken 2022",
+    "subtitle": "",
+    "publisher": "All Verlag",
+    "authors": ["Dik Browne"],
+    "price": 19.8,
+    "releaseDate": "2026-07-01",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322626-20260113131812.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/katalog.html&filter=letzten-wochen"
+  },
+  {
+    "id": "ppm-9783968043784",
+    "isbn13": "9783968043784",
+    "title": "Talk Dirty 1",
+    "subtitle": "",
+    "publisher": "All Verlag",
+    "authors": ["Matthias Schultheiss"],
+    "price": 24.8,
+    "releaseDate": "2026-07-01",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322624-20260113131455.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/katalog.html&filter=letzten-wochen"
+  },
+  {
+    "id": "ppm-9783964451545",
+    "isbn13": "9783964451545",
+    "title": "Beuys",
+    "subtitle": "Die Erfindung der Wahrheit",
+    "publisher": "avant-verlag",
+    "authors": ["Lenz Mosbacher"],
+    "price": 30,
+    "releaseDate": "2026-07-01",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322438-20251204143315.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/katalog.html&filter=letzten-wochen"
+  },
+  {
+    "id": "ppm-9783964451484",
+    "isbn13": "9783964451484",
+    "title": "Bunny war böse",
+    "subtitle": "",
+    "publisher": "avant-verlag",
+    "authors": ["Lilli Loge"],
+    "price": 29,
+    "releaseDate": "2026-07-01",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322439-20251204143553.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/katalog.html&filter=letzten-wochen"
+  },
+  {
+    "id": "ppm-9783964451613",
+    "isbn13": "9783964451613",
+    "title": "Madeleine, die Widerständige 4",
+    "subtitle": "Der Engel des Todes",
+    "publisher": "avant-verlag",
+    "authors": ["Dominique Bertail", "Jean-David Morvan", "Madeleine Riffaud"],
+    "price": 29,
+    "releaseDate": "2026-07-01",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322436-20251204142934.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/katalog.html&filter=letzten-wochen"
+  },
+  {
+    "id": "ppm-9783962341022",
+    "isbn13": "9783962341022",
+    "title": "Das Trivialepos der DDR",
+    "subtitle": "Mosaik und seine Quellen",
+    "publisher": "Bachmann Verlag",
+    "authors": ["Thomas Kramer"],
+    "price": 29.9,
+    "releaseDate": "2026-07-01",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322820-20260305133339.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/katalog.html&filter=letzten-wochen"
+  },
+  {
+    "id": "ppm-9783986668488",
+    "isbn13": "9783986668488",
+    "title": "Avatar – Der Herr der Elemente 09 Premium",
+    "subtitle": "Feuer und Familie",
+    "publisher": "Cross Cult",
+    "authors": ["Gene Luen Yang", "Gurihiru"],
+    "price": 40,
+    "releaseDate": "2026-07-01",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322022-20260311124854.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/katalog.html&filter=letzten-wochen"
+  },
+  {
+    "id": "ppm-9783986668709",
+    "isbn13": "9783986668709",
+    "title": "We Stand on Guard – Neue Edition",
+    "subtitle": "",
+    "publisher": "Cross Cult",
+    "authors": ["Brian K. Vaughan", "Steve Skroce"],
+    "price": 30,
+    "releaseDate": "2026-07-01",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322850-20260319145516.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/katalog.html&filter=letzten-wochen"
+  },
+  {
+    "id": "ppm-9783689020361",
+    "isbn13": "9783689020361",
+    "title": "Das Neil Gaiman Bibliothek-Bundle",
+    "subtitle": "Drei Bände",
+    "publisher": "Dantes Verlag",
+    "authors": ["Neil Gaiman"],
+    "price": 28,
+    "releaseDate": "2026-07-01",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322818-20260304134452.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/katalog.html&filter=letzten-wochen"
+  }
+]
