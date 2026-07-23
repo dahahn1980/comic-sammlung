@@ -15,6 +15,7 @@
         <button class="active" data-view-link="dashboard">Übersicht</button>
         <button data-view-link="collection">Sammlung</button>
         <button data-view-link="series">Reihen</button>
+        <button data-view-link="newreleases">Neuheiten</button>
         <button data-view-link="wishlist">Wunschliste</button>
       </nav>
       <button class="mobile-menu" id="mobileMenu" aria-label="Navigation öffnen">Menü</button>
@@ -84,6 +85,28 @@
           <div class="empty-icon">♡</div><h2>Die Wunschliste ist noch leer.</h2><p>Auf der Detailseite kannst du einen Comic vom Bestand auf die Wunschliste setzen.</p>
           <button class="primary-action" data-view-link="collection">Sammlung öffnen <span>→</span></button>
         </div>
+      </section>
+
+      <section class="view" id="newreleasesView">
+        <div class="page-intro releases-intro">
+          <p class="kicker">Dein persönlicher Aufnahmekatalog</p>
+          <h1>Neuheiten</h1>
+          <p>Aktuelle Comic-Novitäten von PPM prüfen, vormerken oder ausblenden.</p>
+        </div>
+        <div class="release-summary" id="releaseSummary"></div>
+        <div class="release-toolbar">
+          <div class="release-tabs" id="releaseTabs">
+            <button class="active" data-release-filter="open">Offen</button>
+            <button data-release-filter="relevant">Für dich relevant</button>
+            <button data-release-filter="wishlist">Vorgemerkt</button>
+            <button data-release-filter="later">Später</button>
+            <button data-release-filter="dismissed">Ausgeblendet</button>
+          </div>
+          <button class="secondary-action" id="resetReleaseDecisions">Entscheidungen zurücksetzen</button>
+        </div>
+        <div class="release-grid" id="releaseGrid"></div>
+        <div class="empty-state" id="releaseEmpty" hidden><h2>Hier ist gerade alles erledigt.</h2><p>Wähle einen anderen Bereich oder setze Entscheidungen zurück.</p></div>
+        <p class="release-source-note">Datenstand: PPM-Neuheiten Juli 2026 · Quellenangaben öffnen jeweils den Originaleintrag bei PPM.</p>
       </section>
 
       <section class="view" id="detailView">
