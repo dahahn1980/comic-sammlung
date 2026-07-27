@@ -1,5 +1,402 @@
 [
   {
+    "id": "ppm-9783965822450",
+    "isbn13": "9783965822450",
+    "title": "Yon 1",
+    "subtitle": "Band 1 von 4",
+    "publisher": "Schreiber & Leser",
+    "authors": [
+      "Camille Broutin"
+    ],
+    "price": 16.95,
+    "releaseDate": "2026-07-27",
+    "calendarWeek": "2026-KW31",
+    "firstSeenAt": "2026-07-27",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322542-20260623134152.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Yon-1::322542.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783689501242",
+    "isbn13": "9783689501242",
+    "title": "Thorgal Saga 5",
+    "subtitle": "Die wandernde Stadt",
+    "publisher": "Splitter",
+    "authors": [
+      "Antoine Ozanam",
+      "Mohamed Aouamri"
+    ],
+    "price": 24.0,
+    "releaseDate": "2026-07-27",
+    "calendarWeek": "2026-KW31",
+    "firstSeenAt": "2026-07-27",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322376-20260716123611.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Thorgal-Saga-5::322376.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783987211065",
+    "isbn13": "9783987211065",
+    "title": "The Department of Truth 5",
+    "subtitle": "Was dein Land für dich tun kann",
+    "publisher": "Splitter",
+    "authors": [
+      "James Tynion IV.",
+      "Martin Simmonds"
+    ],
+    "price": 25.0,
+    "releaseDate": "2026-07-27",
+    "calendarWeek": "2026-KW31",
+    "firstSeenAt": "2026-07-27",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322399-20260716123417.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/The-Department-of-Truth-5::322399.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783987212123",
+    "isbn13": "9783987212123",
+    "title": "Teenage Mutant Ninja Turtles Splitter Collection 13",
+    "subtitle": "",
+    "publisher": "Splitter",
+    "authors": [
+      "Kevin Eastman",
+      "Tom Waltz",
+      "Dave Wachter",
+      "Mateus Santolouco",
+      "Michael Dialynas"
+    ],
+    "price": 55.0,
+    "releaseDate": "2026-07-27",
+    "calendarWeek": "2026-KW31",
+    "firstSeenAt": "2026-07-27",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322391-20260716123220.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Teenage-Mutant-Ninja-Turtles-Splitter-Collection-13::322391.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783965822399",
+    "isbn13": "9783965822399",
+    "title": "Sgt. Kirk 3",
+    "subtitle": "Dritte Epoche",
+    "publisher": "Schreiber & Leser",
+    "authors": [
+      "Hugo Pratt",
+      "Héctor G. Oesterheld"
+    ],
+    "price": 32.8,
+    "releaseDate": "2026-07-27",
+    "calendarWeek": "2026-KW31",
+    "firstSeenAt": "2026-07-27",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322544-20260623134113.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Sgt-Kirk-3::322544.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783965822405",
+    "isbn13": "9783965822405",
+    "title": "Roxane - Gesamtausgabe",
+    "subtitle": "",
+    "publisher": "Schreiber & Leser",
+    "authors": [
+      "André Taymans"
+    ],
+    "price": 29.8,
+    "releaseDate": "2026-07-27",
+    "calendarWeek": "2026-KW31",
+    "firstSeenAt": "2026-07-27",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322543-20260623134027.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Roxane-Gesamtausgabe::322543.html",
+    "scope": "franco-belgisch",
+    "editionType": "new-edition"
+  },
+  {
+    "id": "ppm-9783967923414",
+    "isbn13": "9783967923414",
+    "title": "RIP 1 (Neuauflage)",
+    "subtitle": "Derrick - Ich werde den Tod nicht überleben",
+    "publisher": "Splitter",
+    "authors": [
+      "Gaet's",
+      "Julien Monier"
+    ],
+    "price": 22.0,
+    "releaseDate": "2026-07-27",
+    "calendarWeek": "2026-KW31",
+    "firstSeenAt": "2026-07-27",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/315749-20220919145807.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/RIP-1::315749.html",
+    "scope": "splitter",
+    "editionType": "new-edition"
+  },
+  {
+    "id": "ppm-9783967922844",
+    "isbn13": "9783967922844",
+    "title": "Nekromanten",
+    "subtitle": "Splitter Double",
+    "publisher": "Splitter",
+    "authors": [
+      "Olivier Gay",
+      "Tina Valentino"
+    ],
+    "price": 25.0,
+    "releaseDate": "2026-07-27",
+    "calendarWeek": "2026-KW31",
+    "firstSeenAt": "2026-07-27",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322319-20260716122245.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Nekromanten::322319.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783949987151",
+    "isbn13": "9783949987151",
+    "title": "Michel Vaillant Legenden 4",
+    "subtitle": "Das Rennen des Jahrhunderts",
+    "publisher": "Zack Edition",
+    "authors": [
+      "Denis Lapière",
+      "Vincent Dutreuil"
+    ],
+    "price": 24.0,
+    "releaseDate": "2026-07-27",
+    "calendarWeek": "2026-KW31",
+    "firstSeenAt": "2026-07-27",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322858-20260402143837.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Michel-Vaillant-Legenden-4::322858.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783967920222",
+    "isbn13": "9783967920222",
+    "title": "Länder von Ogon 7",
+    "subtitle": "Die Zitadelle der Nebel",
+    "publisher": "Splitter",
+    "authors": [
+      "Gihef"
+    ],
+    "price": 17.0,
+    "releaseDate": "2026-07-27",
+    "calendarWeek": "2026-KW31",
+    "firstSeenAt": "2026-07-27",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322377-20260716122028.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Laender-von-Ogon-7::322377.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783689501792",
+    "isbn13": "9783689501792",
+    "title": "Historische Persönlichkeiten (11): Luther",
+    "subtitle": "",
+    "publisher": "Splitter",
+    "authors": [
+      "Oliver Jouvray"
+    ],
+    "price": 17.0,
+    "releaseDate": "2026-07-27",
+    "calendarWeek": "2026-KW31",
+    "firstSeenAt": "2026-07-27",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322386-20260715124948.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Historische-Persoenlichkeiten-11-Luther::322386.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783967927771",
+    "isbn13": "9783967927771",
+    "title": "Eine außergewöhnliche Reise 4",
+    "subtitle": "Gesamtausgabe",
+    "publisher": "toonfish",
+    "authors": [
+      "Denis-Pierre Filippi",
+      "Silvio Camboni"
+    ],
+    "price": 34.95,
+    "releaseDate": "2026-07-27",
+    "calendarWeek": "2026-KW31",
+    "firstSeenAt": "2026-07-27",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322394-20260715125814.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Eine-aussergewoehnliche-Reise-4::322394.html",
+    "scope": "franco-belgisch",
+    "editionType": "new-edition"
+  },
+  {
+    "id": "ppm-9783958399006",
+    "isbn13": "9783958399006",
+    "title": "Eine außergewöhnliche Reise 1 (Neuauflage)",
+    "subtitle": "Gesamtausgabe",
+    "publisher": "toonfish",
+    "authors": [
+      "Denis-Pierre Filippi",
+      "Silvio Camboni"
+    ],
+    "price": 32.95,
+    "releaseDate": "2026-07-27",
+    "calendarWeek": "2026-KW31",
+    "firstSeenAt": "2026-07-27",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/307952-20150205130550.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Eine-aussergewoehnliche-Reise-1::307952.html",
+    "scope": "franco-belgisch",
+    "editionType": "new-edition"
+  },
+  {
+    "id": "ppm-9783962192167",
+    "isbn13": "9783962192167",
+    "title": "Die alten Knacker 5 (Neuauflage)",
+    "subtitle": "Reif fürs Asyl",
+    "publisher": "Splitter",
+    "authors": [
+      "Wilfrid Lupano",
+      "Paul Cauuet"
+    ],
+    "price": 18.0,
+    "releaseDate": "2026-07-27",
+    "calendarWeek": "2026-KW31",
+    "firstSeenAt": "2026-07-27",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/311323-20181203112554.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Die-alten-Knacker-5::311323.html",
+    "scope": "splitter",
+    "editionType": "new-edition"
+  },
+  {
+    "id": "ppm-9783689501501",
+    "isbn13": "9783689501501",
+    "title": "Die Bruderschaft der Stürme 2",
+    "subtitle": "Orvann",
+    "publisher": "Splitter",
+    "authors": [
+      "Jean-Luc Istin",
+      "Sylvain Cordurié"
+    ],
+    "price": 18.0,
+    "releaseDate": "2026-07-27",
+    "calendarWeek": "2026-KW31",
+    "firstSeenAt": "2026-07-27",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322347-20260715124755.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Die-Bruderschaft-der-Stuerme-2::322347.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783987213311",
+    "isbn13": "9783987213311",
+    "title": "Der Preis der Liebe",
+    "subtitle": "",
+    "publisher": "Splitter",
+    "authors": [
+      "Axel"
+    ],
+    "price": 19.8,
+    "releaseDate": "2026-07-27",
+    "calendarWeek": "2026-KW31",
+    "firstSeenAt": "2026-07-27",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322369-20260715124558.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Der-Preis-der-Liebe::322369.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783987217715",
+    "isbn13": "9783987217715",
+    "title": "Der Alchimist 4",
+    "subtitle": "Venezianische Masken",
+    "publisher": "toonfish",
+    "authors": [
+      "Alessandro Barbucci",
+      "Alexander Saint-Genez",
+      "Nicolas Beuglet"
+    ],
+    "price": 15.95,
+    "releaseDate": "2026-07-27",
+    "calendarWeek": "2026-KW31",
+    "firstSeenAt": "2026-07-27",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322316-20260715130042.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Der-Alchimist-4::322316.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783692580098",
+    "isbn13": "9783692580098",
+    "title": "Das letzte Haus am Rand des Waldes",
+    "subtitle": "",
+    "publisher": "Splitter",
+    "authors": [
+      "Jean-Blaise Djian",
+      "Regis Loisel"
+    ],
+    "price": 35.0,
+    "releaseDate": "2026-07-27",
+    "calendarWeek": "2026-KW31",
+    "firstSeenAt": "2026-07-27",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322337-20260715125612.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Das-letzte-Haus-am-Rand-des-Waldes::322337.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783987213861",
+    "isbn13": "9783987213861",
+    "title": "Das Volk der Nebel 1 (Neuauflage)",
+    "subtitle": "Im Feenreich",
+    "publisher": "Splitter",
+    "authors": [
+      "Katia Even",
+      "Styloïde"
+    ],
+    "price": 18.0,
+    "releaseDate": "2026-07-27",
+    "calendarWeek": "2026-KW31",
+    "firstSeenAt": "2026-07-27",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/318704-20240513135813.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Das-Volk-der-Nebel-1::318704.html",
+    "scope": "splitter",
+    "editionType": "new-edition"
+  },
+  {
+    "id": "ppm-9783689500214",
+    "isbn13": "9783689500214",
+    "title": "Creepshow 3 (Album)",
+    "subtitle": "",
+    "publisher": "Splitter",
+    "authors": [
+      "Diverse Autoren"
+    ],
+    "price": 29.8,
+    "releaseDate": "2026-07-27",
+    "calendarWeek": "2026-KW31",
+    "firstSeenAt": "2026-07-27",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322348-20260715125401.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Creepshow-3-Album::322348.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783987214073",
+    "isbn13": "9783987214073",
+    "title": "Black Horizon 3",
+    "subtitle": "Schemot",
+    "publisher": "Splitter",
+    "authors": [
+      "Philippe Pelaez",
+      "Benjamin Blasco-Martinez"
+    ],
+    "price": 18.0,
+    "releaseDate": "2026-07-27",
+    "calendarWeek": "2026-KW31",
+    "firstSeenAt": "2026-07-27",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322324-20260715124213.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Black-Horizon-3::322324.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
     "id": "ppm-9783956403187",
     "isbn13": "9783956403187",
     "title": "Welt ohne Ende",
@@ -29,7 +426,7 @@
       "Horacio Altuna"
     ],
     "price": 49.8,
-    "releaseDate": "2026-07-23",
+    "releaseDate": "2026-07-27",
     "calendarWeek": "2026-KW30",
     "firstSeenAt": "2026-07-23",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322635-20260113133736.jpg",
@@ -48,7 +445,7 @@
       "Eddy Paape"
     ],
     "price": 44.8,
-    "releaseDate": "2026-07-23",
+    "releaseDate": "2026-07-27",
     "calendarWeek": "2026-KW30",
     "firstSeenAt": "2026-07-23",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322643-20260113134807.jpg",
@@ -85,7 +482,7 @@
       "Thomas Yeates"
     ],
     "price": 24.9,
-    "releaseDate": "2026-07-23",
+    "releaseDate": "2026-07-27",
     "calendarWeek": "2026-KW30",
     "firstSeenAt": "2026-07-23",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/314223-20201126153305.jpg",
@@ -103,7 +500,7 @@
       "John Cullen Murphy"
     ],
     "price": 24.9,
-    "releaseDate": "2026-07-23",
+    "releaseDate": "2026-07-27",
     "calendarWeek": "2026-KW30",
     "firstSeenAt": "2026-07-23",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/308238-20150113113113.jpg",
@@ -122,7 +519,7 @@
       "Daniel Hulet"
     ],
     "price": 39.8,
-    "releaseDate": "2026-07-23",
+    "releaseDate": "2026-07-27",
     "calendarWeek": "2026-KW30",
     "firstSeenAt": "2026-07-23",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322629-20260113132148.jpg",
@@ -141,7 +538,7 @@
       "René Goscinny"
     ],
     "price": 39.8,
-    "releaseDate": "2026-07-23",
+    "releaseDate": "2026-07-27",
     "calendarWeek": "2026-KW30",
     "firstSeenAt": "2026-07-23",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322631-20260113132947.jpg",
@@ -160,7 +557,7 @@
       "René Goscinny"
     ],
     "price": 39.8,
-    "releaseDate": "2026-07-23",
+    "releaseDate": "2026-07-27",
     "calendarWeek": "2026-KW30",
     "firstSeenAt": "2026-07-23",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322633-20260113133118.jpg",
@@ -178,7 +575,7 @@
       "Jijé"
     ],
     "price": 39.8,
-    "releaseDate": "2026-07-23",
+    "releaseDate": "2026-07-27",
     "calendarWeek": "2026-KW30",
     "firstSeenAt": "2026-07-23",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322641-20260113134449.jpg",
@@ -214,7 +611,7 @@
       "Jijé"
     ],
     "price": 39.8,
-    "releaseDate": "2026-07-23",
+    "releaseDate": "2026-07-27",
     "calendarWeek": "2026-KW30",
     "firstSeenAt": "2026-07-23",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322639-20260113134308.jpg",
@@ -250,7 +647,7 @@
       "Hermann"
     ],
     "price": 44.8,
-    "releaseDate": "2026-07-23",
+    "releaseDate": "2026-07-27",
     "calendarWeek": "2026-KW30",
     "firstSeenAt": "2026-07-23",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322637-20260113134045.jpg",
@@ -305,7 +702,7 @@
       "Jean-Luc Delvaux"
     ],
     "price": 39.0,
-    "releaseDate": "2026-07-23",
+    "releaseDate": "2026-07-27",
     "calendarWeek": "2026-KW30",
     "firstSeenAt": "2026-07-23",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322916-20260420132516.jpg",
@@ -324,7 +721,7 @@
       "Jean-Luc Delvaux"
     ],
     "price": 15.0,
-    "releaseDate": "2026-07-23",
+    "releaseDate": "2026-07-27",
     "calendarWeek": "2026-KW30",
     "firstSeenAt": "2026-07-23",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322915-20260420132237.jpg",
@@ -343,7 +740,7 @@
       "Noel Ummels"
     ],
     "price": 17.0,
-    "releaseDate": "2026-07-23",
+    "releaseDate": "2026-07-27",
     "calendarWeek": "2026-KW30",
     "firstSeenAt": "2026-07-23",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322966-20260513121045.jpg",
@@ -361,7 +758,7 @@
       "Eric Heuvel"
     ],
     "price": 35.0,
-    "releaseDate": "2026-07-23",
+    "releaseDate": "2026-07-27",
     "calendarWeek": "2026-KW30",
     "firstSeenAt": "2026-07-23",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322931-20260511144025.jpg",
@@ -399,7 +796,7 @@
       "Laurent Verron"
     ],
     "price": 15.8,
-    "releaseDate": "2026-07-23",
+    "releaseDate": "2026-07-27",
     "calendarWeek": "2026-KW30",
     "firstSeenAt": "2026-07-23",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/321959-20260623132210.jpg",
