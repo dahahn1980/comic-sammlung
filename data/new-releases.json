@@ -1,5 +1,100 @@
 [
   {
+    "id": "ppm-9783899088526",
+    "isbn13": "9783899088526",
+    "title": "Theodor Pussel 14 VZA",
+    "subtitle": "Aro Satoe",
+    "publisher": "Salleck",
+    "authors": [
+      "Frank Le Gall"
+    ],
+    "price": 59.0,
+    "releaseDate": "2026-08-24",
+    "calendarWeek": "2026-KW35",
+    "firstSeenAt": "2026-08-24",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322913-20260420130124.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Theodor-Pussel-14-VZA::322913.html",
+    "scope": "franco-belgisch",
+    "editionType": "variant"
+  },
+  {
+    "id": "ppm-9783965822412",
+    "isbn13": "9783965822412",
+    "title": "Nestor Burma: In der Klemme (Neue Edition)",
+    "subtitle": "",
+    "publisher": "Schreiber & Leser",
+    "authors": [
+      "Emmanuel Moynot",
+      "Léo Malet"
+    ],
+    "price": 22.8,
+    "releaseDate": "2026-08-24",
+    "calendarWeek": "2026-KW35",
+    "firstSeenAt": "2026-08-24",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322546-20260706122402.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Nestor-Burma-In-der-Klemme-Neue-Edition::322546.html",
+    "scope": "franco-belgisch",
+    "editionType": "new-edition"
+  },
+  {
+    "id": "ppm-9783965822436",
+    "isbn13": "9783965822436",
+    "title": "Hohle Welten - NogegoN",
+    "subtitle": "",
+    "publisher": "Schreiber & Leser",
+    "authors": [
+      "François Schuiten",
+      "Luc Schuiten"
+    ],
+    "price": 22.8,
+    "releaseDate": "2026-08-24",
+    "calendarWeek": "2026-KW35",
+    "firstSeenAt": "2026-08-24",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322545-20260706122133.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Hohle-Welten-NogegoN::322545.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783965822474",
+    "isbn13": "9783965822474",
+    "title": "Der Magier im Kreml",
+    "subtitle": "",
+    "publisher": "Schreiber & Leser",
+    "authors": [
+      "Luc Jacamon",
+      "Giuliano da Empoli"
+    ],
+    "price": 29.8,
+    "releaseDate": "2026-08-24",
+    "calendarWeek": "2026-KW35",
+    "firstSeenAt": "2026-08-24",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323115-20260706122041.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Der-Magier-im-Kreml::323115.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783949987953",
+    "isbn13": "9783949987953",
+    "title": "Aus der Spur 1",
+    "subtitle": "Davor",
+    "publisher": "Zack Edition",
+    "authors": [
+      "Pierre Lemaitre",
+      "Pascal Bertho",
+      "Guiseppe Liotti"
+    ],
+    "price": 24.0,
+    "releaseDate": "2026-08-24",
+    "calendarWeek": "2026-KW35",
+    "firstSeenAt": "2026-08-24",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322859-20260427074518.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Aus-der-Spur-1::322859.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
     "id": "ppm-9783964304766",
     "isbn13": "9783964304766",
     "title": "Nicky Saxx 4",
@@ -10,7 +105,7 @@
       "Willem Ritstier"
     ],
     "price": 20.0,
-    "releaseDate": "2026-08-10",
+    "releaseDate": "2026-08-24",
     "calendarWeek": "2026-KW33",
     "firstSeenAt": "2026-08-10",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322965-20260601122547.jpg",
@@ -29,7 +124,7 @@
       "Willem Ritstier"
     ],
     "price": 20.0,
-    "releaseDate": "2026-08-10",
+    "releaseDate": "2026-08-24",
     "calendarWeek": "2026-KW33",
     "firstSeenAt": "2026-08-10",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322964-20260513121140.jpg",
@@ -48,7 +143,7 @@
       "Enric Badia Romero"
     ],
     "price": 29.0,
-    "releaseDate": "2026-08-10",
+    "releaseDate": "2026-08-24",
     "calendarWeek": "2026-KW32",
     "firstSeenAt": "2026-08-03",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322904-20260417135846.jpg",
@@ -70,7 +165,7 @@
       "Richard Burton"
     ],
     "price": 29.0,
-    "releaseDate": "2026-08-10",
+    "releaseDate": "2026-08-24",
     "calendarWeek": "2026-KW32",
     "firstSeenAt": "2026-08-03",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322905-20260417140015.jpg",
