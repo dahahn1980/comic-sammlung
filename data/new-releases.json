@@ -1,5 +1,466 @@
 [
   {
+    "id": "ppm-9783987213700",
+    "isbn13": "9783987213700",
+    "title": "Worldtree 3 (w0rldtr33)",
+    "subtitle": "Input",
+    "publisher": "Splitter",
+    "authors": [
+      "James Tynion IV.",
+      "Fernando Blanco"
+    ],
+    "price": 25.0,
+    "releaseDate": "2026-08-31",
+    "calendarWeek": "2026-KW36",
+    "firstSeenAt": "2026-08-31",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322401-20260812131413.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Worldtree-3-w0rldtr33::322401.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783987213366",
+    "isbn13": "9783987213366",
+    "title": "Women of the West",
+    "subtitle": "",
+    "publisher": "Splitter",
+    "authors": [
+      "Diverse Autoren"
+    ],
+    "price": 25.0,
+    "releaseDate": "2026-08-31",
+    "calendarWeek": "2026-KW36",
+    "firstSeenAt": "2026-08-31",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322374-20260812131553.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Women-of-the-West::322374.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783987214455",
+    "isbn13": "9783987214455",
+    "title": "The Sacrificers 3",
+    "subtitle": "",
+    "publisher": "Splitter",
+    "authors": [
+      "Rick Remender",
+      "Max Fiumara"
+    ],
+    "price": 24.0,
+    "releaseDate": "2026-08-31",
+    "calendarWeek": "2026-KW36",
+    "firstSeenAt": "2026-08-31",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322345-20260811131803.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/The-Sacrificers-3::322345.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783967923353",
+    "isbn13": "9783967923353",
+    "title": "Silent Jenny",
+    "subtitle": "",
+    "publisher": "Splitter",
+    "authors": [
+      "Mathieu Bablet"
+    ],
+    "price": 49.8,
+    "releaseDate": "2026-08-31",
+    "calendarWeek": "2026-KW36",
+    "firstSeenAt": "2026-08-31",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322321-20260811131213.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Silent-Jenny::322321.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783987212482",
+    "isbn13": "9783987212482",
+    "title": "SIX 3",
+    "subtitle": "Der Schwur von Gabaldón",
+    "publisher": "Splitter",
+    "authors": [
+      "Philippe Palaez",
+      "Casado"
+    ],
+    "price": 18.0,
+    "releaseDate": "2026-08-31",
+    "calendarWeek": "2026-KW36",
+    "firstSeenAt": "2026-08-31",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322344-20260811131547.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/SIX-3::322344.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783692580012",
+    "isbn13": "9783692580012",
+    "title": "Revolution",
+    "subtitle": "",
+    "publisher": "Splitter",
+    "authors": [
+      "Milo Manara"
+    ],
+    "price": 22.0,
+    "releaseDate": "2026-08-31",
+    "calendarWeek": "2026-KW36",
+    "firstSeenAt": "2026-08-31",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322346-20260811131013.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Revolution::322346.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783689501747",
+    "isbn13": "9783689501747",
+    "title": "Orks und Goblins 32",
+    "subtitle": "Ogoor",
+    "publisher": "Splitter",
+    "authors": [
+      "Olivier Peru",
+      "Andrea Cuneo"
+    ],
+    "price": 18.0,
+    "releaseDate": "2026-08-31",
+    "calendarWeek": "2026-KW36",
+    "firstSeenAt": "2026-08-31",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322396-20260811130738.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Orks-und-Goblins-32::322396.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783987217586",
+    "isbn13": "9783987217586",
+    "title": "Metamorphe 1",
+    "subtitle": "Beast Friends",
+    "publisher": "toonfish",
+    "authors": [
+      "Olivier Gay",
+      "Jonathan Aucomte"
+    ],
+    "price": 15.95,
+    "releaseDate": "2026-08-31",
+    "calendarWeek": "2026-KW36",
+    "firstSeenAt": "2026-08-31",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322357-20260811130558.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Metamorphe-1::322357.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783987217678",
+    "isbn13": "9783987217678",
+    "title": "Marla 1",
+    "subtitle": "Die Flamingohöhle",
+    "publisher": "toonfish",
+    "authors": [
+      "Giovanni Di Gregorio",
+      "Lorena Calderón"
+    ],
+    "price": 16.95,
+    "releaseDate": "2026-08-31",
+    "calendarWeek": "2026-KW36",
+    "firstSeenAt": "2026-08-31",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322322-20260811130419.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Marla-1::322322.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783987212987",
+    "isbn13": "9783987212987",
+    "title": "Malcolm Max 07",
+    "subtitle": "Am Ende der Zeit",
+    "publisher": "Splitter",
+    "authors": [
+      "Peter Mennigen",
+      "Ingo Römling"
+    ],
+    "price": 19.8,
+    "releaseDate": "2026-08-31",
+    "calendarWeek": "2026-KW36",
+    "firstSeenAt": "2026-08-31",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322315-20260811130246.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Malcolm-Max-07::322315.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783692580111",
+    "isbn13": "9783692580111",
+    "title": "Junior und Senior 1",
+    "subtitle": "",
+    "publisher": "Splitter",
+    "authors": [
+      "Robin Recht",
+      "Jean-Baptiste Hostache"
+    ],
+    "price": 22.0,
+    "releaseDate": "2026-08-31",
+    "calendarWeek": "2026-KW36",
+    "firstSeenAt": "2026-08-31",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322335-20260811130109.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Junior-und-Senior-1::322335.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783910965331",
+    "isbn13": "9783910965331",
+    "title": "I.R.$. 25",
+    "subtitle": "Dreissig Milliarden Dollar",
+    "publisher": "Finix-Comics",
+    "authors": [
+      "Bernard Vrancken",
+      "Stéphen Desberg"
+    ],
+    "price": 19.8,
+    "releaseDate": "2026-08-31",
+    "calendarWeek": "2026-KW36",
+    "firstSeenAt": "2026-08-31",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/321958-20260623133355.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/I-R-%24-25::321958.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783967923629",
+    "isbn13": "9783967923629",
+    "title": "Frankenstein (George Bess) (Neuauflage)",
+    "subtitle": "Nach Mary Shelley",
+    "publisher": "Splitter",
+    "authors": [
+      "George Bess"
+    ],
+    "price": 39.8,
+    "releaseDate": "2026-08-31",
+    "calendarWeek": "2026-KW36",
+    "firstSeenAt": "2026-08-31",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/315692-20220617112159.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Frankenstein-George-Bess::315692.html",
+    "scope": "splitter",
+    "editionType": "new-edition"
+  },
+  {
+    "id": "ppm-9783967927276",
+    "isbn13": "9783967927276",
+    "title": "Enola Holmes 3 (Neuauflage)",
+    "subtitle": "Der Fall der verhängnisvollen Blumen",
+    "publisher": "toonfish",
+    "authors": [
+      "Serena Blasco"
+    ],
+    "price": 15.95,
+    "releaseDate": "2026-08-31",
+    "calendarWeek": "2026-KW36",
+    "firstSeenAt": "2026-08-31",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/314836-20211013114116.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Enola-Holmes-3::314836.html",
+    "scope": "franco-belgisch",
+    "editionType": "new-edition"
+  },
+  {
+    "id": "ppm-9783987213328",
+    "isbn13": "9783987213328",
+    "title": "Eine treue Frau",
+    "subtitle": "",
+    "publisher": "Splitter",
+    "authors": [
+      "Axel"
+    ],
+    "price": 19.8,
+    "releaseDate": "2026-08-31",
+    "calendarWeek": "2026-KW36",
+    "firstSeenAt": "2026-08-31",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322368-20260811125910.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Eine-treue-Frau::322368.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783868699555",
+    "isbn13": "9783868699555",
+    "title": "Die Schlümpfe 01 (Neuauflage)",
+    "subtitle": "Blauschlümpfe und Schwarzschlümpfe",
+    "publisher": "toonfish",
+    "authors": [
+      "Peyo"
+    ],
+    "price": 14.95,
+    "releaseDate": "2026-08-31",
+    "calendarWeek": "2026-KW36",
+    "firstSeenAt": "2026-08-31",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/305050.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Die-Schluempfe-01::5050.html",
+    "scope": "franco-belgisch",
+    "editionType": "new-edition"
+  },
+  {
+    "id": "ppm-9783967921403",
+    "isbn13": "9783967921403",
+    "title": "Die Geschichte der Drogen",
+    "subtitle": "",
+    "publisher": "Splitter",
+    "authors": [
+      "Jean-Pierre Pécau",
+      "Nicolas Otéro"
+    ],
+    "price": 25.0,
+    "releaseDate": "2026-08-31",
+    "calendarWeek": "2026-KW36",
+    "firstSeenAt": "2026-08-31",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322333-20260811125701.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Die-Geschichte-der-Drogen::322333.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783689501624",
+    "isbn13": "9783689501624",
+    "title": "Die Duellantin 2",
+    "subtitle": "Korsett und Konter",
+    "publisher": "Splitter",
+    "authors": [
+      "Francesco Trifogli"
+    ],
+    "price": 19.8,
+    "releaseDate": "2026-08-31",
+    "calendarWeek": "2026-KW36",
+    "firstSeenAt": "2026-08-31",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322343-20260811125310.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Die-Duellantin-2::322343.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783689500290",
+    "isbn13": "9783689500290",
+    "title": "Die 5 Reiche 16",
+    "subtitle": "Keinen Ausweg",
+    "publisher": "Splitter",
+    "authors": [
+      "Jérôme Lereculey",
+      "Lewelyn"
+    ],
+    "price": 18.0,
+    "releaseDate": "2026-08-31",
+    "calendarWeek": "2026-KW36",
+    "firstSeenAt": "2026-08-31",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322341-20260811125127.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Die-5-Reiche-16::322341.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783868696240",
+    "isbn13": "9783868696240",
+    "title": "Der Incal Gesamtausgabe (limitierte Sonderedition)",
+    "subtitle": "20 Jahre Splitter Verlag",
+    "publisher": "Splitter",
+    "authors": [
+      "Alexandro Jodorowsky",
+      "Moebius"
+    ],
+    "price": 99.8,
+    "releaseDate": "2026-08-31",
+    "calendarWeek": "2026-KW36",
+    "firstSeenAt": "2026-08-31",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322306-20260811124934.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Der-Incal-Gesamtausgabe-limitierte-Sonderedition::322306.html",
+    "scope": "splitter",
+    "editionType": "new-edition"
+  },
+  {
+    "id": "ppm-9783987212925",
+    "isbn13": "9783987212925",
+    "title": "DEN 3",
+    "subtitle": "Kinder des Feuers",
+    "publisher": "Splitter",
+    "authors": [
+      "Richard Corben"
+    ],
+    "price": 29.8,
+    "releaseDate": "2026-08-31",
+    "calendarWeek": "2026-KW36",
+    "firstSeenAt": "2026-08-31",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322314-20260811124754.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/DEN-3::322314.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783689501310",
+    "isbn13": "9783689501310",
+    "title": "Cyborgs 3",
+    "subtitle": "Tank",
+    "publisher": "Splitter",
+    "authors": [
+      "Jean-Luc Istin"
+    ],
+    "price": 18.0,
+    "releaseDate": "2026-08-31",
+    "calendarWeek": "2026-KW36",
+    "firstSeenAt": "2026-08-31",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322373-20260811124606.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Cyborgs-3::322373.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783692580166",
+    "isbn13": "9783692580166",
+    "title": "Colony 10",
+    "subtitle": "Vernichtung",
+    "publisher": "Splitter",
+    "authors": [
+      "Vincenzo Cucca",
+      "Denis-Pierre Filippi"
+    ],
+    "price": 17.0,
+    "releaseDate": "2026-08-31",
+    "calendarWeek": "2026-KW36",
+    "firstSeenAt": "2026-08-31",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322310-20260811124412.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Colony-10::322310.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783964305268",
+    "isbn13": "9783964305268",
+    "title": "COZMIC Sparpaket Band 4 bis 6",
+    "subtitle": "",
+    "publisher": "Kult Comics",
+    "authors": [],
+    "price": 30.0,
+    "releaseDate": "2026-08-31",
+    "calendarWeek": "2026-KW36",
+    "firstSeenAt": "2026-08-31",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323475-20260713135054.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/COZMIC-Sparpaket-Band-4-bis-6::323475.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783987213434",
+    "isbn13": "9783987213434",
+    "title": "Atalante 14",
+    "subtitle": "Die Kinder der Küste",
+    "publisher": "Splitter",
+    "authors": [
+      "Didier Crisse"
+    ],
+    "price": 17.0,
+    "releaseDate": "2026-08-31",
+    "calendarWeek": "2026-KW36",
+    "firstSeenAt": "2026-08-31",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322375-20260811124236.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Atalante-14::322375.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
     "id": "ppm-9783899088526",
     "isbn13": "9783899088526",
     "title": "Theodor Pussel 14 VZA",
@@ -9,7 +470,7 @@
       "Frank Le Gall"
     ],
     "price": 59.0,
-    "releaseDate": "2026-08-24",
+    "releaseDate": "2026-08-31",
     "calendarWeek": "2026-KW35",
     "firstSeenAt": "2026-08-24",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322913-20260420130124.jpg",
@@ -28,7 +489,7 @@
       "Léo Malet"
     ],
     "price": 22.8,
-    "releaseDate": "2026-08-24",
+    "releaseDate": "2026-08-31",
     "calendarWeek": "2026-KW35",
     "firstSeenAt": "2026-08-24",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322546-20260706122402.jpg",
@@ -47,7 +508,7 @@
       "Luc Schuiten"
     ],
     "price": 22.8,
-    "releaseDate": "2026-08-24",
+    "releaseDate": "2026-08-31",
     "calendarWeek": "2026-KW35",
     "firstSeenAt": "2026-08-24",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322545-20260706122133.jpg",
@@ -66,7 +527,7 @@
       "Giuliano da Empoli"
     ],
     "price": 29.8,
-    "releaseDate": "2026-08-24",
+    "releaseDate": "2026-08-31",
     "calendarWeek": "2026-KW35",
     "firstSeenAt": "2026-08-24",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323115-20260706122041.jpg",
@@ -105,7 +566,7 @@
       "Willem Ritstier"
     ],
     "price": 20.0,
-    "releaseDate": "2026-08-24",
+    "releaseDate": "2026-08-31",
     "calendarWeek": "2026-KW33",
     "firstSeenAt": "2026-08-10",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322965-20260601122547.jpg",
@@ -124,7 +585,7 @@
       "Willem Ritstier"
     ],
     "price": 20.0,
-    "releaseDate": "2026-08-24",
+    "releaseDate": "2026-08-31",
     "calendarWeek": "2026-KW33",
     "firstSeenAt": "2026-08-10",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322964-20260513121140.jpg",
