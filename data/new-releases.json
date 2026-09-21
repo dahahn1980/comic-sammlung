@@ -1,5 +1,62 @@
 [
   {
+    "id": "ppm-9783968044071",
+    "isbn13": "9783968044071",
+    "title": "Bob Morane (All Verlag) 14",
+    "subtitle": "Der Tempel der Dinosaurier",
+    "publisher": "All Verlag",
+    "authors": [
+      "Henri Vernes",
+      "William Vance"
+    ],
+    "price": 17.8,
+    "releaseDate": "2026-09-21",
+    "calendarWeek": "2026-KW39",
+    "firstSeenAt": "2026-09-21",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323386-20260701123504.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Bob-Morane-All-Verlag-14::323386.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783968044057",
+    "isbn13": "9783968044057",
+    "title": "Bob Morane (All Verlag) 13",
+    "subtitle": "Die Giganten von Mu",
+    "publisher": "All Verlag",
+    "authors": [
+      "Henri Vernes",
+      "William Vance"
+    ],
+    "price": 17.8,
+    "releaseDate": "2026-09-21",
+    "calendarWeek": "2026-KW39",
+    "firstSeenAt": "2026-09-21",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323384-20260701123020.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Bob-Morane-All-Verlag-13::323384.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783968044125",
+    "isbn13": "9783968044125",
+    "title": "Alain Chevallier 7",
+    "subtitle": "Duell Auto gegen Motorrad",
+    "publisher": "All Verlag",
+    "authors": [
+      "André-Paul Duchâteau",
+      "Christian Denayer"
+    ],
+    "price": 17.8,
+    "releaseDate": "2026-09-21",
+    "calendarWeek": "2026-KW39",
+    "firstSeenAt": "2026-09-21",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323391-20260701123955.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Alain-Chevallier-7::323391.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
     "id": "ppm-9783965822429",
     "isbn13": "9783965822429",
     "title": "Nestor Burma: Wer einmal auf dem Friedhof liegt...(Neue Edition)",
@@ -10,7 +67,7 @@
       "Léo Malet"
     ],
     "price": 22.8,
-    "releaseDate": "2026-09-14",
+    "releaseDate": "2026-09-21",
     "calendarWeek": "2026-KW38",
     "firstSeenAt": "2026-09-14",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322548-20260828135153.jpg",
@@ -48,7 +105,7 @@
       "Dik Browne"
     ],
     "price": 19.8,
-    "releaseDate": "2026-09-14",
+    "releaseDate": "2026-09-21",
     "calendarWeek": "2026-KW38",
     "firstSeenAt": "2026-09-14",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323389-20260701123719.jpg",
@@ -87,7 +144,7 @@
       "Brice Goepfert"
     ],
     "price": 39.8,
-    "releaseDate": "2026-09-14",
+    "releaseDate": "2026-09-21",
     "calendarWeek": "2026-KW38",
     "firstSeenAt": "2026-09-14",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323382-20260701122642.jpg",
@@ -105,7 +162,7 @@
       "Saverio Micheloni"
     ],
     "price": 19.8,
-    "releaseDate": "2026-09-14",
+    "releaseDate": "2026-09-21",
     "calendarWeek": "2026-KW38",
     "firstSeenAt": "2026-09-14",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323380-20260701122422.jpg",
@@ -123,7 +180,7 @@
       "André Taymans"
     ],
     "price": 24.8,
-    "releaseDate": "2026-09-14",
+    "releaseDate": "2026-09-21",
     "calendarWeek": "2026-KW38",
     "firstSeenAt": "2026-09-14",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323297-20260828135108.jpg",
@@ -142,7 +199,7 @@
       "Eduardo Risso"
     ],
     "price": 34.8,
-    "releaseDate": "2026-09-14",
+    "releaseDate": "2026-09-21",
     "calendarWeek": "2026-KW38",
     "firstSeenAt": "2026-09-14",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322547-20260828135014.jpg",
@@ -160,7 +217,7 @@
       "Hal Foster"
     ],
     "price": 24.9,
-    "releaseDate": "2026-09-14",
+    "releaseDate": "2026-09-21",
     "calendarWeek": "2026-KW37",
     "firstSeenAt": "2026-09-07",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/300140.jpg",
@@ -178,7 +235,7 @@
       "Thomas Yeates"
     ],
     "price": 24.9,
-    "releaseDate": "2026-09-14",
+    "releaseDate": "2026-09-21",
     "calendarWeek": "2026-KW37",
     "firstSeenAt": "2026-09-07",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/317114-20221129140437.jpg",
@@ -196,7 +253,7 @@
       "Gary Gianni"
     ],
     "price": 24.9,
-    "releaseDate": "2026-09-14",
+    "releaseDate": "2026-09-21",
     "calendarWeek": "2026-KW37",
     "firstSeenAt": "2026-09-07",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/310790-20171205075732.jpg",
@@ -215,7 +272,7 @@
       "Fernando Blanco"
     ],
     "price": 25.0,
-    "releaseDate": "2026-09-14",
+    "releaseDate": "2026-09-21",
     "calendarWeek": "2026-KW36",
     "firstSeenAt": "2026-08-31",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322401-20260812131413.jpg",
@@ -233,7 +290,7 @@
       "Diverse Autoren"
     ],
     "price": 25.0,
-    "releaseDate": "2026-09-14",
+    "releaseDate": "2026-09-21",
     "calendarWeek": "2026-KW36",
     "firstSeenAt": "2026-08-31",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322374-20260812131553.jpg",
@@ -252,7 +309,7 @@
       "Max Fiumara"
     ],
     "price": 24.0,
-    "releaseDate": "2026-09-14",
+    "releaseDate": "2026-09-21",
     "calendarWeek": "2026-KW36",
     "firstSeenAt": "2026-08-31",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322345-20260811131803.jpg",
@@ -270,7 +327,7 @@
       "Mathieu Bablet"
     ],
     "price": 49.8,
-    "releaseDate": "2026-09-14",
+    "releaseDate": "2026-09-21",
     "calendarWeek": "2026-KW36",
     "firstSeenAt": "2026-08-31",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322321-20260811131213.jpg",
@@ -289,7 +346,7 @@
       "Casado"
     ],
     "price": 18.0,
-    "releaseDate": "2026-09-14",
+    "releaseDate": "2026-09-21",
     "calendarWeek": "2026-KW36",
     "firstSeenAt": "2026-08-31",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322344-20260811131547.jpg",
@@ -307,7 +364,7 @@
       "Milo Manara"
     ],
     "price": 22.0,
-    "releaseDate": "2026-09-14",
+    "releaseDate": "2026-09-21",
     "calendarWeek": "2026-KW36",
     "firstSeenAt": "2026-08-31",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322346-20260811131013.jpg",
@@ -326,7 +383,7 @@
       "Andrea Cuneo"
     ],
     "price": 18.0,
-    "releaseDate": "2026-09-14",
+    "releaseDate": "2026-09-21",
     "calendarWeek": "2026-KW36",
     "firstSeenAt": "2026-08-31",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322396-20260811130738.jpg",
@@ -383,7 +440,7 @@
       "Ingo Römling"
     ],
     "price": 19.8,
-    "releaseDate": "2026-09-14",
+    "releaseDate": "2026-09-21",
     "calendarWeek": "2026-KW36",
     "firstSeenAt": "2026-08-31",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322315-20260811130246.jpg",
@@ -402,7 +459,7 @@
       "Jean-Baptiste Hostache"
     ],
     "price": 22.0,
-    "releaseDate": "2026-09-14",
+    "releaseDate": "2026-09-21",
     "calendarWeek": "2026-KW36",
     "firstSeenAt": "2026-08-31",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322335-20260811130109.jpg",
@@ -421,7 +478,7 @@
       "Stéphen Desberg"
     ],
     "price": 19.8,
-    "releaseDate": "2026-09-14",
+    "releaseDate": "2026-09-21",
     "calendarWeek": "2026-KW36",
     "firstSeenAt": "2026-08-31",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/321958-20260623133355.jpg",
@@ -439,7 +496,7 @@
       "George Bess"
     ],
     "price": 39.8,
-    "releaseDate": "2026-09-14",
+    "releaseDate": "2026-09-21",
     "calendarWeek": "2026-KW36",
     "firstSeenAt": "2026-08-31",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/315692-20220617112159.jpg",
@@ -457,7 +514,7 @@
       "Serena Blasco"
     ],
     "price": 15.95,
-    "releaseDate": "2026-09-14",
+    "releaseDate": "2026-09-21",
     "calendarWeek": "2026-KW36",
     "firstSeenAt": "2026-08-31",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/314836-20211013114116.jpg",
@@ -475,7 +532,7 @@
       "Axel"
     ],
     "price": 19.8,
-    "releaseDate": "2026-09-14",
+    "releaseDate": "2026-09-21",
     "calendarWeek": "2026-KW36",
     "firstSeenAt": "2026-08-31",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322368-20260811125910.jpg",
@@ -493,7 +550,7 @@
       "Peyo"
     ],
     "price": 14.95,
-    "releaseDate": "2026-09-14",
+    "releaseDate": "2026-09-21",
     "calendarWeek": "2026-KW36",
     "firstSeenAt": "2026-08-31",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/305050.jpg",
@@ -512,7 +569,7 @@
       "Nicolas Otéro"
     ],
     "price": 25.0,
-    "releaseDate": "2026-09-14",
+    "releaseDate": "2026-09-21",
     "calendarWeek": "2026-KW36",
     "firstSeenAt": "2026-08-31",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322333-20260811125701.jpg",
@@ -530,7 +587,7 @@
       "Francesco Trifogli"
     ],
     "price": 19.8,
-    "releaseDate": "2026-09-14",
+    "releaseDate": "2026-09-21",
     "calendarWeek": "2026-KW36",
     "firstSeenAt": "2026-08-31",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322343-20260811125310.jpg",
@@ -549,7 +606,7 @@
       "Lewelyn"
     ],
     "price": 18.0,
-    "releaseDate": "2026-09-14",
+    "releaseDate": "2026-09-21",
     "calendarWeek": "2026-KW36",
     "firstSeenAt": "2026-08-31",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322341-20260811125127.jpg",
@@ -568,7 +625,7 @@
       "Moebius"
     ],
     "price": 99.8,
-    "releaseDate": "2026-09-14",
+    "releaseDate": "2026-09-21",
     "calendarWeek": "2026-KW36",
     "firstSeenAt": "2026-08-31",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322306-20260811124934.jpg",
@@ -586,7 +643,7 @@
       "Richard Corben"
     ],
     "price": 29.8,
-    "releaseDate": "2026-09-14",
+    "releaseDate": "2026-09-21",
     "calendarWeek": "2026-KW36",
     "firstSeenAt": "2026-08-31",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322314-20260811124754.jpg",
@@ -604,7 +661,7 @@
       "Jean-Luc Istin"
     ],
     "price": 18.0,
-    "releaseDate": "2026-09-14",
+    "releaseDate": "2026-09-21",
     "calendarWeek": "2026-KW36",
     "firstSeenAt": "2026-08-31",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322373-20260811124606.jpg",
@@ -623,7 +680,7 @@
       "Denis-Pierre Filippi"
     ],
     "price": 17.0,
-    "releaseDate": "2026-09-14",
+    "releaseDate": "2026-09-21",
     "calendarWeek": "2026-KW36",
     "firstSeenAt": "2026-08-31",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322310-20260811124412.jpg",
@@ -639,7 +696,7 @@
     "publisher": "Kult Comics",
     "authors": [],
     "price": 30.0,
-    "releaseDate": "2026-09-14",
+    "releaseDate": "2026-09-21",
     "calendarWeek": "2026-KW36",
     "firstSeenAt": "2026-08-31",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323475-20260713135054.jpg",
@@ -657,7 +714,7 @@
       "Didier Crisse"
     ],
     "price": 17.0,
-    "releaseDate": "2026-09-14",
+    "releaseDate": "2026-09-21",
     "calendarWeek": "2026-KW36",
     "firstSeenAt": "2026-08-31",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322375-20260811124236.jpg",
