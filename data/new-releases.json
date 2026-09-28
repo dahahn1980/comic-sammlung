@@ -1,5 +1,121 @@
 [
   {
+    "id": "ppm-9783692580074",
+    "isbn13": "9783692580074",
+    "title": "Die Kunst, den Hintern zu versohlen",
+    "subtitle": "",
+    "publisher": "Splitter",
+    "authors": [
+      "Milo Manara",
+      "Jean-Pierre Enard"
+    ],
+    "price": 25.0,
+    "releaseDate": "2026-09-28",
+    "calendarWeek": "2026-KW40",
+    "firstSeenAt": "2026-09-28",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322338-20260908141726.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Die-Kunst-den-Hintern-zu-versohlen::322338.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783689501518",
+    "isbn13": "9783689501518",
+    "title": "Die Bruderschaft der Stürme 3",
+    "subtitle": "Ankonn",
+    "publisher": "Splitter",
+    "authors": [
+      "Sylvain Cordurié",
+      "Nico Tamburo"
+    ],
+    "price": 18.0,
+    "releaseDate": "2026-09-28",
+    "calendarWeek": "2026-KW40",
+    "firstSeenAt": "2026-09-28",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322327-20260908141548.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Die-Bruderschaft-der-Stuerme-3::322327.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783910965294",
+    "isbn13": "9783910965294",
+    "title": "Brennendes Herz 7",
+    "subtitle": "Der Graf von Saint-Germain",
+    "publisher": "Finix-Comics",
+    "authors": [
+      "Patrick Cothias",
+      "Marco Venanzi"
+    ],
+    "price": 19.8,
+    "releaseDate": "2026-09-28",
+    "calendarWeek": "2026-KW40",
+    "firstSeenAt": "2026-09-28",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322870-20260623133021.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Brennendes-Herz-7::322870.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783689501891",
+    "isbn13": "9783689501891",
+    "title": "Ange Leca 2",
+    "subtitle": "Amerikanische Monster",
+    "publisher": "Splitter",
+    "authors": [
+      "Tom Graffin",
+      "Jerome Ropert",
+      "Victor Lepointe"
+    ],
+    "price": 18.0,
+    "releaseDate": "2026-09-28",
+    "calendarWeek": "2026-KW40",
+    "firstSeenAt": "2026-09-28",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322361-20260908141203.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Ange-Leca-2::322361.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783967920765",
+    "isbn13": "9783967920765",
+    "title": "Alix Senator 16",
+    "subtitle": "Atlantis",
+    "publisher": "Splitter",
+    "authors": [
+      "Valérie Mangin",
+      "Thierry Démarez"
+    ],
+    "price": 17.0,
+    "releaseDate": "2026-09-28",
+    "calendarWeek": "2026-KW40",
+    "firstSeenAt": "2026-09-28",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322313-20260908141033.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Alix-Senator-16::322313.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783868696134",
+    "isbn13": "9783868696134",
+    "title": "Alix Senator 01 (Neuauflage)",
+    "subtitle": "Die blutigen Flügel",
+    "publisher": "Splitter",
+    "authors": [
+      "Martin",
+      "Mangin",
+      "Démarez"
+    ],
+    "price": 17.0,
+    "releaseDate": "2026-09-28",
+    "calendarWeek": "2026-KW40",
+    "firstSeenAt": "2026-09-28",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/306696.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Alix-Senator-01::6696.html",
+    "scope": "splitter",
+    "editionType": "new-edition"
+  },
+  {
     "id": "ppm-9783968044071",
     "isbn13": "9783968044071",
     "title": "Bob Morane (All Verlag) 14",
@@ -10,7 +126,7 @@
       "William Vance"
     ],
     "price": 17.8,
-    "releaseDate": "2026-09-21",
+    "releaseDate": "2026-09-28",
     "calendarWeek": "2026-KW39",
     "firstSeenAt": "2026-09-21",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323386-20260701123504.jpg",
@@ -29,7 +145,7 @@
       "William Vance"
     ],
     "price": 17.8,
-    "releaseDate": "2026-09-21",
+    "releaseDate": "2026-09-28",
     "calendarWeek": "2026-KW39",
     "firstSeenAt": "2026-09-21",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323384-20260701123020.jpg",
@@ -48,7 +164,7 @@
       "Christian Denayer"
     ],
     "price": 17.8,
-    "releaseDate": "2026-09-21",
+    "releaseDate": "2026-09-28",
     "calendarWeek": "2026-KW39",
     "firstSeenAt": "2026-09-21",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323391-20260701123955.jpg",
@@ -67,7 +183,7 @@
       "Léo Malet"
     ],
     "price": 22.8,
-    "releaseDate": "2026-09-21",
+    "releaseDate": "2026-09-28",
     "calendarWeek": "2026-KW38",
     "firstSeenAt": "2026-09-14",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322548-20260828135153.jpg",
@@ -105,7 +221,7 @@
       "Dik Browne"
     ],
     "price": 19.8,
-    "releaseDate": "2026-09-21",
+    "releaseDate": "2026-09-28",
     "calendarWeek": "2026-KW38",
     "firstSeenAt": "2026-09-14",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323389-20260701123719.jpg",
@@ -144,7 +260,7 @@
       "Brice Goepfert"
     ],
     "price": 39.8,
-    "releaseDate": "2026-09-21",
+    "releaseDate": "2026-09-28",
     "calendarWeek": "2026-KW38",
     "firstSeenAt": "2026-09-14",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323382-20260701122642.jpg",
@@ -162,7 +278,7 @@
       "Saverio Micheloni"
     ],
     "price": 19.8,
-    "releaseDate": "2026-09-21",
+    "releaseDate": "2026-09-28",
     "calendarWeek": "2026-KW38",
     "firstSeenAt": "2026-09-14",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323380-20260701122422.jpg",
@@ -180,7 +296,7 @@
       "André Taymans"
     ],
     "price": 24.8,
-    "releaseDate": "2026-09-21",
+    "releaseDate": "2026-09-28",
     "calendarWeek": "2026-KW38",
     "firstSeenAt": "2026-09-14",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323297-20260828135108.jpg",
@@ -199,7 +315,7 @@
       "Eduardo Risso"
     ],
     "price": 34.8,
-    "releaseDate": "2026-09-21",
+    "releaseDate": "2026-09-28",
     "calendarWeek": "2026-KW38",
     "firstSeenAt": "2026-09-14",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322547-20260828135014.jpg",
@@ -217,7 +333,7 @@
       "Hal Foster"
     ],
     "price": 24.9,
-    "releaseDate": "2026-09-21",
+    "releaseDate": "2026-09-28",
     "calendarWeek": "2026-KW37",
     "firstSeenAt": "2026-09-07",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/300140.jpg",
@@ -235,7 +351,7 @@
       "Thomas Yeates"
     ],
     "price": 24.9,
-    "releaseDate": "2026-09-21",
+    "releaseDate": "2026-09-28",
     "calendarWeek": "2026-KW37",
     "firstSeenAt": "2026-09-07",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/317114-20221129140437.jpg",
@@ -253,7 +369,7 @@
       "Gary Gianni"
     ],
     "price": 24.9,
-    "releaseDate": "2026-09-21",
+    "releaseDate": "2026-09-28",
     "calendarWeek": "2026-KW37",
     "firstSeenAt": "2026-09-07",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/310790-20171205075732.jpg",
@@ -696,7 +812,7 @@
     "publisher": "Kult Comics",
     "authors": [],
     "price": 30.0,
-    "releaseDate": "2026-09-21",
+    "releaseDate": "2026-09-28",
     "calendarWeek": "2026-KW36",
     "firstSeenAt": "2026-08-31",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323475-20260713135054.jpg",
