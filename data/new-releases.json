@@ -1,5 +1,113 @@
 [
   {
+    "id": "ppm-9783964305190",
+    "isbn13": "9783964305190",
+    "title": "Comic-Biografie - Sempé",
+    "subtitle": "Wie sag´ ich´s meinen Lesern?",
+    "publisher": "Kult Comics",
+    "authors": [
+      "Willi Blöß"
+    ],
+    "price": 10.0,
+    "releaseDate": "2026-10-05",
+    "calendarWeek": "2026-KW41",
+    "firstSeenAt": "2026-10-05",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323146-20260601123502.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Comic-Biografie-Sempe::323146.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783964305152",
+    "isbn13": "9783964305152",
+    "title": "Comic-Biografie - Otmar Alt",
+    "subtitle": "Graf Öppenpöller gibt sich die Ehre",
+    "publisher": "Kult Comics",
+    "authors": [
+      "Willi Blöß"
+    ],
+    "price": 10.0,
+    "releaseDate": "2026-10-05",
+    "calendarWeek": "2026-KW41",
+    "firstSeenAt": "2026-10-05",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323150-20260601124201.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Comic-Biografie-Otmar-Alt::323150.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783964305176",
+    "isbn13": "9783964305176",
+    "title": "Comic-Biografie - Nam June Paik",
+    "subtitle": "Electric Warrior",
+    "publisher": "Kult Comics",
+    "authors": [
+      "Willi Blöß"
+    ],
+    "price": 10.0,
+    "releaseDate": "2026-10-05",
+    "calendarWeek": "2026-KW41",
+    "firstSeenAt": "2026-10-05",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323148-20260601123817.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Comic-Biografie-Nam-June-Paik::323148.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783964305183",
+    "isbn13": "9783964305183",
+    "title": "Comic-Biografie - Louise Bourgeois",
+    "subtitle": "Die Spinnenfrau",
+    "publisher": "Kult Comics",
+    "authors": [
+      "Willi Blöß"
+    ],
+    "price": 10.0,
+    "releaseDate": "2026-10-05",
+    "calendarWeek": "2026-KW41",
+    "firstSeenAt": "2026-10-05",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323147-20260601123645.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Comic-Biografie-Louise-Bourgeois::323147.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783964305169",
+    "isbn13": "9783964305169",
+    "title": "Comic-Biografie - Horst Janssen",
+    "subtitle": "Messerwetzel",
+    "publisher": "Kult Comics",
+    "authors": [
+      "Willi Blöß"
+    ],
+    "price": 10.0,
+    "releaseDate": "2026-10-05",
+    "calendarWeek": "2026-KW41",
+    "firstSeenAt": "2026-10-05",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323149-20260601124002.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Comic-Biografie-Horst-Janssen::323149.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783964305206",
+    "isbn13": "9783964305206",
+    "title": "Comic-Biografie - Claire Bretecher",
+    "subtitle": "und die Frustrierten",
+    "publisher": "Kult Comics",
+    "authors": [
+      "Willi Blöß"
+    ],
+    "price": 10.0,
+    "releaseDate": "2026-10-05",
+    "calendarWeek": "2026-KW41",
+    "firstSeenAt": "2026-10-05",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323145-20260601123314.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Comic-Biografie-Claire-Bretecher::323145.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
     "id": "ppm-9783692580074",
     "isbn13": "9783692580074",
     "title": "Die Kunst, den Hintern zu versohlen",
@@ -48,7 +156,7 @@
       "Marco Venanzi"
     ],
     "price": 19.8,
-    "releaseDate": "2026-09-28",
+    "releaseDate": "2026-10-05",
     "calendarWeek": "2026-KW40",
     "firstSeenAt": "2026-09-28",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322870-20260623133021.jpg",
@@ -87,7 +195,7 @@
       "Thierry Démarez"
     ],
     "price": 17.0,
-    "releaseDate": "2026-09-28",
+    "releaseDate": "2026-10-05",
     "calendarWeek": "2026-KW40",
     "firstSeenAt": "2026-09-28",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322313-20260908141033.jpg",
@@ -107,7 +215,7 @@
       "Démarez"
     ],
     "price": 17.0,
-    "releaseDate": "2026-09-28",
+    "releaseDate": "2026-10-05",
     "calendarWeek": "2026-KW40",
     "firstSeenAt": "2026-09-28",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/306696.jpg",
@@ -126,7 +234,7 @@
       "William Vance"
     ],
     "price": 17.8,
-    "releaseDate": "2026-09-28",
+    "releaseDate": "2026-10-05",
     "calendarWeek": "2026-KW39",
     "firstSeenAt": "2026-09-21",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323386-20260701123504.jpg",
@@ -145,7 +253,7 @@
       "William Vance"
     ],
     "price": 17.8,
-    "releaseDate": "2026-09-28",
+    "releaseDate": "2026-10-05",
     "calendarWeek": "2026-KW39",
     "firstSeenAt": "2026-09-21",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323384-20260701123020.jpg",
@@ -164,7 +272,7 @@
       "Christian Denayer"
     ],
     "price": 17.8,
-    "releaseDate": "2026-09-28",
+    "releaseDate": "2026-10-05",
     "calendarWeek": "2026-KW39",
     "firstSeenAt": "2026-09-21",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323391-20260701123955.jpg",
@@ -183,7 +291,7 @@
       "Léo Malet"
     ],
     "price": 22.8,
-    "releaseDate": "2026-09-28",
+    "releaseDate": "2026-10-05",
     "calendarWeek": "2026-KW38",
     "firstSeenAt": "2026-09-14",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322548-20260828135153.jpg",
@@ -221,7 +329,7 @@
       "Dik Browne"
     ],
     "price": 19.8,
-    "releaseDate": "2026-09-28",
+    "releaseDate": "2026-10-05",
     "calendarWeek": "2026-KW38",
     "firstSeenAt": "2026-09-14",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323389-20260701123719.jpg",
@@ -260,7 +368,7 @@
       "Brice Goepfert"
     ],
     "price": 39.8,
-    "releaseDate": "2026-09-28",
+    "releaseDate": "2026-10-05",
     "calendarWeek": "2026-KW38",
     "firstSeenAt": "2026-09-14",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323382-20260701122642.jpg",
@@ -278,7 +386,7 @@
       "Saverio Micheloni"
     ],
     "price": 19.8,
-    "releaseDate": "2026-09-28",
+    "releaseDate": "2026-10-05",
     "calendarWeek": "2026-KW38",
     "firstSeenAt": "2026-09-14",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323380-20260701122422.jpg",
@@ -296,7 +404,7 @@
       "André Taymans"
     ],
     "price": 24.8,
-    "releaseDate": "2026-09-28",
+    "releaseDate": "2026-10-05",
     "calendarWeek": "2026-KW38",
     "firstSeenAt": "2026-09-14",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323297-20260828135108.jpg",
@@ -315,7 +423,7 @@
       "Eduardo Risso"
     ],
     "price": 34.8,
-    "releaseDate": "2026-09-28",
+    "releaseDate": "2026-10-05",
     "calendarWeek": "2026-KW38",
     "firstSeenAt": "2026-09-14",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322547-20260828135014.jpg",
