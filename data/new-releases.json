@@ -1,5 +1,24 @@
 [
   {
+    "id": "ppm-9783948057862",
+    "isbn13": "9783948057862",
+    "title": "Die Gentlemen GmbH 6",
+    "subtitle": "Im Königreich ist die Hölle los",
+    "publisher": "Finix-Comics",
+    "authors": [
+      "Alfredo Castelli",
+      "Ferdinando Tacconi"
+    ],
+    "price": 39.8,
+    "releaseDate": "2026-10-26",
+    "calendarWeek": "2026-KW44",
+    "firstSeenAt": "2026-10-26",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/320114-20250117134704.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Die-Gentlemen-GmbH-6::320114.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
     "id": "ppm-9783964305190",
     "isbn13": "9783964305190",
     "title": "Comic-Biografie - Sempé",
@@ -9,7 +28,7 @@
       "Willi Blöß"
     ],
     "price": 10.0,
-    "releaseDate": "2026-10-19",
+    "releaseDate": "2026-10-26",
     "calendarWeek": "2026-KW41",
     "firstSeenAt": "2026-10-05",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323146-20260601123502.jpg",
@@ -27,7 +46,7 @@
       "Willi Blöß"
     ],
     "price": 10.0,
-    "releaseDate": "2026-10-19",
+    "releaseDate": "2026-10-26",
     "calendarWeek": "2026-KW41",
     "firstSeenAt": "2026-10-05",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323150-20260601124201.jpg",
@@ -45,7 +64,7 @@
       "Willi Blöß"
     ],
     "price": 10.0,
-    "releaseDate": "2026-10-19",
+    "releaseDate": "2026-10-26",
     "calendarWeek": "2026-KW41",
     "firstSeenAt": "2026-10-05",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323148-20260601123817.jpg",
@@ -63,7 +82,7 @@
       "Willi Blöß"
     ],
     "price": 10.0,
-    "releaseDate": "2026-10-19",
+    "releaseDate": "2026-10-26",
     "calendarWeek": "2026-KW41",
     "firstSeenAt": "2026-10-05",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323147-20260601123645.jpg",
@@ -81,7 +100,7 @@
       "Willi Blöß"
     ],
     "price": 10.0,
-    "releaseDate": "2026-10-19",
+    "releaseDate": "2026-10-26",
     "calendarWeek": "2026-KW41",
     "firstSeenAt": "2026-10-05",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323149-20260601124002.jpg",
@@ -99,7 +118,7 @@
       "Willi Blöß"
     ],
     "price": 10.0,
-    "releaseDate": "2026-10-19",
+    "releaseDate": "2026-10-26",
     "calendarWeek": "2026-KW41",
     "firstSeenAt": "2026-10-05",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323145-20260601123314.jpg",
