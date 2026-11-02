@@ -1,5 +1,252 @@
 [
   {
+    "id": "ppm-9783965822504",
+    "isbn13": "9783965822504",
+    "title": "Yon 2",
+    "subtitle": "Band 2 von 4",
+    "publisher": "Schreiber & Leser",
+    "authors": [
+      "Camille Broutin"
+    ],
+    "price": 18.95,
+    "releaseDate": "2026-11-02",
+    "calendarWeek": "2026-KW45",
+    "firstSeenAt": "2026-11-02",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323302-20260928130135.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Yon-2::323302.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783899083934",
+    "isbn13": "9783899083934",
+    "title": "Margots Reportagen 2 (Neuauflage)",
+    "subtitle": "Die Göttinnen der Straße",
+    "publisher": "Salleck",
+    "authors": [
+      "Olivier Marin"
+    ],
+    "price": 20.0,
+    "releaseDate": "2026-11-02",
+    "calendarWeek": "2026-KW45",
+    "firstSeenAt": "2026-11-02",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/305697.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Margots-Reportagen-2::5697.html",
+    "scope": "franco-belgisch",
+    "editionType": "new-edition"
+  },
+  {
+    "id": "ppm-9783965821057",
+    "isbn13": "9783965821057",
+    "title": "Druuna Eterna 1 (Neuauflage)",
+    "subtitle": "Vertrieben",
+    "publisher": "Schreiber & Leser",
+    "authors": [
+      "Joseph Viglioglia",
+      "Alessio Schreiner"
+    ],
+    "price": 22.8,
+    "releaseDate": "2026-11-02",
+    "calendarWeek": "2026-KW45",
+    "firstSeenAt": "2026-11-02",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/315771-20220322103657.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Druuna-Eterna-1::315771.html",
+    "scope": "franco-belgisch",
+    "editionType": "new-edition"
+  },
+  {
+    "id": "ppm-9783692580326",
+    "isbn13": "9783692580326",
+    "title": "Die Kaste der Meta-Barone Gesamtausgabe (limitierte Sonderedition)",
+    "subtitle": "20 Jahre Splitter Verlag",
+    "publisher": "Splitter",
+    "authors": [
+      "Alejandro Jodorowsky",
+      "Juan Gimenez"
+    ],
+    "price": 99.8,
+    "releaseDate": "2026-11-02",
+    "calendarWeek": "2026-KW45",
+    "firstSeenAt": "2026-11-02",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323167-20261009133435.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Die-Kaste-der-Meta-Barone-Gesamtausgabe-limitierte-Sonderedition::323167.html",
+    "scope": "splitter",
+    "editionType": "new-edition"
+  },
+  {
+    "id": "ppm-9783899085488",
+    "isbn13": "9783899085488",
+    "title": "Die Abenteuer von Jacques Gibrat 4 (Neuauflage)",
+    "subtitle": "Die Gattin des Notars",
+    "publisher": "Salleck",
+    "authors": [
+      "Thierry Dubois",
+      "Jean-Luc Delvaux"
+    ],
+    "price": 20.0,
+    "releaseDate": "2026-11-02",
+    "calendarWeek": "2026-KW45",
+    "firstSeenAt": "2026-11-02",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/307870-20140715125225.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Die-Abenteuer-von-Jacques-Gibrat-4::307870.html",
+    "scope": "franco-belgisch",
+    "editionType": "new-edition"
+  },
+  {
+    "id": "ppm-9783899084221",
+    "isbn13": "9783899084221",
+    "title": "Die Abenteuer von Jacques Gibrat 2 (Neuauflage)",
+    "subtitle": "Die Rückkehr der Kapuzinerbande",
+    "publisher": "Salleck",
+    "authors": [
+      "Thierry Dubois",
+      "Delvaux",
+      "Jean-Luc"
+    ],
+    "price": 20.0,
+    "releaseDate": "2026-11-02",
+    "calendarWeek": "2026-KW45",
+    "firstSeenAt": "2026-11-02",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/305698.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Die-Abenteuer-von-Jacques-Gibrat-2::5698.html",
+    "scope": "franco-belgisch",
+    "editionType": "new-edition"
+  },
+  {
+    "id": "ppm-9783899083903",
+    "isbn13": "9783899083903",
+    "title": "Die Abenteuer von Jacques Gibrat 1 (Neuauflage)",
+    "subtitle": "Die Bande der Weindiebe",
+    "publisher": "Salleck",
+    "authors": [
+      "Thierry Dubois",
+      "Delvaux",
+      "Jean-Luc"
+    ],
+    "price": 20.0,
+    "releaseDate": "2026-11-02",
+    "calendarWeek": "2026-KW45",
+    "firstSeenAt": "2026-11-02",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/305269.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Die-Abenteuer-von-Jacques-Gibrat-1::5269.html",
+    "scope": "franco-belgisch",
+    "editionType": "new-edition"
+  },
+  {
+    "id": "ppm-9783899085631",
+    "isbn13": "9783899085631",
+    "title": "Der Pilot mit dem Edelweiß 3 (Neuauflage)",
+    "subtitle": "Walburga",
+    "publisher": "Salleck",
+    "authors": [
+      "Yann",
+      "Romain Hugault"
+    ],
+    "price": 20.0,
+    "releaseDate": "2026-11-02",
+    "calendarWeek": "2026-KW45",
+    "firstSeenAt": "2026-11-02",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/308134-20141120111302.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Der-Pilot-mit-dem-Edelweiss-3::308134.html",
+    "scope": "franco-belgisch",
+    "editionType": "new-edition"
+  },
+  {
+    "id": "ppm-9783987211775",
+    "isbn13": "9783987211775",
+    "title": "Carthago 16",
+    "subtitle": "Dakhan",
+    "publisher": "Splitter",
+    "authors": [
+      "Christophe Bec",
+      "Ennio Bufi"
+    ],
+    "price": 18.0,
+    "releaseDate": "2026-11-02",
+    "calendarWeek": "2026-KW45",
+    "firstSeenAt": "2026-11-02",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323166-20261009133147.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Carthago-16::323166.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783965822511",
+    "isbn13": "9783965822511",
+    "title": "Caroline Baldwin Special - Monsun",
+    "subtitle": "",
+    "publisher": "Schreiber & Leser",
+    "authors": [
+      "André Taymans"
+    ],
+    "price": 16.95,
+    "releaseDate": "2026-11-02",
+    "calendarWeek": "2026-KW45",
+    "firstSeenAt": "2026-11-02",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323299-20260928130108.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Caroline-Baldwin-Special-Monsun::323299.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783692581538",
+    "isbn13": "9783692581538",
+    "title": "Adventspaket: UCC Dolores",
+    "subtitle": "Band 1-3 der Comic-Serie",
+    "publisher": "Splitter",
+    "authors": [
+      "Didier Tarquin",
+      "Lyse Tarquin"
+    ],
+    "price": 35.0,
+    "releaseDate": "2026-11-02",
+    "calendarWeek": "2026-KW45",
+    "firstSeenAt": "2026-11-02",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323624-20261008144455.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Adventspaket-UCC-Dolores::323624.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783692581545",
+    "isbn13": "9783692581545",
+    "title": "Adventspaket: Krone der Sterne",
+    "subtitle": "Die komplette Comic-Serie",
+    "publisher": "Splitter",
+    "authors": [
+      "Kai Meyer",
+      "Ralf Schlüter",
+      "Yann Krehl"
+    ],
+    "price": 39.8,
+    "releaseDate": "2026-11-02",
+    "calendarWeek": "2026-KW45",
+    "firstSeenAt": "2026-11-02",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323623-20261008144608.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Adventspaket-Krone-der-Sterne::323623.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783692581552",
+    "isbn13": "9783692581552",
+    "title": "Adventspaket: ISS Snipers",
+    "subtitle": "Band 1-3 der Comic-Serie",
+    "publisher": "Splitter",
+    "authors": [
+      "Jean-Luc Istin",
+      "Erwan Seure-Le Bihan"
+    ],
+    "price": 39.8,
+    "releaseDate": "2026-11-02",
+    "calendarWeek": "2026-KW45",
+    "firstSeenAt": "2026-11-02",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323622-20261008144421.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Adventspaket-ISS-Snipers::323622.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
     "id": "ppm-9783948057862",
     "isbn13": "9783948057862",
     "title": "Die Gentlemen GmbH 6",
@@ -10,7 +257,7 @@
       "Ferdinando Tacconi"
     ],
     "price": 39.8,
-    "releaseDate": "2026-10-26",
+    "releaseDate": "2026-11-02",
     "calendarWeek": "2026-KW44",
     "firstSeenAt": "2026-10-26",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/320114-20250117134704.jpg",
