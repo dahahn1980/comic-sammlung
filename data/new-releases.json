@@ -1,5 +1,117 @@
 [
   {
+    "id": "ppm-9783868697018",
+    "isbn13": "9783868697018",
+    "title": "Elfen 02 (Neuauflage)",
+    "subtitle": "Die Ehre der Waldelfen",
+    "publisher": "Splitter",
+    "authors": [
+      "Nicolas Jarry",
+      "Gianluca Maconi"
+    ],
+    "price": 18.0,
+    "releaseDate": "2026-11-09",
+    "calendarWeek": "2026-KW46",
+    "firstSeenAt": "2026-11-09",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/307198.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Elfen-02::7198.html",
+    "scope": "splitter",
+    "editionType": "new-edition"
+  },
+  {
+    "id": "ppm-9783987213335",
+    "isbn13": "9783987213335",
+    "title": "Eine kurze Geschichte des Fußballs (Neuauflage)",
+    "subtitle": "",
+    "publisher": "Splitter",
+    "authors": [
+      "Deveney",
+      "Mickael Correia",
+      "Lelio Bonaccorco"
+    ],
+    "price": 25.0,
+    "releaseDate": "2026-11-09",
+    "calendarWeek": "2026-KW46",
+    "firstSeenAt": "2026-11-09",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322367-20251216123604.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Eine-kurze-Geschichte-des-Fussballs::322367.html",
+    "scope": "splitter",
+    "editionType": "new-edition"
+  },
+  {
+    "id": "ppm-9783692580470",
+    "isbn13": "9783692580470",
+    "title": "Die Odyssee (Manara)",
+    "subtitle": "",
+    "publisher": "Splitter",
+    "authors": [
+      "Milo Manara"
+    ],
+    "price": 25.0,
+    "releaseDate": "2026-11-09",
+    "calendarWeek": "2026-KW46",
+    "firstSeenAt": "2026-11-09",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323169-20261009133903.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Die-Odyssee-Manara::323169.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783689501112",
+    "isbn13": "9783689501112",
+    "title": "Die Kriege von Arran 7",
+    "subtitle": "Die Belagerung von Dal Darum",
+    "publisher": "Splitter",
+    "authors": [
+      "Jean-Luc Istin",
+      "Brice Cossu"
+    ],
+    "price": 19.8,
+    "releaseDate": "2026-11-09",
+    "calendarWeek": "2026-KW46",
+    "firstSeenAt": "2026-11-09",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323168-20261009133700.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Die-Kriege-von-Arran-7::323168.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783910965584",
+    "isbn13": "9783910965584",
+    "title": "Agent Alpha 14 (Neuauflage)",
+    "subtitle": "Roadies",
+    "publisher": "Finix-Comics",
+    "authors": [
+      "Youri Jigounov"
+    ],
+    "price": 15.8,
+    "releaseDate": "2026-11-09",
+    "calendarWeek": "2026-KW46",
+    "firstSeenAt": "2026-11-09",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/317071-20230112131645.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Agent-Alpha-14::317071.html",
+    "scope": "franco-belgisch",
+    "editionType": "new-edition"
+  },
+  {
+    "id": "ppm-9783910965577",
+    "isbn13": "9783910965577",
+    "title": "Agent Alpha 11 (Neuauflage)",
+    "subtitle": "Spritztour mit Malcolm",
+    "publisher": "Finix-Comics",
+    "authors": [
+      "Youri Jigounov"
+    ],
+    "price": 15.8,
+    "releaseDate": "2026-11-09",
+    "calendarWeek": "2026-KW46",
+    "firstSeenAt": "2026-11-09",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/315231-20210810095445.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Agent-Alpha-11::315231.html",
+    "scope": "franco-belgisch",
+    "editionType": "new-edition"
+  },
+  {
     "id": "ppm-9783965822504",
     "isbn13": "9783965822504",
     "title": "Yon 2",
@@ -27,7 +139,7 @@
       "Olivier Marin"
     ],
     "price": 20.0,
-    "releaseDate": "2026-11-02",
+    "releaseDate": "2026-11-09",
     "calendarWeek": "2026-KW45",
     "firstSeenAt": "2026-11-02",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/305697.jpg",
@@ -65,7 +177,7 @@
       "Juan Gimenez"
     ],
     "price": 99.8,
-    "releaseDate": "2026-11-02",
+    "releaseDate": "2026-11-09",
     "calendarWeek": "2026-KW45",
     "firstSeenAt": "2026-11-02",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323167-20261009133435.jpg",
@@ -84,7 +196,7 @@
       "Jean-Luc Delvaux"
     ],
     "price": 20.0,
-    "releaseDate": "2026-11-02",
+    "releaseDate": "2026-11-09",
     "calendarWeek": "2026-KW45",
     "firstSeenAt": "2026-11-02",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/307870-20140715125225.jpg",
@@ -104,7 +216,7 @@
       "Jean-Luc"
     ],
     "price": 20.0,
-    "releaseDate": "2026-11-02",
+    "releaseDate": "2026-11-09",
     "calendarWeek": "2026-KW45",
     "firstSeenAt": "2026-11-02",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/305698.jpg",
@@ -124,7 +236,7 @@
       "Jean-Luc"
     ],
     "price": 20.0,
-    "releaseDate": "2026-11-02",
+    "releaseDate": "2026-11-09",
     "calendarWeek": "2026-KW45",
     "firstSeenAt": "2026-11-02",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/305269.jpg",
@@ -143,7 +255,7 @@
       "Romain Hugault"
     ],
     "price": 20.0,
-    "releaseDate": "2026-11-02",
+    "releaseDate": "2026-11-09",
     "calendarWeek": "2026-KW45",
     "firstSeenAt": "2026-11-02",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/308134-20141120111302.jpg",
@@ -162,7 +274,7 @@
       "Ennio Bufi"
     ],
     "price": 18.0,
-    "releaseDate": "2026-11-02",
+    "releaseDate": "2026-11-09",
     "calendarWeek": "2026-KW45",
     "firstSeenAt": "2026-11-02",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323166-20261009133147.jpg",
@@ -199,7 +311,7 @@
       "Lyse Tarquin"
     ],
     "price": 35.0,
-    "releaseDate": "2026-11-02",
+    "releaseDate": "2026-11-09",
     "calendarWeek": "2026-KW45",
     "firstSeenAt": "2026-11-02",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323624-20261008144455.jpg",
@@ -219,7 +331,7 @@
       "Yann Krehl"
     ],
     "price": 39.8,
-    "releaseDate": "2026-11-02",
+    "releaseDate": "2026-11-09",
     "calendarWeek": "2026-KW45",
     "firstSeenAt": "2026-11-02",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323623-20261008144608.jpg",
@@ -238,7 +350,7 @@
       "Erwan Seure-Le Bihan"
     ],
     "price": 39.8,
-    "releaseDate": "2026-11-02",
+    "releaseDate": "2026-11-09",
     "calendarWeek": "2026-KW45",
     "firstSeenAt": "2026-11-02",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323622-20261008144421.jpg",
@@ -257,7 +369,7 @@
       "Ferdinando Tacconi"
     ],
     "price": 39.8,
-    "releaseDate": "2026-11-02",
+    "releaseDate": "2026-11-09",
     "calendarWeek": "2026-KW44",
     "firstSeenAt": "2026-10-26",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/320114-20250117134704.jpg",
