@@ -1,5 +1,435 @@
 [
   {
+    "id": "ppm-9783968044262",
+    "isbn13": "9783968044262",
+    "title": "Yalek 9",
+    "subtitle": "Katastrophe in Globovision",
+    "publisher": "All Verlag",
+    "authors": [
+      "André-Paul Duchâteau",
+      "Christian Denayer"
+    ],
+    "price": 17.8,
+    "releaseDate": "2026-11-16",
+    "calendarWeek": "2026-KW47",
+    "firstSeenAt": "2026-11-16",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323406-20260701130430.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Yalek-9::323406.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783964305213",
+    "isbn13": "9783964305213",
+    "title": "Tramp Gesamtausgabe 6",
+    "subtitle": "",
+    "publisher": "Kult Comics",
+    "authors": [
+      "Jean-Charles Kraehn",
+      "Roberto Zaghi"
+    ],
+    "price": 29.0,
+    "releaseDate": "2026-11-16",
+    "calendarWeek": "2026-KW47",
+    "firstSeenAt": "2026-11-16",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323143-20260601122442.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Tramp-Gesamtausgabe-6::323143.html",
+    "scope": "franco-belgisch",
+    "editionType": "new-edition"
+  },
+  {
+    "id": "ppm-9783949968099",
+    "isbn13": "9783949968099",
+    "title": "Soda Doppelband",
+    "subtitle": "Auferstehung/Enthüllungen",
+    "publisher": "Piredda",
+    "authors": [
+      "Dan Verlinden",
+      "Philippe Tome"
+    ],
+    "price": 32.5,
+    "releaseDate": "2026-11-16",
+    "calendarWeek": "2026-KW47",
+    "firstSeenAt": "2026-11-16",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323289-20261106133918.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Soda-Doppelband::323289.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783968044187",
+    "isbn13": "9783968044187",
+    "title": "Red Sonja Gesamtausgabe 3",
+    "subtitle": "",
+    "publisher": "All Verlag",
+    "authors": [
+      "Bruce Jones",
+      "Frank Thorne"
+    ],
+    "price": 29.8,
+    "releaseDate": "2026-11-16",
+    "calendarWeek": "2026-KW47",
+    "firstSeenAt": "2026-11-16",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323398-20260701124906.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Red-Sonja-Gesamtausgabe-3::323398.html",
+    "scope": "franco-belgisch",
+    "editionType": "new-edition"
+  },
+  {
+    "id": "ppm-9783692580524",
+    "isbn13": "9783692580524",
+    "title": "Perry Rhodan - Stardust 1",
+    "subtitle": "",
+    "publisher": "Splitter",
+    "authors": [
+      "Uwe Anton"
+    ],
+    "price": 28.0,
+    "releaseDate": "2026-11-16",
+    "calendarWeek": "2026-KW47",
+    "firstSeenAt": "2026-11-16",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323181-20260928125806.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Perry-Rhodan-Stardust-1::323181.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783692580517",
+    "isbn13": "9783692580517",
+    "title": "No Man's Land - Variantcover C (Rot)",
+    "subtitle": "",
+    "publisher": "Splitter",
+    "authors": [
+      "Szymon Kudranski"
+    ],
+    "price": 25.0,
+    "releaseDate": "2026-11-16",
+    "calendarWeek": "2026-KW47",
+    "firstSeenAt": "2026-11-16",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323179-20261009135538.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/No-Mans-Land-Variantcover-C-Rot::323179.html",
+    "scope": "splitter",
+    "editionType": "variant"
+  },
+  {
+    "id": "ppm-9783692580500",
+    "isbn13": "9783692580500",
+    "title": "No Man's Land - Variantcover B (Falter)",
+    "subtitle": "",
+    "publisher": "Splitter",
+    "authors": [
+      "Szymon Kudranski"
+    ],
+    "price": 25.0,
+    "releaseDate": "2026-11-16",
+    "calendarWeek": "2026-KW47",
+    "firstSeenAt": "2026-11-16",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323178-20261009135437.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/No-Mans-Land-Variantcover-B-Falter::323178.html",
+    "scope": "splitter",
+    "editionType": "variant"
+  },
+  {
+    "id": "ppm-9783692580494",
+    "isbn13": "9783692580494",
+    "title": "No Man's Land - Variantcover A (Berg)",
+    "subtitle": "",
+    "publisher": "Splitter",
+    "authors": [
+      "Szymon Kudranski"
+    ],
+    "price": 25.0,
+    "releaseDate": "2026-11-16",
+    "calendarWeek": "2026-KW47",
+    "firstSeenAt": "2026-11-16",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323177-20261009135334.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/No-Mans-Land-Variantcover-A-Berg::323177.html",
+    "scope": "splitter",
+    "editionType": "variant"
+  },
+  {
+    "id": "ppm-9783692580302",
+    "isbn13": "9783692580302",
+    "title": "Moby Dick (Chabouté)",
+    "subtitle": "",
+    "publisher": "Splitter",
+    "authors": [
+      "Christophe Chabouté"
+    ],
+    "price": 39.8,
+    "releaseDate": "2026-11-16",
+    "calendarWeek": "2026-KW47",
+    "firstSeenAt": "2026-11-16",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323176-20261014142714.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Moby-Dick-Chaboute::323176.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783967920239",
+    "isbn13": "9783967920239",
+    "title": "Länder von Ogon 8",
+    "subtitle": "Oru Rongo",
+    "publisher": "Splitter",
+    "authors": [
+      "Nicolas Jarry",
+      "Gianluca Gugliotta"
+    ],
+    "price": 18.0,
+    "releaseDate": "2026-11-16",
+    "calendarWeek": "2026-KW47",
+    "firstSeenAt": "2026-11-16",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323175-20261009135113.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Laender-von-Ogon-8::323175.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783965822542",
+    "isbn13": "9783965822542",
+    "title": "Kathleen van Straeten - Expo ’58",
+    "subtitle": "",
+    "publisher": "Schreiber & Leser",
+    "authors": [
+      "Patrick Weber",
+      "Baudoin Deville"
+    ],
+    "price": 17.95,
+    "releaseDate": "2026-11-16",
+    "calendarWeek": "2026-KW47",
+    "firstSeenAt": "2026-11-16",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323301-20261026100704.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Kathleen-van-Straeten-Expo-58::323301.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783692580388",
+    "isbn13": "9783692580388",
+    "title": "Interplanetar 1 - Mars",
+    "subtitle": "Der rote Planet",
+    "publisher": "Splitter",
+    "authors": [
+      "Bruno Lecigne",
+      "Fabien Bedouel"
+    ],
+    "price": 18.0,
+    "releaseDate": "2026-11-16",
+    "calendarWeek": "2026-KW47",
+    "firstSeenAt": "2026-11-16",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323174-20261009134908.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Interplanetar-1-Mars::323174.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783692580210",
+    "isbn13": "9783692580210",
+    "title": "Inside Moebius (limitierte Vorzugsausgabe)",
+    "subtitle": "20 Jahre Splitter Verlag – limitierte Sonderausgabe",
+    "publisher": "Splitter",
+    "authors": [
+      "Moebius"
+    ],
+    "price": 129.8,
+    "releaseDate": "2026-11-16",
+    "calendarWeek": "2026-KW47",
+    "firstSeenAt": "2026-11-16",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322505-20260908142428.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Inside-Moebius-limitierte-Vorzugsausgabe::322505.html",
+    "scope": "splitter",
+    "editionType": "variant"
+  },
+  {
+    "id": "ppm-9783692580203",
+    "isbn13": "9783692580203",
+    "title": "Inside Moebius",
+    "subtitle": "Gesamtausgabe Band 1 und 2",
+    "publisher": "Splitter",
+    "authors": [
+      "Moebius"
+    ],
+    "price": 99.8,
+    "releaseDate": "2026-11-16",
+    "calendarWeek": "2026-KW47",
+    "firstSeenAt": "2026-11-16",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322506-20260908142316.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Inside-Moebius::322506.html",
+    "scope": "splitter",
+    "editionType": "new-edition"
+  },
+  {
+    "id": "ppm-9783965822498",
+    "isbn13": "9783965822498",
+    "title": "Harry Dickson 4",
+    "subtitle": "Die Auferstehung der Gorgonen",
+    "publisher": "Schreiber & Leser",
+    "authors": [
+      "Onofrio Catacchio",
+      "Doug Headline",
+      "Luana Vergari"
+    ],
+    "price": 17.95,
+    "releaseDate": "2026-11-16",
+    "calendarWeek": "2026-KW47",
+    "firstSeenAt": "2026-11-16",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323300-20261026100740.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Harry-Dickson-4::323300.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783692581224",
+    "isbn13": "9783692581224",
+    "title": "Glow",
+    "subtitle": "glühend & kurvig",
+    "publisher": "Splitter",
+    "authors": [
+      "Max Sulfur"
+    ],
+    "price": 19.8,
+    "releaseDate": "2026-11-16",
+    "calendarWeek": "2026-KW47",
+    "firstSeenAt": "2026-11-16",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323173-20261009134718.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Glow::323173.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783967922912",
+    "isbn13": "9783967922912",
+    "title": "Fang 2",
+    "subtitle": "Auf der Suche nach Aldafaor",
+    "publisher": "Splitter",
+    "authors": [
+      "Joe Kelly",
+      "Niko Henrichon"
+    ],
+    "price": 18.0,
+    "releaseDate": "2026-11-16",
+    "calendarWeek": "2026-KW47",
+    "firstSeenAt": "2026-11-16",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323172-20261009134540.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Fang-2::323172.html",
+    "scope": "splitter",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783964302786",
+    "isbn13": "9783964302786",
+    "title": "Der Vagabund der Unendlichkeit 5",
+    "subtitle": "",
+    "publisher": "Kult Comics",
+    "authors": [
+      "Christian Godard",
+      "Julio Ribera"
+    ],
+    "price": 49.0,
+    "releaseDate": "2026-11-16",
+    "calendarWeek": "2026-KW47",
+    "firstSeenAt": "2026-11-16",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323141-20260601122025.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Der-Vagabund-der-Unendlichkeit-5::323141.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783968044200",
+    "isbn13": "9783968044200",
+    "title": "Der Gesang der Runen 1",
+    "subtitle": "Die erste Hülle",
+    "publisher": "All Verlag",
+    "authors": [
+      "Sylvain Runberg",
+      "Jean-Charles Poupard"
+    ],
+    "price": 17.8,
+    "releaseDate": "2026-11-16",
+    "calendarWeek": "2026-KW47",
+    "firstSeenAt": "2026-11-16",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323400-20260701125156.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Der-Gesang-der-Runen-1::323400.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783899088052",
+    "isbn13": "9783899088052",
+    "title": "Angel Wings 8 VZA",
+    "subtitle": "",
+    "publisher": "Salleck",
+    "authors": [
+      "Yann",
+      "Romain Hugault"
+    ],
+    "price": 59.0,
+    "releaseDate": "2026-11-16",
+    "calendarWeek": "2026-KW47",
+    "firstSeenAt": "2026-11-16",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323579-20260930135806.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Angel-Wings-8-VZA::323579.html",
+    "scope": "franco-belgisch",
+    "editionType": "variant"
+  },
+  {
+    "id": "ppm-9783899088045",
+    "isbn13": "9783899088045",
+    "title": "Angel Wings 8",
+    "subtitle": "Anything Goes",
+    "publisher": "Salleck",
+    "authors": [
+      "Yann",
+      "Romain Hugault"
+    ],
+    "price": 18.0,
+    "releaseDate": "2026-11-16",
+    "calendarWeek": "2026-KW47",
+    "firstSeenAt": "2026-11-16",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323578-20260930135944.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Angel-Wings-8::323578.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
+    "id": "ppm-9783899088113",
+    "isbn13": "9783899088113",
+    "title": "Angel Wings 7 VZA",
+    "subtitle": "MiG Madness",
+    "publisher": "Salleck",
+    "authors": [
+      "Yann",
+      "Romain Hugault"
+    ],
+    "price": 59.0,
+    "releaseDate": "2026-11-16",
+    "calendarWeek": "2026-KW47",
+    "firstSeenAt": "2026-11-16",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/319052-20260930135610.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Angel-Wings-7-VZA::319052.html",
+    "scope": "franco-belgisch",
+    "editionType": "variant"
+  },
+  {
+    "id": "ppm-9783899088106",
+    "isbn13": "9783899088106",
+    "title": "Angel Wings 7",
+    "subtitle": "MiG Madness",
+    "publisher": "Salleck",
+    "authors": [
+      "Yann",
+      "Romain Hugault"
+    ],
+    "price": 18.0,
+    "releaseDate": "2026-11-16",
+    "calendarWeek": "2026-KW47",
+    "firstSeenAt": "2026-11-16",
+    "cover": "https://data.ppm-vertrieb.de/product_images/info_images/319051-20240312104731.jpg",
+    "sourceUrl": "https://www.ppm-vertrieb.de/Angel-Wings-7::319051.html",
+    "scope": "franco-belgisch",
+    "editionType": "regular"
+  },
+  {
     "id": "ppm-9783868697018",
     "isbn13": "9783868697018",
     "title": "Elfen 02 (Neuauflage)",
@@ -10,7 +440,7 @@
       "Gianluca Maconi"
     ],
     "price": 18.0,
-    "releaseDate": "2026-11-09",
+    "releaseDate": "2026-11-16",
     "calendarWeek": "2026-KW46",
     "firstSeenAt": "2026-11-09",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/307198.jpg",
@@ -30,7 +460,7 @@
       "Lelio Bonaccorco"
     ],
     "price": 25.0,
-    "releaseDate": "2026-11-09",
+    "releaseDate": "2026-11-16",
     "calendarWeek": "2026-KW46",
     "firstSeenAt": "2026-11-09",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/322367-20251216123604.jpg",
@@ -48,7 +478,7 @@
       "Milo Manara"
     ],
     "price": 25.0,
-    "releaseDate": "2026-11-09",
+    "releaseDate": "2026-11-16",
     "calendarWeek": "2026-KW46",
     "firstSeenAt": "2026-11-09",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323169-20261009133903.jpg",
@@ -67,7 +497,7 @@
       "Brice Cossu"
     ],
     "price": 19.8,
-    "releaseDate": "2026-11-09",
+    "releaseDate": "2026-11-16",
     "calendarWeek": "2026-KW46",
     "firstSeenAt": "2026-11-09",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323168-20261009133700.jpg",
@@ -85,7 +515,7 @@
       "Youri Jigounov"
     ],
     "price": 15.8,
-    "releaseDate": "2026-11-09",
+    "releaseDate": "2026-11-16",
     "calendarWeek": "2026-KW46",
     "firstSeenAt": "2026-11-09",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/317071-20230112131645.jpg",
@@ -103,7 +533,7 @@
       "Youri Jigounov"
     ],
     "price": 15.8,
-    "releaseDate": "2026-11-09",
+    "releaseDate": "2026-11-16",
     "calendarWeek": "2026-KW46",
     "firstSeenAt": "2026-11-09",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/315231-20210810095445.jpg",
@@ -177,7 +607,7 @@
       "Juan Gimenez"
     ],
     "price": 99.8,
-    "releaseDate": "2026-11-09",
+    "releaseDate": "2026-11-16",
     "calendarWeek": "2026-KW45",
     "firstSeenAt": "2026-11-02",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323167-20261009133435.jpg",
@@ -274,7 +704,7 @@
       "Ennio Bufi"
     ],
     "price": 18.0,
-    "releaseDate": "2026-11-09",
+    "releaseDate": "2026-11-16",
     "calendarWeek": "2026-KW45",
     "firstSeenAt": "2026-11-02",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323166-20261009133147.jpg",
@@ -311,7 +741,7 @@
       "Lyse Tarquin"
     ],
     "price": 35.0,
-    "releaseDate": "2026-11-09",
+    "releaseDate": "2026-11-16",
     "calendarWeek": "2026-KW45",
     "firstSeenAt": "2026-11-02",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323624-20261008144455.jpg",
@@ -331,7 +761,7 @@
       "Yann Krehl"
     ],
     "price": 39.8,
-    "releaseDate": "2026-11-09",
+    "releaseDate": "2026-11-16",
     "calendarWeek": "2026-KW45",
     "firstSeenAt": "2026-11-02",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323623-20261008144608.jpg",
@@ -350,7 +780,7 @@
       "Erwan Seure-Le Bihan"
     ],
     "price": 39.8,
-    "releaseDate": "2026-11-09",
+    "releaseDate": "2026-11-16",
     "calendarWeek": "2026-KW45",
     "firstSeenAt": "2026-11-02",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/323622-20261008144421.jpg",
@@ -369,7 +799,7 @@
       "Ferdinando Tacconi"
     ],
     "price": 39.8,
-    "releaseDate": "2026-11-09",
+    "releaseDate": "2026-11-16",
     "calendarWeek": "2026-KW44",
     "firstSeenAt": "2026-10-26",
     "cover": "https://data.ppm-vertrieb.de/product_images/info_images/320114-20250117134704.jpg",
